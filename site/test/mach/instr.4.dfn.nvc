@@ -1,0 +1,23 @@
+// id [element] [action] [...] [more] [ref [type] instr]
+// id [element] [action] [...] [ref next]
+// 
+// reserved tokens:
+// null next \n \_
+// reserved tokens when the "next" argument (#4; last one) is a literal
+// (it means to stop execution):
+// 0
+
+	1		cmd 	set 		1 dest	0	hello	0 null	0 next
+//2		cmd 	get 		1 dest	1 edx 	0 !!! 	0 next		// delimiter string
+	3		cmd 	get 		1 dest	1 edx 	0 \n	 	0 next		// delimiter char
+//4		cmd 	get 		1 dest	1 edx 	0 5 		0 next		// max nr of chars
+
+	5		store set 		1 dest	0 eax 	0 ABC 	0 next
+	6		store unset		1 dest 	0 eax		0 null	0 next
+	7		store exist		1 dest	1 eax 	0 null 	0 next
+//8		store rename	1 dest	0 eax 	0 ecx 	0 next
+//9		store clear		1 dest 	0 null 	0 null	0 next		// unset the user-set variables in the namespace of this thread
+//10	store size		1 dest 	0 null 	0 null	0 next		// the size of the user-set variables in the namespace of this thread
+
+	// a null instruction
+	11	null 	null 		0 null	0	null	0 null	0 0

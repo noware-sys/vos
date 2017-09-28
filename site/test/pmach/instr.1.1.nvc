@@ -1,0 +1,2 @@
+cmd [set] hello_world_from_nvc! ;
+store [set] 0 eax 0 ABC ;

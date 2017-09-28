@@ -1,0 +1,26 @@
+	1		cmd 	set 		0 null	0	Please	0 null	0 next
+	2		cmd 	set 		0 null	0	\_ 	0 null	0 next
+	3		cmd 	set 		0 null	0	enter	0 null	0 next
+	4		cmd 	set 		0 null	0	\_ 	0 null	0 next
+	5		cmd 	set 		0 null	0	something:	0 null	0 next
+	6		cmd 	set 		0 null	0	\_ 	0 null	0 next
+	7		cmd 	get 		0 null	0 user 	0 \n	 	0 next
+	8		cmd 	set 		0 null	0	You	0 null	0 next
+	9		cmd 	set 		0 null	0	\_ 	0 null	0 next
+	10	cmd 	set 		0 null	0	entered	0 null	0 next
+	11	cmd 	set 		0 null	0	\_ 	0 null	0 next
+	12	cmd 	set 		0 null	0	this:	0 null	0 next
+	13	cmd 	set 		0 null	0	\_	0 null	0 next
+	14	cmd 	set 		0 null	1	user	0 null	0 next
+	15	cmd 	set 		0 null	0	\n	0 null	0 next
+	16	store exist		0 presence	0 user 	0 null 	0 next
+	17	cmd 	set 		0 null	1	presence	0 null	0 next
+	18	cmd 	set 		0 null	0	\n	0 null	0 next
+
+	19	store unset		0 null 	0 user		0 null	0 next
+	20	store exist		0 presence 	0 user		0 null	0 next
+	21	cmd 	set 		0 null	1	presence	0 null	0 next
+
+	22	cmd 	set 		0 null	0	\n	0 null	0 next
+
+	23	null 	null 		0 null	0	null	0 null	0 0

@@ -1,0 +1,214 @@
+/*
+	Case sensitive.
+	Object-Oriented.
+	JavaScript Object Style Notation.
+	
+	? Uniqueness == Name + Type
+	?	Should the type be determined by the context? No(, in general).
+	
+	Garbage-collecting.
+	Type hinting.
+*/
+
+/*
+	Basic things.
+	{
+		Declare things.
+			Perform things. (By extension.)
+	}
+	
+	
+	[]			Expression Grouping
+	()			Function Calling
+	{}			Scope Declaration
+	:[:]		Scope Resulution
+	
+	!Without References (Pointers)! (Like * or &) ((Always) pass by value)
+	
+	///
+	
+	Basic words (including operators)?:
+	
+	f[unctio]n
+	fin[alization]
+	init[ialization]
+	init[ializ]ed
+	dfn/[definition]
+	dft/[default]
+	ndx/[index]
+	return
+	bool[ean]
+	n[umbe]r::
+		nat[ural]
+		int[eger]
+		real
+		lat[eral]
+			([imaginary]/img)	<- No!
+	n[umbe]r
+	t[e]xt
+	[str[ing]]
+	[v[o]id]
+	nul[l]
+	new
+	scope(/[name]space)	// Partial class definition. No? No!
+	struct[ure]
+		class
+		obj[ect]
+		entity/[ntt]
+	[type]
+	const[ant]
+	var[iable]
+	static
+	dyn[amic]
+	label
+	=
+	==
+	[===	((Also compare the type?) Like in PHP)]
+*/
+
+/*
+	/*
+		Nested comments, like this one, should be valid.
+	*/
+*/
+
+/*
+	Action, Instruction, Operation
+	
+	Instruct to do an operation.
+	? An action is a literal or a grouping of either an instruction or an operation.
+	
+	action ~= operation ~= instruction
+	actor ~= operator ~= instructor
+*/
+include_once ("init[ialization].nv");	// Or ".ven"? No.
+
+// This is the global scope.
+
+[partial|complete/fraction]? [[name?]space/]scope(/class?/struct[ure]?) "sys[tem]"
+{
+	/*
+		// Directly declare the operator(s) instead.
+		
+		f[unctio]n declare/set/assign ([null])
+		{
+			// 
+		}
+	*/
+	// Declare an entity.
+	[dyn[amic]|static] ([[variable|constant] type, ...]) (f[unctio]n) [op[erato]r]? "#" (null, null) [[var[iable]|const[ant]], [const[ant]|vari[able]]]
+	{
+		return [null];
+	};
+	
+	// Evaluate an expression.
+	[type] f[unctio]n [""] ()
+	{
+		return [null];
+	};
+	
+	
+	
+	//function declare ("2nd constant", "the value", true/* boolean constant*/);	// ?
+	
+	["#"|"@"][whitespace]"var";	// "#var" is only *declared* here.
+	
+	#var = text . appended;
+	# number = "123";	// This is still a number. Should it? Yes? Yes. But probably not.
+	
+	# text = "text with space characters" . " and with catenated text";
+	
+	
+	// Additionally, this may be done:
+	
+	// Set the value to an (entity?) function.
+	# ("a function") = function a_function () { /* ... */ };
+	// Then, call it.
+	# "a function" -> ();
+	
+	operator 1 2 3 ...
+	"" (...)
+	( 1 2 3
+	function (1, 2, 3(,) ...)
+	
+	((([cout/cli/cui/txt/tui/cmd/screen] << 1) << 2) << 3)
+	
+	
+	// Declare a function without a name.
+	// It would be visible within the scope it is declared, of course.
+	// It would be called like " (arg)".
+	//
+	// !!!
+	// But, what about expressions enclosed within parenthesis?
+	// Maybe always have to declare like """ (arg)"?
+	function [""]? () { /* ... */ };
+	
+	// Get the type of an entity (expression?).
+	"Hi!" -> type () [== "text"];
+	
+	// Instead of "namespace".
+	(class/scope/space/entity/domain/zone/area/name)?namespace personal
+	{
+		function include_once (#"1st argument", #"second argument", /*...*/ /* Variable number of arguments? */)
+		{
+			// ...
+			return (true);
+		}
+		
+		// This is another function.
+		"function" "include once" (null)
+		{
+			// ...
+			"return" (! true);
+		}
+		
+		entity/object/class/set/category/domain/type/space/zone "custom" [: [public/protected(/private ?)] other, ...]
+		{
+			public:
+				null custom (null);		// Constructor.
+				null ~custom (null);	// Destructor.
+				constant static [::..::number] #instances;
+				[type] function operator + (void) constant;
+			protected:	// Inherited.
+			private:	// Uninherited?
+		}
+		
+		//custom #a_var ();
+		#a_var = [new]? custom ();
+	}
+	
+	// Can "re-declare" classes. ?
+	
+	// Switch Cases:
+	switch [[(]expression[)]]
+	{
+		case [(][[expression[ ]]operator[ ]]expression[)]:	// The default operator should be == ?
+		case default:
+	}
+	
+		// Example
+		switch
+		{
+			case default:	// Multiple instances of the default case?
+				return true;
+			if #i  % 7 === "4":	// Is always false.
+				return false;
+			!when? #i  % 7 === 3 + 1:
+				break;
+			case default:
+				return false;
+		}
+		
+		switch (#i % 7)
+		{
+			case default:	// Multiple instances of the default case?
+				return true;
+			case === "4":	// Is always false.
+				return false;
+			case === 3 + 1:
+				break;
+			case default:
+				return false;
+		}
+};
+

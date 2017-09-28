@@ -1,0 +1,5 @@
+mov 0 eax 0 111
+mov 0 ebx 0 222
+mov 0 ecx 0 333
+mov 0 edx 0 444
+mov 0 dl 0 555

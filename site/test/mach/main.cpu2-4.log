@@ -1,0 +1,175 @@
+[7f84dbee0d00] zyre::inited()::_zyre == nullptr==[0]
+[7f84dbee0d00] [zyre::inited()::_reception == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_zyre == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_reception == nullptr==[0]
+7f84d760d700] zyre::receive()::waiting for an event
+[zyre::running()::inited()==[[7f84dbee0d00] zyre::inited()::_zyre == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_reception == nullptr==[0]
+1]
+[7f84dbee0d00] zyre::inited()::_zyre == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_reception == nullptr==[0]
+zyre::running()::_running==[1]
+zyre::running()::inited()==[[7f84dbee0d00] zyre::inited()::_zyre == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_reception == nullptr==[0]
+1]
+[7f84dbee0d00] zyre::inited()::_zyre == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_reception == nullptr==[0]
+zyre::running()::_running==[1]
+7f84d660b700] noware::mach::cpu::notify::sleeping for 5 seconds
+[7f84dbee0d00] zyre::inited()::_zyre == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_reception == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_zyre == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_reception == nullptr==[0]
+noware::mach::cpu::exe()::in scope
+[7f84d5e0a700] noware::mach::cpu::exe()::while(true)::in scope
+noware::mach::dev::search_local()::called
+noware::mach::dev::multicast()::called
+noware::mach::dev::multicast()::request_token==[pR9PDhMHQNXRT710]
+zmq::msg::first_clear_space()::called
+[7f84d4e08700] zyre::receive()::waiting for an event
+zmq::msg::first_clear_space()::is_empty()==[false]zyre::running()::inited()==[[7f84dbee0d00] zyre::inited()::_zyre == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_reception == nullptr==[0]
+1]
+[7f84dbee0d00] zyre::inited()::_zyre == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_reception == nullptr==[0]
+zyre::running()::_running==[1]
+zyre::running()::inited()==[[7f84dbee0d00] zyre::inited()::_zyre == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_reception == nullptr==[0]
+1]
+[7f84dbee0d00] zyre::inited()::_zyre == nullptr==[0]
+[7f84dbee0d00] zyre::inited()::_reception == nullptr==[0]
+zyre::running()::_running==[1]
+
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 11 size::count"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response::wanted"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 11 size::count"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response::wanted"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 11 size::count"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="pR9PDhMHQNXRT710"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response::wanted"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 11 size::count"
+zyre::multicast()::called
+zyre::running()::inited()==[[7f84d5e0a700] zyre::inited()::_zyre == nullptr==[0]
+[7f84d5e0a700] zyre::inited()::_reception == nullptr==[0]
+1]
+[7f84d5e0a700] zyre::inited()::_zyre == nullptr==[0]
+[7f84d5e0a700] zyre::inited()::_reception == nullptr==[0]
+zyre::running()::_running==[1]
+zyre::multicast::zyre_shout()[success]
+noware::mach::dev::multicast()::node.multicast()::success
+[[7f84d760d700] zyre::receive()::received an event
+[7f84d760d700] zyre::receive()::(event==nullptr)[false]
+[7f84d760d700] zyre::receive()::
+[7f84d760d700] zyre::receive()::(_exoreception.empty())[false]
+[7f84d760d700] zyre::receive()::(reception_is_set())[true]
+[7f84d760d700] zyre::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[ENTER]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,ENTER,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+[7f84d760d700] zyre::receive()::waiting for an event
+[7f84d760d700] zyre::receive()::received an event
+[7f84d760d700] zyre::receive()::(event==nullptr)[false]
+[7f84d760d700] zyre::receive()::
+[7f84d760d700] zyre::receive()::(_exoreception.empty())[false]
+[7f84d760d700] zyre::receive()::(reception_is_set())[true]
+[7f84d760d700] zyre::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+[7f84d760d700] zyre::receive()::waiting for an event
+zyre::peers_count::peers==nullptr
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[pR9PDhMHQNXRT710]
+[7f84c77fe700] noware::mach::cpu::notify::sleeping for 5 seconds
+noware::mach::cpu::exe()::in scope7f84d4e08700] zyre::receive()::received an event
+[7f84d4e08700] zyre::receive()::(event==nullptr)[false]
+[7f84d4e08700] zyre::receive()::
+[7f84d4e08700] zyre::receive()::(_exoreception.empty())[false]
+[7f84d4e08700] zyre::receive()::(reception_is_set())[true]
+[7f84d4e08700] zyre::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[ENTER]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,ENTER,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+[7f84d4e08700] zyre::receive()::waiting for an event
+[7f84d4e08700] zyre::receive()::received an event
+[7f84d4e08700] zyre::receive()::(event==nullptr)[false]
+[7f84d4e08700] zyre::receive()::
+[7f84d4e08700] zyre::receive()::(_exoreception.empty())[false]
+[7f84d4e08700] zyre::receive()::(reception_is_set())[true]
+[7f84d4e08700] zyre::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOINnoware::mach::dev::receive_local::node.peers_size()==[
+[7f84c6ffd700] noware::mach::cpu::exe()::while(true)::in scope
+]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::mach::dev::search_local()::called[7f84d4e08700] zyre::receive()::waiting for an event
+
+noware::mach::dev::multicast()::called
+noware::mach::dev::multicast()::request_token==[41cueQnf78SLoi1h]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 11 size::count"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[zyre::peers_count::result=zlist_size(peers)==[1]
+1]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[0]
+noware::mach::dev::receive_local()::responses_expect==[0]
+noware::mach::dev::receive_local()::post-loop
+1]=="noware::mach::dev::response::wanted"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 11 size::count"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response::wanted"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 11 size::count"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="41cueQnf78SLoi1h"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response::wanted"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 11 size::count"
+zyre::multicast()::called
+zyre::running()::inited()==[[7f84c6ffd700] zyre::inited()::_zyre == nullptr==[0]
+[7f84c6ffd700] zyre::inited()::_reception == nullptr==[0]
+1]
+[7f84c6ffd700] zyre::inited()::_zyre == nullptr==[0]
+[7f84c6ffd700] zyre::inited()::_reception == nullptr==[0]
+zyre::running()::_running==[1]
+zyre::multicast::zyre_shout()[success]
+noware::mach::dev::multicast()::node.multicast()::success
+zyre::peers_count::peers==nullptr
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[41cueQnf78SLoi1h]
+noware::mach::dev::receive_local::node.peers_size()==[zyre::peers_count::result=zlist_size(peers)==[1]
+1]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[0]
+noware::mach::dev::receive_local()::responses_expect==[0]
+noware::mach::dev::receive_local()::post-loop
+[7f84d660b700] noware::mach::cpu::notify::slept for 5 seconds
+[7f84d660b700] noware::mach::cpu::notify::_condition_instr_enqueued.notify_all()ing
+[7f84c77fe700] noware::mach::cpu::notify::slept for 5 seconds
+[7f84c77fe700] noware::mach::cpu::notify::_condition_instr_enqueued.notify_all()ing
+[7f84dbee0d00] noware::mach::cpu::stop()::_exen->interrupt()ing
+[7f84dbee0d00] noware::mach::cpu::stop()::_exen->interrupt()ed
+[7f84dbee0d00] noware::mach::cpu::stop()::_exen->join()ing

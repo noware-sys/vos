@@ -1,0 +1,7 @@
+; format:
+; type				|	constant	bool				text/number		number	bool				text/number		number
+; descrption	|	mov[e] 		reference		destination		offset	reference		source				offset
+
+move 0 eax 0 0 111 0
+move 0 ecx 0 0 333 0
+move 0 dl 0 0 555 0

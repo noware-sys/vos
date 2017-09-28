@@ -1,0 +1,6 @@
+1. load
+2. store
+
+3. add
+4. nand
+5. jump on <=

@@ -1,0 +1,12 @@
+misc::elf
+	try to use unsigned int
+mach
+	? group per machine instead of per resource
+mach
+	dev
+	...
+		use multiple zmq frames instead of one serialized zmq frame
+change extension: .[class].[hc]xx -> .incl.[class].[hc]xx
+make virtual all functions of all classes
+virtually inherit from all classes (virtual public <class>)
+

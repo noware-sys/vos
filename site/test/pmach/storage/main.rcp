@@ -1,0 +1,39 @@
+#.PHONY: clean
+.PHONY : all, clean
+
+# QUEX_PATH = /opt/quex
+QUEX_PATH = /usr/include/quex
+LIB = noware
+LIB_PATH = /usr/include/noware
+COMPILER = g++
+CCOMPILER = gcc
+
+IN = #container-variable.obj tool.obj
+OUT = main.elf
+#OUT_32 = main-32.elf
+#COMPILER_FLAGS = -g -ggdb -pedantic -fpermissive -static-libgcc -static -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(QUEX_PATH) -I$(LIB_PATH) $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lczmq -lzmq -lzyre
+COMPILER_FLAGS = -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(QUEX_PATH) -I$(LIB_PATH) $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lsqlite3 -lczmq -lzmq -lzyre
+
+#all:
+all : $(OUT)
+#$(OUT) : sqlite.obj #$(IN)
+$(OUT) :
+	if test ! -f $(OUT);\
+	then\
+		#$(CC) $(IN);\
+		#$(COMPILER) $(COMPILER_FLAGS) -o $(OUT) $(IN);\
+		$(COMPILER) $(COMPILER_FLAGS) -o main.obj -c main.cxx;\
+		#$(COMPILER) $(COMPILER_FLAGS) -o mathematics.obj -c $(LIB_PATH)/$(LIB)/mathematics.c++;\
+		#$(COMPILER) $(COMPILER_FLAGS) -o tool.obj -c $(LIB_PATH)/$(LIB)/tool.c++;\
+		#$(COMPILER) $(COMPILER_FLAGS) -o container-variable.obj -c $(LIB_PATH)/$(LIB)/container/variable.c++;\
+		\
+		$(COMPILER) $(COMPILER_FLAGS) -o $(OUT) main.obj $(IN);\
+	fi
+	
+	if test -f $(OUT) && test ! -x $(OUT);\
+	#if test ! -x $(OUT);\
+	then\
+		chmod +x $(OUT);\
+	fi
+clean:
+	rm --force *.elf *.obj;

@@ -1,0 +1,6 @@
+#include ".incl.dev.cxx"
+#include ".incl.store.cxx"
+#include ".incl.queue.cxx"
+#include ".incl.cpu.cxx"
+//#include ".thread.cxx"
+#include ".incl.cmd.cxx"

@@ -1,0 +1,1496 @@
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[ENTER]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,ENTER,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[ENTER]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,ENTER,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[ENTER]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,ENTER,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[ENTER]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[ENTER]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,ENTER,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+ENTER,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[ENTER]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,ENTER,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::mach::cpu::set()::in scope
+noware::mach::cpu::set()::return
+noware::mach::dev::search_local()::called
+noware::mach::dev::anycast(noware::mach::store)::called
+noware::mach::dev::anycast(msg,noware::mach::store)::request_token==[vh9ut3oQd5bn9cZe]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="vh9ut3oQd5bn9cZe"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb"
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data::pre-loop
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data[1]=="vh9ut3oQd5bn9cZe"
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb"
+noware::mach::dev::anycast(noware::mach::store)::node.anycast(noware::mach::store)::pre
+noware::net::node::anycast()::peers_list_size < 1::false
+noware::net::node::anycast()::return
+noware::mach::dev::anycast(noware::mach::store)::node.anycast(noware::mach::store)::success
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[vh9ut3oQd5bn9cZe]
+noware::mach::dev::receive_local::node.peers_size()==[noware::net::node::peers_count::result=zlist_size(peers)==[2]
+2]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[1]
+noware::mach::dev::receive_local()::responses_expect==[1]
+noware::mach::dev::receive_local()::while::responses_count==[0]
+noware::mach::dev::receive_local()::loop::receiving::messagenoware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="vh9ut3oQd5bn9cZe"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb"
+noware::mach::dev::receive()::request[!noware::mach::dev::response]
+noware::mach::store::respond()::called
+noware::mach::store::respond()::if::message[subject]==[assignment]
+noware::mach::store::respond()::if::message[subject]==assignment::in scope
+noware::mach::dev::receive()::respond[true]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="vh9ut3oQd5bn9cZe"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::respond_post[true]
+noware::mach::dev::respond_post()::called
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::net::node::receive()::received an event
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="vh9ut3oQd5bn9cZe"
+noware::mach::dev::receive()::msg.data[2]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[3]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::response[noware::mach::dev::response]
+noware::mach::dev::receive()::unicast_local(msg,vh9ut3oQd5bn9cZe)
+noware::mach::dev::unicast_local()::conn==[]
+noware::mach::dev::unicast_local()::request_token==[vh9ut3oQd5bn9cZe]
+noware::mach::dev::unicast_local()::message==[22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 4 type 8 response 5 value 1 1]
+noware::mach::dev::unicast_local()::send()
+noware::mach::dev::unicast_local()::send()==[Success]
+noware::mach::dev::receive_local()::loop:: received::message
+noware::mach::dev::receive_local()::message_tree.deserialize()::pre-call
+noware::mach::dev::receive_local()::message_content.data()==[22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 assignment 4 type 8 response 5 value 1 1]
+noware::mach::dev::receive_local()::message_tree.deserialize()==True
+noware::mach::dev::receive_local()::if(search())::pre-call
+noware::mach::cpu::search()::called
+noware::mach::dev::receive()::unicast_local(msg,vh9ut3oQd5bn9cZe)==[success]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::mach::cpu::search()::deserialize::success
+noware::mach::dev::receive_local()::if(search())::break
+noware::mach::dev::receive_local()::post-loop
+noware::mach::cpu::set()::in scope
+noware::mach::cpu::set()::return
+noware::mach::dev::search_local()::called
+noware::mach::dev::anycast(noware::mach::store)::called
+noware::mach::dev::anycast(msg,noware::mach::store)::request_token==[Rmn6xmJJ1Hxwy7tu]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="Rmn6xmJJ1Hxwy7tu"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 5 value 1 1"
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data::pre-loop
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data[1]=="Rmn6xmJJ1Hxwy7tu"
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 5 value 1 1"
+noware::mach::dev::anycast(noware::mach::store)::node.anycast(noware::mach::store)::pre
+noware::net::node::anycast()::peers_list_size < 1::false
+noware::net::node::anycast()::return
+noware::mach::dev::anycast(noware::mach::store)::node.anycast(noware::mach::store)::success
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[Rmn6xmJJ1Hxwy7tu]
+noware::mach::dev::receive_local::node.peers_size()==[noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="Rmn6xmJJ1Hxwy7tu"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 5 value 1 1"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 5 value 1 1"
+noware::mach::dev::receive()::request[!noware::mach::dev::response]
+noware::mach::store::respond()::called
+noware::mach::store::respond()::if::message[subject]==[assignment]
+noware::mach::store::respond()::if::message[subject]==assignment::in scope
+noware::mach::dev::receive()::respond[true]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="Rmn6xmJJ1Hxwy7tu"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::respond_post[true]
+noware::mach::dev::respond_post()::called
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::peers_count::result=zlist_size(peers)==[2noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="Rmn6xmJJ1Hxwy7tu"
+noware::mach::dev::receive()::msg.data[2]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[3]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::response[noware::mach::dev::response]
+noware::mach::dev::receive()::unicast_local(msg,Rmn6xmJJ1Hxwy7tu)
+noware::mach::dev::unicast_local()::conn==[]
+noware::mach::dev::unicast_local()::request_token==[Rmn6xmJJ1Hxwy7tu]
+]
+2]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[1]
+noware::mach::dev::receive_local()::responses_expect==[1]
+noware::mach::dev::receive_local()::while::responses_count==[0]
+noware::mach::dev::receive_local()::loop::receiving::message
+noware::mach::dev::unicast_local()::message==[22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 4 type 8 response 5 value 1 1]
+noware::mach::dev::unicast_local()::send()
+noware::mach::dev::unicast_local()::send()==[Success]
+noware::mach::dev::receive_local()::loop:: received::message
+noware::mach::dev::receive_local()::message_tree.deserialize()::pre-call
+noware::mach::dev::receive_local()::message_content.data()==[22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 running 7 subject 10 assignment 4 type 8 response 5 value 1 1]
+noware::mach::dev::receive_local()::message_tree.deserialize()==True
+noware::mach::dev::receive_local()::if(search())::pre-call
+noware::mach::cpu::search()::called
+noware::mach::cpu::search()::deserialize::success
+noware::mach::dev::receive_local()::if(search())::break
+noware::mach::dev::receive_local()::post-loop
+noware::mach::cpu::set()::in scope
+noware::mach::cpu::set()::return
+noware::mach::dev::search_local()::called
+noware::mach::dev::anycast(noware::mach::store)::called
+noware::mach::dev::anycast(msg,noware::mach::store)::request_token==[q0g0cGgXHQZkFPsD]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="q0g0cGgXHQZkFPsD"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 5 value 1 1"
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data::pre-loop
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data[1]=="q0g0cGgXHQZkFPsD"
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 5 value 1 1"
+noware::mach::dev::anycast(noware::mach::store)::node.anycast(noware::mach::store)::pre
+noware::net::node::anycast()::peers_list_size < 1::false
+noware::net::node::anycast()::return
+noware::mach::dev::anycast(noware::mach::store)::node.anycast(noware::mach::store)::success
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[q0g0cGgXHQZkFPsD]
+noware::mach::dev::receive_local::node.peers_size()==[noware::net::node::peers_count::result=zlist_size(peers)==[2]
+2]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[1]
+noware::mach::dev::receive_local()::responses_expect==[1]
+noware::mach::dev::receive_local()::while::responses_count==[0]
+noware::mach::dev::receive_local()::loop::receiving::message
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[noware::mach::dev::receive()::unicast_local(msg,Rmn6xmJJ1Hxwy7tuWHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="q0g0cGgXHQZkFPsD"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 5 value 1 1"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 5 value 1 1"
+noware::mach::dev::receive()::request[!noware::mach::dev::response]
+noware::mach::store::respond()::called
+)==[success]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::mach::store::respond()::if::message[subject]==[assignment]
+noware::mach::store::respond()::if::message[subject]==assignment::in scope
+noware::mach::dev::receive()::respond[true]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="q0g0cGgXHQZkFPsD"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::respond_post[true]
+noware::mach::dev::respond_post()::called
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="q0g0cGgXHQZkFPsD"
+noware::mach::dev::receive()::msg.data[2]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[3]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::response[noware::mach::dev::response]
+noware::mach::dev::receive()::unicast_local(msg,q0g0cGgXHQZkFPsD)
+noware::mach::dev::unicast_local()::conn==[]
+noware::mach::dev::unicast_local()::request_token==[q0g0cGgXHQZkFPsD]
+noware::mach::dev::unicast_local()::message==[22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 4 type 8 response 5 value 1 1]
+noware::mach::dev::unicast_local()::send()
+noware::mach::dev::unicast_local()::send()==[Success]
+noware::mach::dev::receive_local()::loop:: received::message
+noware::mach::dev::receive_local()::message_tree.deserialize()::pre-call
+noware::mach::dev::receive_local()::message_content.data()==[22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 5 index 7 subject 10 assignment 4 type 8 response 5 value 1 1]
+noware::mach::dev::receive_local()::message_tree.deserialize()==True
+noware::mach::dev::receive_local()::if(search())::pre-call
+noware::mach::cpu::search()::called
+noware::mach::dev::receive()::unicast_local(msg,q0g0cGgXHQZkFPsD)==[success]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::mach::cpu::search()::deserialize::success
+noware::mach::dev::receive_local()::if(search())::break
+noware::mach::dev::receive_local()::post-loop
+noware::mach::cpu::set()::in scope
+noware::mach::cpu::set()::return
+noware::mach::dev::search_local()::called
+noware::mach::dev::anycast(noware::mach::store)::called
+noware::mach::dev::anycast(msg,noware::mach::store)::request_token==[VXAVe7QopohioOkS]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="VXAVe7QopohioOkS"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 5 value 1 1"
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data::pre-loop
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data[1]=="VXAVe7QopohioOkS"
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 5 value 1 1"
+noware::mach::dev::anycast(noware::mach::store)::node.anycast(noware::mach::store)::pre
+noware::net::node::anycast()::peers_list_size < 1::false
+noware::net::node::anycast()::return
+noware::mach::dev::anycast(noware::mach::store)::node.anycast(noware::mach::store)::success
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[VXAVe7QopohioOkS]
+noware::mach::dev::receive_local::node.peers_size()==[noware::net::node::peers_count::result=zlist_size(peers)==[2]
+2]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[1]
+noware::mach::dev::receive_local()::responses_expect==[1]
+noware::mach::dev::receive_local()::while::responses_count==[0]
+noware::mach::dev::receive_local()::loop::receiving::message
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="VXAVe7QopohioOkS"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 5 value 1 1"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="22 serialization::archive 15 0 0 4 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 5 value 1 1"
+noware::mach::dev::receive()::request[!noware::mach::dev::response]
+noware::mach::store::respond()::called
+noware::mach::store::respond()::if::message[subject]==[assignment]
+noware::mach::store::respond()::if::message[subject]==assignment::in scope
+noware::mach::dev::receive()::respond[true]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="VXAVe7QopohioOkS"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::respond_post[true]
+noware::mach::dev::respond_post()::called
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="VXAVe7QopohioOkS"
+noware::mach::dev::receive()::msg.data[2]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[3]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::response[noware::mach::dev::response]
+noware::mach::dev::receive()::unicast_local(msg,VXAVe7QopohioOkS)
+noware::mach::dev::unicast_local()::conn==[]
+noware::mach::dev::unicast_local()::request_token==[VXAVe7QopohioOkS]
+noware::mach::dev::unicast_local()::message==[22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 4 type 8 response 5 value 1 1¼]
+noware::mach::dev::unicast_local()::send()
+noware::mach::dev::unicast_local()::send()==[Success]
+noware::mach::dev::receive_local()::loop:: received::message
+noware::mach::dev::receive_local()::message_tree.deserialize()::pre-call
+noware::mach::dev::receive_local()::message_content.data()==[22 serialization::archive 15 0 0 5 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 9 index.max 7 subject 10 assignment 4 type 8 response 5 value 1 1´]
+noware::mach::dev::receive_local()::message_tree.deserialize()==True
+noware::mach::dev::receive_local()::if(search())::pre-call
+noware::mach::cpu::search()::called
+noware::mach::cpu::search()::deserialize::success
+noware::mach::dev::receive_local()::if(search())::break
+noware::mach::dev::receive_local()::post-loop
+noware::mach::dev::receive()::unicast_local(msg,VXAVe7QopohioOkS)==[success]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::mach::dev::search_local()::called
+noware::mach::dev::anycast(noware::mach::store)::called
+noware::mach::dev::anycast(msg,noware::mach::store)::request_token==[kB3fPFtyUQWgvDnO]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="kB3fPFtyUQWgvDnO"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment"
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data::pre-loop
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data[1]=="kB3fPFtyUQWgvDnO"
+noware::mach::dev::anycast(noware::mach::store)::msg_req.data[2]=="22 serialization::archive 15 0 0 3 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment"
+noware::mach::dev::anycast(noware::mach::store)::node.anycast(noware::mach::store)::pre
+noware::net::node::anycast()::peers_list_size < 1::false
+noware::net::node::anycast()::return
+noware::mach::dev::anycast(noware::mach::store)::node.anycast(noware::mach::store)::success
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[kB3fPFtyUQWgvDnO]
+noware::mach::dev::receive_local::node.peers_size()==[noware::net::node::peers_count::result=zlist_size(peers)==[2]
+2]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[1]
+noware::mach::dev::receive_local()::responses_expect==[1]
+noware::mach::dev::receive_local()::while::responses_count==[0]
+noware::mach::dev::receive_local()::loop::receiving::message
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="kB3fPFtyUQWgvDnO"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 3 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="22 serialization::archive 15 0 0 3 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment"
+noware::mach::dev::receive()::request[!noware::mach::dev::response]
+noware::mach::store::respond()::called
+noware::mach::store::respond()::if::message[subject]==[obtainment]
+noware::mach::store::respond()::if::message[subject]==obtainment::in scope
+noware::mach::store::respond()::message[subject]==obtainment::response[value.exist]==1
+noware::mach::store::respond()::message[subject]==obtainment::response[value]==22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb
+noware::mach::dev::receive()::respond[true]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 6 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 11 value.exist 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 6 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 11 value.exist 1 1"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 6 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 11 value.exist 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="kB3fPFtyUQWgvDnO"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 6 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 11 value.exist 1 1"
+noware::mach::dev::receive()::respond_post[true]
+noware::mach::dev::respond_post()::called
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="kB3fPFtyUQWgvDnO"
+noware::mach::dev::receive()::msg.data[2]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[3]=="22 serialization::archive 15 0 0 6 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 11 value.exist 1 1"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 6 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 11 value.exist 1 1"
+noware::mach::dev::receive()::response[noware::mach::dev::response]
+noware::mach::dev::receive()::unicast_local(msg,kB3fPFtyUQWgvDnO)
+noware::mach::dev::unicast_local()::conn==[]
+noware::mach::dev::unicast_local()::request_token==[kB3fPFtyUQWgvDnO]
+noware::mach::dev::unicast_local()::message==[22 serialization::archive 15 0 0 6 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 11 value.exist 1 1Å]
+noware::mach::dev::unicast_local()::send()
+noware::mach::dev::unicast_local()::send()==[Success]
+noware::mach::dev::receive_local()::loop:: received::message
+noware::mach::dev::receive_local()::message_tree.deserialize()::pre-call
+noware::mach::dev::receive_local()::message_content.data()==[22 serialization::archive 15 0 0 6 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 3 key 7 instr 1 7 subject 10 obtainment 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 11 value.exist 1 1]
+noware::mach::dev::receive_local()::message_tree.deserialize()==True
+noware::mach::dev::receive_local()::if(search())::pre-call
+noware::mach::cpu::search()::called
+noware::mach::dev::receive()::unicast_local(msg,kB3fPFtyUQWgvDnO)==[success]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::mach::cpu::search()::deserialize::success
+noware::mach::dev::receive_local()::if(search())::break
+noware::mach::dev::receive_local()::post-loop
+noware::mach::dev::search_local()::called
+noware::mach::dev::anycast(noware::mach::queue::nonfull)::called
+noware::mach::dev::anycast(msg,noware::mach::queue::nonfull)::request_token==[P5ADZrgdtdHhoMNG]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 2 0 0 0 7 element 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 7 subject 7 enqueue"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="P5ADZrgdtdHhoMNG"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 2 0 0 0 7 element 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 7 subject 7 enqueue"
+noware::mach::dev::anycast(noware::mach::queue::nonfull)::msg_req.data::pre-loop
+noware::mach::dev::anycast(noware::mach::queue::nonfull)::msg_req.data[1]=="P5ADZrgdtdHhoMNG"
+noware::mach::dev::anycast(noware::mach::queue::nonfull)::msg_req.data[2]=="22 serialization::archive 15 0 0 2 0 0 0 7 element 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 7 subject 7 enqueue"
+noware::mach::dev::anycast(noware::mach::queue::nonfull)::node.anycast(noware::mach::queue::nonfull)::pre
+noware::net::node::anycast()::peers_list_size < 1::false
+noware::net::node::anycast()::return
+noware::mach::dev::anycast(noware::mach::queue::nonfull)::node.anycast(noware::mach::queue::nonfull)::success
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[P5ADZrgdtdHhoMNG]
+noware::mach::dev::receive_local::node.peers_size()==[noware::net::node::peers_count::result=zlist_size(peers)==[2]
+2]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[1]
+noware::mach::dev::receive_local()::responses_expect==[1]
+noware::mach::dev::receive_local()::while::responses_count==[0]
+noware::mach::dev::receive_local()::loop::receiving::message
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="P5ADZrgdtdHhoMNG"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 2 0 0 0 7 element 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 7 subject 7 enqueue"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="22 serialization::archive 15 0 0 2 0 0 0 7 element 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 7 subject 7 enqueue"
+noware::mach::dev::receive()::request[!noware::mach::dev::response]
+noware::mach::queue::respond()::called
+noware::mach::queue::respond()::msg_request.data[1]=="22 serialization::archive 15 0 0 2 0 0 0 7 element 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 7 subject 7 enqueue"
+noware::mach::queue::respond()::deserialize()==[success]
+noware::mach::queue::respond()::if::message[subject]==[enqueue]
+noware::mach::queue::respond()::if::message[subject]==enqueue::in scope
+noware::mach::queue::respond()::response[value]==[1]
+noware::mach::dev::receive()::respond[true]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 7 enqueue 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 7 enqueue 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 7 enqueue 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="P5ADZrgdtdHhoMNG"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 7 enqueue 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::respond_post[true]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="P5ADZrgdtdHhoMNG"
+noware::mach::dev::receive()::msg.data[2]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 7 enqueue 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 7 enqueue 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::response[noware::mach::dev::response]
+noware::mach::dev::receive()::unicast_local(msg,P5ADZrgdtdHhoMNG)
+noware::mach::dev::unicast_local()::conn==[]
+noware::mach::dev::unicast_local()::request_token==[P5ADZrgdtdHhoMNG]
+noware::mach::dev::unicast_local()::message==[22 serialization::archive 15 0 0 3 0 0 0 7 subject 7 enqueue 4 type 8 response 5 value 1 1]
+noware::mach::dev::unicast_local()::send()
+noware::mach::dev::unicast_local()::send()==[Success]
+noware::mach::dev::receive_local()::loop:: received::message
+noware::mach::dev::receive_local()::message_tree.deserialize()::pre-call
+noware::mach::dev::receive_local()::message_content.data()==[22 serialization::archive 15 0 0 3 0 0 0 7 subject 7 enqueue 4 type 8 response 5 value 1 1 instr 1 7 subject 10 obtainment 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb 11 value.exist 1 1]
+noware::mach::dev::receive_local()::message_tree.deserialize()==True
+noware::mach::dev::receive_local()::if(search())::pre-call
+noware::mach::cpu::search()::called
+noware::mach::cpu::search()::deserialize::success
+noware::mach::cpu::search()::subject==[enqueue]
+noware::mach::dev::receive_local()::if(search())::break
+noware::mach::dev::receive_local()::post-loop
+noware::mach::dev::receive()::unicast_local(msg,P5ADZrgdtdHhoMNG)==[success]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::mach::cpu::exe()::in scope
+noware::mach::cpu::exe()::while(true)::in scope
+noware::mach::cpu::exe()::while(running)::in scope
+noware::mach::dev::search_local()::called
+noware::mach::dev::anycast(noware::mach::queue)::called
+noware::mach::dev::anycast(msg,noware::mach::queue)::request_token==[pg1f76MNtoV7251k]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="pg1f76MNtoV7251k"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::anycast(noware::mach::queue)::msg_req.data::pre-loop
+noware::mach::dev::anycast(noware::mach::queue)::msg_req.data[1]=="pg1f76MNtoV7251k"
+noware::mach::dev::anycast(noware::mach::queue)::msg_req.data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::anycast(noware::mach::queue)::node.anycast(noware::mach::queue)::pre
+noware::net::node::anycast()::peers_list_size < 1::false
+noware::net::node::anycast()::return
+noware::mach::dev::anycast(noware::mach::queue)::node.anycast(noware::mach::queue)::success
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[pg1f76MNtoV7251k]
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::callednoware::mach::dev::receive_local::node.peers_size()==[
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="pg1f76MNtoV7251k"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::receive()::request[!noware::mach::dev::response]
+noware::mach::queue::respond()::called
+noware::mach::queue::respond()::msg_request.data[1]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::queue::respond()::deserialize()==[success]
+noware::mach::queue::respond()::if::message[subject]==[size::used]
+noware::mach::queue::respond()::if::message[subject]==size::used::in scope
+noware::mach::queue::respond()::response[value]==[1]
+noware::mach::dev::receive()::respond[true]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="pg1f76MNtoV7251k"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::respond_post[true]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::peers_count::result=zlist_size(peers)==[2]
+2]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[1]
+noware::mach::dev::receive_local()::responses_expect==[1]
+noware::mach::dev::receive_local()::while::responses_count==[0]
+noware::mach::dev::receive_local()::loop::receiving::message
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="pg1f76MNtoV7251k"
+noware::mach::dev::receive()::msg.data[2]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::response[noware::mach::dev::response]
+noware::mach::dev::receive()::unicast_local(msg,pg1f76MNtoV7251k)
+noware::mach::dev::unicast_local()::conn==[]
+noware::mach::dev::unicast_local()::request_token==[pg1f76MNtoV7251k]
+noware::mach::dev::unicast_local()::message==[22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 1]
+noware::mach::dev::unicast_local()::send()
+noware::mach::dev::unicast_local()::send()==[Success]
+noware::mach::dev::receive_local()::loop:: received::message
+noware::mach::dev::receive_local()::message_tree.deserialize()::pre-call
+noware::mach::dev::receive_local()::message_content.data()==[22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 1]
+noware::mach::dev::receive_local()::message_tree.deserialize()==True
+noware::mach::dev::receive_local()::if(search())::pre-call
+noware::mach::cpu::search()::called
+noware::mach::cpu::search()::deserialize::success
+noware::mach::cpu::search()::subject==[size::used]
+noware::mach::cpu::search()::result_tmp==[1]
+noware::mach::cpu::search()::msg_result==[1]
+noware::mach::dev::receive_local()::if(search())::post-call
+noware::mach::dev::receive_local()::post-loop
+noware::mach::cpu::exe()::while(!empty())::in scope
+noware::mach::cpu::next_dequeue()
+noware::mach::dev::search_local()::called
+noware::mach::dev::anycast(noware::mach::queue::nonempty)::called
+noware::mach::dev::anycast(msg,noware::mach::queue::nonempty)::request_token==[cGQ1W4LoF4c7mgmt]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 12 next_dequeue"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="cGQ1W4LoF4c7mgmt"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 12 next_dequeue"
+noware::mach::dev::anycast(noware::mach::queue::nonempty)::msg_req.data::pre-loop
+noware::mach::dev::anycast(noware::mach::queue::nonempty)::msg_req.data[1]=="cGQ1W4LoF4c7mgmt"
+noware::mach::dev::anycast(noware::mach::queue::nonempty)::msg_req.data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 12 next_dequeue"
+noware::mach::dev::anycast(noware::mach::queue::nonempty)::node.anycast(noware::mach::queue::nonempty)::pre
+noware::net::node::anycast()::peers_list_size < 1::false
+noware::net::node::anycast()::return
+noware::mach::dev::anycast(noware::mach::queue::nonempty)::node.anycast(noware::mach::queue::nonempty)::success
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[cGQ1W4LoF4c7mgmt]
+noware::mach::dev::receive_local::node.peers_size()==[noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="cGQ1W4LoF4c7mgmt"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 12 next_dequeue"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 12 next_dequeue"
+noware::mach::dev::receive()::request[!noware::mach::dev::response]
+noware::mach::queue::respond()::called
+noware::mach::queue::respond()::msg_request.data[1]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 12 next_dequeue"
+noware::mach::dev::receive()::unicast_local(msg,pg1f76MNtoV7251k)==[noware::mach::queue::respond()::deserialize()==[success]
+noware::mach::queue::respond()::if::message[subject]==[next_dequeue]
+noware::mach::queue::respond()::if::message[subject]==next_dequeue::in scope
+noware::mach::queue::respond()::response[success]==[1]
+noware::mach::queue::respond()::response[value]==[22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb]
+noware::mach::dev::receive()::respond[true]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+noware::net::node::peers_count::result=zlist_size(peers)==[2]
+2]
+noware::mach::dev::receive_local()::pre-loopzmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 4 0 0 0 7 subject 12 next_dequeue 7 success 1 1 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 4 0 0 0 7 subject 12 next_dequeue 7 success 1 1 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 4 0 0 0 7 subject 12 next_dequeue 7 success 1 1 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="cGQ1W4LoF4c7mgmt"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 4 0 0 0 7 subject 12 next_dequeue 7 success 1 1 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb"
+noware::mach::dev::receive()::respond_post[true]
+
+noware::mach::dev::receive_local()::responses_expected==[1]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::mach::dev::receive_local()::responses_expect==[1]
+noware::mach::dev::receive_local()::while::responses_count==[0]
+noware::mach::dev::receive_local()::loop::receiving::message
+success]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="cGQ1W4LoF4c7mgmt"
+noware::mach::dev::receive()::msg.data[2]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[3]=="22 serialization::archive 15 0 0 4 0 0 0 7 subject 12 next_dequeue 7 success 1 1 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 4 0 0 0 7 subject 12 next_dequeue 7 success 1 1 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb"
+noware::mach::dev::receive()::response[noware::mach::dev::response]
+noware::mach::dev::receive()::unicast_local(msg,cGQ1W4LoF4c7mgmt)
+noware::mach::dev::unicast_local()::conn==[]
+noware::mach::dev::unicast_local()::request_token==[cGQ1W4LoF4c7mgmt]
+noware::mach::dev::unicast_local()::message==[22 serialization::archive 15 0 0 4 0 0 0 7 subject 12 next_dequeue 7 success 1 1 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb::used…]
+noware::mach::dev::unicast_local()::send()
+noware::mach::dev::unicast_local()::send()==[Success]
+noware::mach::dev::receive_local()::loop:: received::message
+noware::mach::dev::receive_local()::message_tree.deserialize()::pre-call
+noware::mach::dev::receive_local()::message_content.data()==[22 serialization::archive 15 0 0 4 0 0 0 7 subject 12 next_dequeue 7 success 1 1 4 type 8 response 5 value 155 22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb]
+noware::mach::dev::receive_local()::message_tree.deserialize()==True
+noware::mach::dev::receive_local()::if(search())::pre-call
+noware::mach::cpu::search()::called
+noware::mach::cpu::search()::deserialize::success
+noware::mach::cpu::search()::subject==[next_dequeue]
+noware::mach::cpu::search()::msg_result==[22 serialization::archive 15 0 0 3 set 3 cli 0 0 4 0 0 0 1 1 4 null 1 2 6 Hello! 1 3 4 null 1 4 1 0 0 0 4 0 0 0 1 1 0 1 2 0 1 3 0 1 4 0 16 VHO35Q3lc9wBLCxb]
+noware::mach::dev::receive_local()::if(search())::break
+noware::mach::dev::receive_local()::post-loop
+noware::mach::cpu::exe::instr.ref[arg1]==false
+noware::mach::cpu::exe::instr[arg1]==[null]
+noware::mach::cpu::exe::instr.ref[arg2]==false
+noware::mach::cpu::exe::instr[arg2]==[Hello!]
+noware::mach::cpu::exe::instr.ref[arg3]==false
+noware::mach::cpu::exe::instr[arg3]==[null]
+noware::mach::cpu::exe::instr.ref[arg4]==false
+noware::mach::cpu::exe::instr[arg4]==[0]
+noware::mach::cpu::exe::instr::cli::set[Hello!]
+noware::mach::dev::search_local()::called
+noware::mach::dev::multicast()::called
+noware::mach::dev::multicast()::request_token==[r5uspgoFkRXDU4Jp]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 2 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 7 subject 9 clearance"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="r5uspgoFkRXDU4Jp"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 2 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 7 subject 9 clearance"
+noware::net::node::multicast()::called
+noware::net::node::multicast::zyre_shout()[success]
+noware::mach::dev::multicast()::node.multicast()::success
+noware::net::node::peers_count::result=zlist_size(peers)==[1]
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[r5uspgoFkRXDU4Jp]
+noware::mach::dev::receive_local::node.peers_size()==[noware::net::node::peers_count::result=zlist_size(peers)==[2]
+2]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[1]
+noware::mach::dev::receive_local()::responses_expect==[1]
+noware::mach::dev::receive_local()::while::responses_count==[0]
+noware::mach::dev::receive_local()::loop::receiving::message
+noware::mach::dev::receive()::unicast_local(msg,cGQ1W4LoF4c7mgmt)==[success]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[SHOUT]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[SHOUT]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="r5uspgoFkRXDU4Jp"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 2 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 7 subject 9 clearance"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="22 serialization::archive 15 0 0 2 0 0 0 5 group 23 thread VHO35Q3lc9wBLCxb 7 subject 9 clearance"
+noware::mach::dev::receive()::request[!noware::mach::dev::response]
+noware::mach::store::respond()::called
+noware::mach::store::respond()::if::message[subject]==[clearance]
+noware::mach::store::respond()::if::message[subject]==clearance::in scope
+noware::mach::dev::receive()::respond[true]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 9 clearance 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 9 clearance 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 9 clearance 4 type 8 response 5 value 1 1"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="r5uspgoFkRXDU4Jp"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 9 clearance 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::respond_post[true]
+noware::mach::dev::respond_post()::called
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[LEAVE]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,LEAVE,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[LEAVE]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,LEAVE,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[JOIN]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,JOIN,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="r5uspgoFkRXDU4Jp"
+noware::mach::dev::receive()::msg.data[2]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 9 clearance 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 9 clearance 4 type 8 response 5 value 1 1"
+noware::mach::dev::receive()::response[noware::mach::dev::response]
+noware::mach::dev::receive()::unicast_local(msg,r5uspgoFkRXDU4Jp)
+noware::mach::dev::unicast_local()::conn==[]
+noware::mach::dev::unicast_local()::request_token==[r5uspgoFkRXDU4Jp]
+noware::mach::dev::unicast_local()::message==[22 serialization::archive 15 0 0 3 0 0 0 7 subject 9 clearance 4 type 8 response 5 value 1 1]
+noware::mach::dev::unicast_local()::send()
+noware::mach::dev::unicast_local()::send()==[Success]
+noware::mach::dev::receive_local()::loop:: received::message
+noware::mach::dev::receive_local()::message_tree.deserialize()::pre-call
+noware::mach::dev::receive_local()::message_content.data()==[22 serialization::archive 15 0 0 3 0 0 0 7 subject 9 clearance 4 type 8 response 5 value 1 1]
+noware::mach::dev::receive_local()::message_tree.deserialize()==True
+noware::mach::dev::receive_local()::if(search())::pre-call
+noware::mach::cpu::search()::called
+noware::mach::cpu::search()::deserialize::success
+noware::mach::dev::receive_local()::if(search())::post-call
+noware::mach::dev::receive_local()::post-loop
+noware::mach::dev::search_local()::called
+noware::mach::dev::anycast(noware::mach::queue)::called
+noware::mach::dev::anycast(msg,noware::mach::queue)::request_token==[FXh6j2qktjpqchYT]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="FXh6j2qktjpqchYT"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::anycast(noware::mach::queue)::msg_req.data::pre-loop
+noware::mach::dev::anycast(noware::mach::queue)::msg_req.data[1]=="FXh6j2qktjpqchYT"
+noware::mach::dev::anycast(noware::mach::queue)::msg_req.data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::anycast(noware::mach::queue)::node.anycast(noware::mach::queue)::pre
+noware::net::node::anycast()::peers_list_size < 1::false
+noware::net::node::anycast()::return
+noware::mach::dev::anycast(noware::mach::queue)::node.anycast(noware::mach::queue)::success
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[FXh6j2qktjpqchYT]
+noware::mach::dev::receive_local::node.peers_size()==[noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="FXh6j2qktjpqchYT"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::receive()::request[!noware::mach::dev::response]
+noware::mach::queue::respond()::called
+noware::mach::queue::respond()::msg_request.data[1]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::queue::respond()::deserialize()==[success]
+noware::mach::queue::respond()::if::message[subject]==[size::used]
+noware::mach::queue::respond()::if::message[subject]==size::used::in scope
+noware::mach::queue::respond()::response[value]==[0]
+noware::mach::dev::receive()::respond[true]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="FXh6j2qktjpqchYT"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+noware::mach::dev::receive()::respond_post[true]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::peers_count::result=zlist_size(peers)==[2]
+2]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[1]
+noware::mach::dev::receive_local()::responses_expect==[1]
+noware::mach::dev::receive_local()::while::responses_count==[0]
+noware::mach::dev::receive_local()::loop::receiving::message
+noware::mach::dev::receive()::unicast_local(msg,r5uspgoFkRXDU4Jp)==[success]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="FXh6j2qktjpqchYT"
+noware::mach::dev::receive()::msg.data[2]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+noware::mach::dev::receive()::response[noware::mach::dev::response]
+noware::mach::dev::receive()::unicast_local(msg,FXh6j2qktjpqchYT)
+noware::mach::dev::unicast_local()::conn==[]
+noware::mach::dev::unicast_local()::request_token==[FXh6j2qktjpqchYT]
+noware::mach::dev::unicast_local()::message==[22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0]
+noware::mach::dev::unicast_local()::send()
+noware::mach::dev::unicast_local()::send()==[Success]
+noware::mach::dev::receive_local()::loop:: received::message
+noware::mach::dev::receive_local()::message_tree.deserialize()::pre-call
+noware::mach::dev::receive_local()::message_content.data()==[22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0
+]
+noware::mach::dev::receive_local()::message_tree.deserialize()==True
+noware::mach::dev::receive_local()::if(search())::pre-call
+noware::mach::cpu::search()::called
+noware::mach::cpu::search()::deserialize::success
+noware::mach::cpu::search()::subject==[size::used]
+noware::mach::cpu::search()::result_tmp==[0]
+noware::mach::cpu::search()::msg_result==[0]
+noware::mach::dev::receive_local()::if(search())::post-call
+noware::mach::dev::receive_local()::post-loop
+noware::mach::cpu::sleeping...
+noware::mach::dev::receive()::unicast_local(msg,FXh6j2qktjpqchYT)==[success]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::mach::cpu::exe()::while(true)::in scope
+noware::mach::cpu::exe()::while(running)::in scope
+noware::mach::dev::search_local()::called
+noware::mach::dev::anycast(noware::mach::queue)::called
+noware::mach::dev::anycast(msg,noware::mach::queue)::request_token==[LWVJ5F5MmoSWqMJm]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="LWVJ5F5MmoSWqMJm"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::anycast(noware::mach::queue)::msg_req.data::pre-loop
+noware::mach::dev::anycast(noware::mach::queue)::msg_req.data[1]=="LWVJ5F5MmoSWqMJm"
+noware::mach::dev::anycast(noware::mach::queue)::msg_req.data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::anycast(noware::mach::queue)::node.anycast(noware::mach::queue)::pre
+noware::net::node::anycast()::peers_list_size < 1::false
+noware::net::node::anycast()::return
+noware::mach::dev::anycast(noware::mach::queue)::node.anycast(noware::mach::queue)::success
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[LWVJ5F5MmoSWqMJm]
+noware::mach::dev::receive_local::node.peers_size()==[noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="LWVJ5F5MmoSWqMJm"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::receive()::request[!noware::mach::dev::response]
+noware::mach::queue::respond()::called
+noware::mach::queue::respond()::msg_request.data[1]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::queue::respond()::deserialize()==[success]
+noware::mach::queue::respond()::if::message[subject]==[size::used]
+noware::mach::queue::respond()::if::message[subject]==size::used::in scope
+noware::mach::queue::respond()::response[value]==[0]
+noware::mach::dev::receive()::respond[true]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="LWVJ5F5MmoSWqMJm"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+noware::mach::dev::receive()::respond_post[true]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="LWVJ5F5MmoSWqMJm"
+noware::mach::dev::receive()::msg.data[2]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+noware::mach::dev::receive()::response[noware::mach::dev::response]
+noware::mach::dev::receive()::unicast_local(msg,LWVJ5F5MmoSWqMJm)
+noware::mach::dev::unicast_local()::conn==[]
+noware::mach::dev::unicast_local()::request_token==[LWVJ5F5MmoSWqMJm]
+noware::mach::dev::unicast_local()::message==[22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0]
+noware::mach::dev::unicast_local()::send()
+noware::mach::dev::unicast_local()::send()==[Success]
+noware::mach::dev::receive()::unicast_local(msg,LWVJ5F5MmoSWqMJm)==[success]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::peers_count::result=zlist_size(peers)==[2]
+2]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[1]
+noware::mach::dev::receive_local()::responses_expect==[1]
+noware::mach::dev::receive_local()::while::responses_count==[0]
+noware::mach::dev::receive_local()::loop::receiving::message
+noware::mach::dev::receive_local()::loop:: received::message
+noware::mach::dev::receive_local()::message_tree.deserialize()::pre-call
+noware::mach::dev::receive_local()::message_content.data()==[22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0e 5 value 1]
+noware::mach::dev::receive_local()::message_tree.deserialize()==True
+noware::mach::dev::receive_local()::if(search())::pre-call
+noware::mach::cpu::search()::called
+noware::mach::cpu::search()::deserialize::success
+noware::mach::cpu::search()::subject==[size::used]
+noware::mach::cpu::search()::result_tmp==[0]
+noware::mach::cpu::search()::msg_result==[0]
+noware::mach::dev::receive_local()::if(search())::post-call
+noware::mach::dev::receive_local()::post-loop
+noware::mach::cpu::sleeping...
+noware::mach::cpu::exe()::while(true)::in scope
+noware::mach::cpu::exe()::while(running)::in scope
+noware::mach::dev::search_local()::called
+noware::mach::dev::anycast(noware::mach::queue)::called
+noware::mach::dev::anycast(msg,noware::mach::queue)::request_token==[tEFsZFQAh475acRg]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="tEFsZFQAh475acRg"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::anycast(noware::mach::queue)::msg_req.data::pre-loop
+noware::mach::dev::anycast(noware::mach::queue)::msg_req.data[1]=="tEFsZFQAh475acRg"
+noware::mach::dev::anycast(noware::mach::queue)::msg_req.data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::anycast(noware::mach::queue)::node.anycast(noware::mach::queue)::pre
+noware::net::node::anycast()::peers_list_size < 1::false
+noware::net::node::anycast()::return
+noware::mach::dev::anycast(noware::mach::queue)::node.anycast(noware::mach::queue)::success
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[tEFsZFQAh475acRg]
+noware::mach::dev::receive_local::node.peers_size()==[noware::net::node::peers_count::result=zlist_size(peers)==[2]
+2]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[1]
+noware::mach::dev::receive_local()::responses_expect==[1]
+noware::mach::dev::receive_local()::while::responses_count==[0]
+noware::mach::dev::receive_local()::loop::receiving::message
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="tEFsZFQAh475acRg"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::dev::receive()::request[!noware::mach::dev::response]
+noware::mach::queue::respond()::called
+noware::mach::queue::respond()::msg_request.data[1]=="22 serialization::archive 15 0 0 1 0 0 0 7 subject 10 size::used"
+noware::mach::queue::respond()::deserialize()==[success]
+noware::mach::queue::respond()::if::message[subject]==[size::used]
+noware::mach::queue::respond()::if::message[subject]==size::used::in scope
+noware::mach::queue::respond()::response[value]==[0]
+noware::mach::dev::receive()::respond[true]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="tEFsZFQAh475acRg"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+noware::mach::dev::receive()::respond_post[true]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[WHISPER]
+noware::mach::dev::receive()::event_type==(WHISPER||SHOUT)==[WHISPER]::in scope
+noware::mach::dev::receive()::event_msg==nullptr
+noware::mach::dev::receive()::event of type data
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="tEFsZFQAh475acRg"
+noware::mach::dev::receive()::msg.data[2]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[3]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+noware::mach::dev::receive()::request_token::post-removal
+noware::mach::dev::receive()::msg.data::pre-loop
+noware::mach::dev::receive()::msg.data[1]=="noware::mach::dev::response"
+noware::mach::dev::receive()::msg.data[2]=="22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0"
+noware::mach::dev::receive()::response[noware::mach::dev::response]
+noware::mach::dev::receive()::unicast_local(msg,tEFsZFQAh475acRg)
+noware::mach::dev::unicast_local()::conn==[]
+noware::mach::dev::unicast_local()::request_token==[tEFsZFQAh475acRg]
+noware::mach::dev::unicast_local()::message==[22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0]
+noware::mach::dev::unicast_local()::send()
+noware::mach::dev::unicast_local()::send()==[Success]
+noware::mach::dev::receive_local()::loop:: received::message
+noware::mach::dev::receive_local()::message_tree.deserialize()::pre-call
+noware::mach::dev::receive_local()::message_content.data()==[22 serialization::archive 15 0 0 3 0 0 0 7 subject 10 size::used 4 type 8 response 5 value 1 0]
+noware::mach::dev::receive_local()::message_tree.deserialize()==True
+noware::mach::dev::receive_local()::if(search())::pre-call
+noware::mach::cpu::search()::called
+noware::mach::cpu::search()::deserialize::success
+noware::mach::cpu::search()::subject==[size::used]
+noware::mach::cpu::search()::result_tmp==[0]
+noware::mach::cpu::search()::msg_result==[0]
+noware::mach::dev::receive_local()::if(search())::post-call
+noware::mach::dev::receive_local()::post-loop
+noware::mach::dev::receive()::unicast_local(msg,tEFsZFQAh475acRg)==[success]
+noware::mach::dev::receive()::return[true]
+noware::net::node::receive()::waiting for an event
+noware::mach::cpu::sleeping...
+noware::net::node::stop()::called
+noware::net::node::stop()::stopping zyre node
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::callednoware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[EXIT]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,EXIT,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+
+noware::mach::dev::receive()::event_type==[EXIT]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,EXIT,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[STOP]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,STOP,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+noware::net::node::stop()::stopped zyre node
+noware::net::node::reception_unset()::called
+noware::net::node::reception_unset()::exoreception.clear()
+noware::net::node::finalize()::reception::deletion
+noware::net::node::finalize()::reception::deleting
+noware::net::node::finalize()::reception::deleted
+noware::net::node::finalize()::zyre_destroy()::pre
+noware::net::node::finalize()::zyre_destroy()::destroying
+noware::net::node::finalize()::zyre_destroy()::destroyed
+noware::net::node::stop()::called
+noware::net::node::stop()::stopping zyre node
+noware::net::node::receive()::received an event
+noware::net::node::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[EXIT]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,EXIT,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+noware::net::node::receive()::waiting for an event
+Assertion failed: pfd.revents & POLLIN (src/signaler.cpp:249)

@@ -1,0 +1,4 @@
+1. load
+2. store
+
+3. bbj	// BitBitJump

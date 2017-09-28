@@ -1,0 +1,10 @@
+mach::cpu:
+	changed from using a std::mutex to using a boost::condition_variable to notify of newly enqueued instructions
+	set a boost::condition_variable notfication from within cpu::enqueue()
+	externally separated 'load_file' in a loader (mach::cpu::loader)
+	apparently fixed shutdown sequence to gracefully quit without errors
+mach::dev
+	deal with situation when peer does not respond when waiting for message in dev::receive_local()
+mach::store:
+	fixed: mach::store was joining group "queue::*" instead of "store::*"
+Separated store, queue, and cpu into individual executables for the main test

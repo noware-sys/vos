@@ -1,0 +1,128 @@
+zyre::inited()::_zyre == nullptr==[1]
+zyre::inited()::_reception == nullptr==[1]
+zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+zyre::receive()::waiting for an event
+zyre::running()::inited()==[zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+1]
+zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+zyre::running()::_running==[1]
+zyre::running()::inited()==[zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+1]
+zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+zyre::running()::_running==[1]
+noware::mach::store::search_local()::called
+noware::mach::store::search_local()::req
+noware::mach::store::search_local()::result
+noware::mach::store::search_local()::deserialize
+noware::mach::store::search_local()::req["subject"]==[existence]
+noware::mach::store::search_local()::req["subject"]==[existence]
+noware::mach::store::search_local()::req["subject"]==[existence]::req.group
+noware::mach::store::search_local()::req["subject"]==[existence]::data.group
+noware::mach::dev::multicast()::called
+noware::mach::dev::multicast()::request_token==[1ZC8PWn65PkyctKf]
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 5 group 1 q 3 key 1 w 7 subject 9 existence"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="noware::mach::dev::response::wanted"
+zmq::msg::prepend()::data[2]=="22 serialization::archive 15 0 0 3 0 0 0 5 group 1 q 3 key 1 w 7 subject 9 existence"
+zmq::msg::first_clear_space()::called
+zmq::msg::first_clear_space()::is_empty()==[false]
+zmq::msg::first_clear_space()::is_full()==[false]
+zmq::msg::first_clear_space()::data[2]=="noware::mach::dev::response::wanted"
+zmq::msg::first_clear_space()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 5 group 1 q 3 key 1 w 7 subject 9 existence"
+zmq::msg::first_clear_space()::return
+zmq::msg::prepend()::data[1]=="1ZC8PWn65PkyctKf"
+zmq::msg::prepend()::data[2]=="noware::mach::dev::response::wanted"
+zmq::msg::prepend()::data[3]=="22 serialization::archive 15 0 0 3 0 0 0 5 group 1 q 3 key 1 w 7 subject 9 existence"
+zyre::multicast()::called
+zyre::running()::inited()==[zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+1]
+zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+zyre::running()::_running==[1]
+zyre::multicast::zyre_shout()[success]
+noware::mach::dev::multicast()::node.multicast()::success
+zyre::peers_count::peers==nullptr
+noware::mach::dev::receive_local::called
+noware::mach::dev::receive_local()::conn==[]
+noware::mach::dev::receive_local()::request_token==[1ZC8PWn65PkyctKf]
+noware::mach::dev::receive_local::node.peers_size()==[zyre::peers_count::result=zlist_size(peers)==[0]
+0]
+noware::mach::dev::receive_local()::pre-loop
+noware::mach::dev::receive_local()::responses_expected==[0]
+noware::mach::dev::receive_local()::responses_expect==[0]
+noware::mach::dev::receive_local()::post-loop
+zyre::running()::inited()==[zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+1]
+zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+zyre::running()::_running==[1]
+noware::mach::store::search_local()::called
+noware::mach::store::search_local()::req
+noware::mach::store::search_local()::result
+noware::mach::store::search_local()::deserialize
+noware::mach::store::search_local()::req["subject"]==[assignment]
+zyre::running()::inited()==[zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+1]
+zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+zyre::running()::_running==[1]
+noware::mach::store::search_local()::called
+noware::mach::store::search_local()::req
+noware::mach::store::search_local()::result
+noware::mach::store::search_local()::deserialize
+noware::mach::store::search_local()::req["subject"]==[existence]
+noware::mach::store::search_local()::req["subject"]==[existence]
+noware::mach::store::search_local()::req["subject"]==[existence]::req.group
+noware::mach::store::search_local()::req["subject"]==[existence]::data.group
+noware::mach::store::search_local()::req["subject"]==[existence]::data.key
+noware::mach::store::search_local()::req["subject"]==[existence]::msg_resp="1"
+noware::mach::store::search_local()::req["subject"]==[existence]::return
+noware::mach::store::search_local()::called
+noware::mach::store::search_local()::req
+noware::mach::store::search_local()::result
+noware::mach::store::search_local()::deserialize
+noware::mach::store::search_local()::req["subject"]==[obtainment]
+noware::mach::store::search_local()::req["subject"]==[obtainment]::value==[r]
+noware::mach::store::search_local()::req["subject"]==[obtainment]::return true
+zyre::inited()::_zyre == nullptr==[0]
+zyre::inited()::_reception == nullptr==[0]
+zyre::stop()::called
+node::stop()::stopping zyre node
+node::stop()::stopped zyre node
+zyre::reception_unset()::calledzyre::receive()::received an event
+zyre::receive()::delegating the event to the external handler
+noware::mach::dev::receive()::called
+noware::mach::dev::receive()::event_type==[STOP]
+noware::mach::dev::receive()::event of type infrastruct[ure]
+noware::mach::dev::infrastruct()::called
+noware::mach::dev::receive()::infrastruct(event,STOP,msg)==[failure]
+noware::mach::dev::receive()::return[false]
+zyre::receive()::waiting for an event
+
+zyre::reception_unset()::_exoreception.clear()
+zyre::finalize()::_reception::deletion
+zyre::finalize()::_reception::deleting
+zyre::finalize()::_reception::deleted
+zyre::finalize()::zyre_destroy()::pre
+zyre::finalize()::zyre_destroy()::destroying
+zyre::finalize()::zyre_destroy()::destroyed
+zyre::reception_unset()::called
+zyre::inited()::_zyre == nullptr==[1]
+zyre::inited()::_reception == nullptr==[1]
+zyre::reception_unset()::called
+zyre::finalize()::_reception::deletion
+zyre::finalize()::zyre_destroy()::pre
+Assertion failed: pfd.revents & POLLIN (src/signaler.cpp:249)

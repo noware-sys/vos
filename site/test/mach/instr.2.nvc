@@ -1,0 +1,2 @@
+[cpu [set]] cmd hello_world_from_nvc! ;
+[cpu [set]] store 0 eax 0 ABC ;

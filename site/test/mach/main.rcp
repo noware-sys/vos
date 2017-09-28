@@ -1,0 +1,51 @@
+quex_path = /usr/include/quex
+lib = noware
+lib_noware_cxx_path = /usr/include/noware/noware.cxx
+lib_mach_noware_cxx_path = /usr/include/noware/mach.noware.cxx
+cxx = g++
+
+obj = main.obj
+src =
+#tool.string.obj tool.nr.obj
+out = main.elf
+
+#cxx_arg = -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(quex_path) -I$(lib_path) $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lsqlite3 -lczmq -lzmq -lzyre
+cxx_arg = -g -ggdb -pedantic -pthread -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(quex_path) -I$(lib_noware_cxx_path) -I$(lib_mach_noware_cxx_path) -I/usr/include/noware/zmq.cxx -I/usr/include/noware/zyre.cxx -I/root/Projects/iMatix/czmq/src -L. -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -lzyre -lczmq -lzmq
+
+#all: $(out) main.store.elf main.queue.elf main.cpu.elf main.loader.elf
+all: main.store.elf main.queue.elf main.cpu.elf main.loader.elf
+
+$(out): $(obj) $(src)
+	$(cxx) $(cxx_arg) -o $@ $(obj);
+main.obj: main.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.cxx;
+
+main.store.elf: main.store.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.store.obj;
+main.queue.elf: main.queue.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.queue.obj;
+main.cpu.elf: main.cpu.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.cpu.obj;
+
+main.store.obj: main.store.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.store.cxx;
+main.queue.obj: main.queue.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.queue.cxx;
+main.cpu.obj: main.cpu.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.cpu.cxx;
+
+main.loader.elf: main.loader.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.loader.obj;
+main.loader.obj: main.loader.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.loader.cxx;
+
+#nr.obj:
+#	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/nr.cxx;
+#serial.obj:
+#	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/serial.hxx;
+#tool.string.obj:
+#	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/tool/string.cxx;
+#misc.serial.obj:
+#	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/misc/serial.cxx;
+clean:
+	rm --force *.elf *.obj;

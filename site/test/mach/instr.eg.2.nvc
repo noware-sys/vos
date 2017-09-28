@@ -1,0 +1,6 @@
+; (text)device (text)action (var)args... (bool)more
+;screen set 1x1x1 A
+cmd set hello_world ;
+;cpu exe set eax 0x123 1
+cpu set eax 0x123
+cmd hello_world ;

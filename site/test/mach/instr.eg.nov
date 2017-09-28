@@ -1,0 +1,27 @@
+; format:
+; type			|	text					bool				text					bool		text												bool				text		bool		text
+; element		|	instruction 	reference		destination		offset	destination_offset_register	reference		source	offset	source_offset_register
+; element		|	instruction 	reference		destination		offset	destination_offset_location	reference		source	offset	source_offset_location
+; 
+; type			|	text					text				bool					bool		text												text			bool				bool		text
+; element		|	instruction 	destination	reference			offset	destination_offset_location	source		reference		offset	source_offset_location
+; 
+; mov 0 eax 0 0 111 0
+; mov 0 ecx 0 0 333 0
+; mov 0 dl 0 0 555 0
+
+; mov al, [edx+eax*1+0x80535d0]
+;
+; mov 0 al 0 offset_register, 1 edx 1 offset_register
+; mov al 0 0 offset_location, edx 1 1 offset_location
+; 0 al 0, 1 edx 1
+; 0 al 0 1 edx 1
+
+; 0 al 0 1 edx 1
+; 0 0 al 1 1 edx
+; al 0 0 edx 1 1
+
+eax = 111
+ebx = 222
+ecx = 333
+edx = 444
