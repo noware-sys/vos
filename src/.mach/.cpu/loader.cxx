@@ -59,6 +59,7 @@ const bool noware::mach::cpu::loader::load_file (const std::string & file_name)
 		assert (set (thread_id, "index.max", noware::nr (_ndx).operator const std::string ()));
 		
 		_instr = get (thread_id, "instr 1");
+		//assert (enqueue (_instr));
 		if (!enqueue (_instr))
 			return false;
 	}
@@ -168,7 +169,7 @@ const bool noware::mach::cpu::loader::enqueue (const instr & inst)
 	}
 }
 
-const bool/* success*/ noware::mach::cpu::loader::search (zmq::msg & msg_result, const zmq::msg & msg_resp, const std::string &/* src*/, const net::cast &/* src_cast*/)
+const bool/* success*/ noware::mach::cpu::loader::search (zmq::msg & msg_result, const zmq::msg & msg_resp, const noware::nr &/* total, expected resonses count*/, const noware::nr &/* current count of peers who responded (so far)*/, const std::string &/* src*/, const net::cast &/* src_cast*/)
 {
 	std::cerr << "noware::mach::cpu::loader::search()::called" << std::endl;
 	
@@ -199,14 +200,13 @@ const bool/* success*/ noware::mach::cpu::loader::search (zmq::msg & msg_result,
 	}
 	else if (resp ["subject"] == "obtainment")
 	{
-		if (resp ["value.exist"] == "0")
+		if (resp ["value.exist"] == "1")
 		{
-			return false;
+			msg_result = resp ["value"];
+			return true;
 		}
 		
-		msg_result = resp ["value"];
-		
-		return true;
+		return false;
 	}
 	else if (resp ["subject"] == "assignment")
 	{

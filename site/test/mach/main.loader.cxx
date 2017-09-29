@@ -95,7 +95,7 @@ int main (int argc, char * argv [])
 		{
 			std::cout << "'" << argv [0] << "': error: could not load the instructions file" << std::endl;
 			
-			return EXIT_FAILURE;
+			//return EXIT_FAILURE;
 		}
 		
 		

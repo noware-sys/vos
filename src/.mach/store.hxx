@@ -7,7 +7,8 @@
 class store
 	: virtual public dev
 	//, public misc::iterator <noware::var>
-	, public contnr::array <std::string, std::string>
+	, virtual public contnr::array <std::string, std::string>
+	//, virtual public misc::iterator <std::tuple <std::string, std::string, std::string>>
 {
 	public:
 		//#include ".store/.hxx"
@@ -16,6 +17,7 @@ class store
 		virtual ~store (void);
 		
 		virtual const bool start (void);
+		
 		
 		// Obtainers
 		
@@ -67,6 +69,35 @@ class store
 		//const std::pair <std::string/*value*/, bool/*reference*/> get (const std::string &/* group*/, const std::string &/* key*/) const;
 		//const std::pair <std::string/*value*/, bool/*reference*/> get (const std::string &/* key*/) const;
 		
+		/*
+		// For range-based for looping:
+		// Necessary:
+		// Should be implemented:
+		virtual const misc::iterator <std::tuple <std::string, std::string, std::string>> begin (void) const;
+		//virtual const store begin (void) const;
+		// Should be implemented:
+		virtual const misc::iterator <std::tuple <std::string, std::string, std::string>> end (void) const;
+		//virtual const store end (void) const;
+		
+		// Should be implemented:
+		//virtual value & operator * (void);
+		virtual const std::tuple <std::string, std::string, std::string> operator * (void) const;
+		////virtual const bool operator != (const misc::iterator <std::string> &/* other* /) const;
+		//virtual const bool operator != (const store &/* other* /) const;
+		// Should be implemented:
+		virtual const misc::iterator <std::tuple <std::string, std::string, std::string>> operator ++ (void);
+		//virtual const store operator ++ (void);
+		
+		
+		// Additional:
+		// Should be implemented:
+		virtual const bool operator == (const misc::iterator <std::tuple <std::string, std::string, std::string>> &/* other* /) const;
+		//virtual const bool operator == (const store &/* other* /) const;
+		// Should be implemented:
+		virtual const misc::iterator <std::tuple <std::string, std::string, std::string>> operator -- (void);
+		//virtual const store operator -- (void);
+		*/
+		
 		
 		// Modifiers
 		
@@ -94,7 +125,8 @@ class store
 		//using device::evaluate;
 		//static const noware::var group_zmq_default;
 		static const std::string grp_dft;
-	protected:
+	//protected:
+	public:
 		// content value data container
 		//noware::list <> data;
 		//noware::list <noware::list <>> data;
@@ -111,7 +143,7 @@ class store
 		virtual const bool/* success*/ respond (zmq::msg &/* response*/, const zmq::msg &/* rx'd*/, const zyre_event_t */* (zyre) event*/, const std::string &/* event_type*/, const std::string &/* shouted_group*/, const net::cast &/* src_cast*/);
 		//virtual const bool/* success*/ respond_post (const zyre_event_t */* (zyre) event*/, const std::string &/* event_type*/, const std::string &/* shouted_group*/, const zmq::msg &/* rx'd*/, const zmq::msg &/* response; read-only*/);
 		//virtual const bool/* success*/ infrastruct (const zyre_event_t */* (zyre) event*/, const std::string &/* event_type*/, const zmq::msg &/* rx'd*/);
-		virtual const bool/* success*/ search (zmq::msg &/* result*/, const zmq::msg &/* message/expression*/, const std::string &/* src*/, const net::cast &/* src_cast*/);// const
+		virtual const bool/* success*/ search (zmq::msg &/* result*/, const zmq::msg &/* message/expression*/, const noware::nr &/* total, expected resonses count*/, const noware::nr &/* current count of peers who responded (so far)*/, const std::string &/* src*/, const net::cast &/* src_cast*/);// const
 		virtual const bool/* success*/ search_local (zmq::msg &/* result*/, const zmq::msg &/* message/expression*/, const std::string &/* src*/, const net::cast &/* src_cast*/);// const
 		virtual const zmq::msg/* result*/ aggregate (const zmq::msg &/* result*/, const zmq::msg &/* response*/, const zmq::msg &/* expression*/, const noware::nr &/* responses_count*//* number of peers who answered*/, const std::string &/* src*/, const net::cast &/* src_cast*/);
 	public:

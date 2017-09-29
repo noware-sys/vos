@@ -1,10 +1,13 @@
-mach::cpu:
+mach::cpu
 	changed from using a std::mutex to using a boost::condition_variable to notify of newly enqueued instructions
 	set a boost::condition_variable notfication from within cpu::enqueue()
 	externally separated 'load_file' in a loader (mach::cpu::loader)
 	apparently fixed shutdown sequence to gracefully quit without errors
 mach::dev
-	deal with situation when peer does not respond when waiting for message in dev::receive_local()
-mach::store:
+	dealt with situation when peer does not respond when waiting for message in dev::receive_local() (implements ((receiving) socket) time out)
+	(seemingly) fixed mistake: must read replies from all peers in dev::receive_local(), not only until a desired result is found; do not short-circuit/interrupt process (... the other peers will reply anyway (at least until a better solution is implemented); we must read their responses)
+	added the total count and the current count of replies in dev::search()
+	receive(): fixed mistake: receive() should not return anything; was returning bool
+mach::store
 	fixed: mach::store was joining group "queue::*" instead of "store::*"
-Separated store, queue, and cpu into individual executables for the main test
+Separated store, queue, and cpu into individual executables for the main test (site/test/mach)

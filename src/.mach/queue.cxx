@@ -501,7 +501,7 @@ const bool/* success*/ noware::mach::queue::respond_post (const zmq::msg & msg_r
 	return true;
 }
 
-const bool/* success*/ noware::mach::queue::search (zmq::msg & msg_result, const zmq::msg & msg_resp, const std::string &/* src*/, const net::cast &/* src_cast*/)
+const bool/* success*/ noware::mach::queue::search (zmq::msg & msg_result, const zmq::msg & msg_resp, const noware::nr &/* total, expected resonses count*/, const noware::nr &/* current count of peers who responded (so far)*/, const std::string &/* src*/, const net::cast &/* src_cast*/)
 {
 	std::cerr << "noware::mach::queue::search()::called" << std::endl;
 	

@@ -213,7 +213,8 @@ const bool noware::mach::store::respond (zmq::msg & msg_response, const zmq::msg
 		}
 		
 		std::cerr << "noware::mach::store::respond()::message[subject]==" << message ["subject"] << "::response[value.exist]==" << response ["value.exist"] << std::endl;
-		std::cerr << "noware::mach::store::respond()::message[subject]==" << message ["subject"] << "::response[value]==" << response ["value"] << std::endl;
+		if (response ["value.exist"] == "1")
+			std::cerr << "noware::mach::store::respond()::message[subject]==" << message ["subject"] << "::response[value]==" << response ["value"] << std::endl;
 	}
 	else if (message ["subject"] == "assignment")
 	{
@@ -482,6 +483,7 @@ const bool noware::mach::store::respond (zmq::msg & msg_response, const zmq::msg
 	}
 	else
 	{
+		std::cerr << "noware::mach::store::respond()::else::return[false]" << std::endl;
 		return false;
 	}
 	
@@ -507,7 +509,7 @@ const bool noware::mach::store::respond (zmq::msg & msg_response, const zmq::msg
 	return result;
 }
 
-const bool noware::mach::store::search (zmq::msg & msg_result, const zmq::msg & msg_resp, const std::string &/* src*/, const net::cast &/* src_cast*/)
+const bool noware::mach::store::search (zmq::msg & msg_result, const zmq::msg & msg_resp, const noware::nr &/* response_expected*/, const noware::nr &/* responses_occured*/, const std::string &/* src*/, const net::cast &/* src_cast*/)
 {
 	std::cerr << "noware::mach::store::search()::called" << std::endl;
 	
@@ -545,14 +547,13 @@ const bool noware::mach::store::search (zmq::msg & msg_result, const zmq::msg & 
 	*/
 	else if (resp ["subject"] == "obtainment")
 	{
-		if (resp ["value.exist"] == "0")
+		if (resp ["value.exist"] == "1")
 		{
-			return false;
+			msg_result = resp ["value"];
+			return true;
 		}
 		
-		msg_result = resp ["value"];
-		
-		return true;
+		return false;
 	}
 	else if (resp ["subject"] == "assignment")
 	{
@@ -1276,4 +1277,61 @@ template <typename value>
 virtual const value noware::mach::store::operator * (void) const
 {
 }
+*/
+
+/*
+// For range-based for looping:
+
+virtual const misc::iterator <std::tuple <std::string, std::string, std::string>> begin (void) const;
+//virtual const store begin (void) const
+{
+	misc::iterator <std::tuple <std::string, std::string, std::string>> iterator;
+	
+	return iterator;
+}
+
+virtual const misc::iterator <std::tuple <std::string, std::string, std::string>> end (void) const;
+//virtual const store end (void) const
+{}
+
+virtual const std::tuple <std::string, std::string, std::string> operator * (void) const
+{}
+
+virtual const bool operator == (const misc::iterator <std::tuple <std::string, std::string, std::string>> & other) const;
+//virtual const bool operator == (const store & other) const
+{}
+
+virtual const misc::iterator <std::tuple <std::string, std::string, std::string>> operator ++ (void);
+//virtual const store operator ++ (void)
+{
+	std::cerr << "noware::mach::dev::multicast()::called" << std::endl;
+	//if (!message.is_group ())
+	//	return "";
+	
+	std::string request_token;
+	zmq::msg msg_resp;
+	//noware::nr responses_count;
+	
+	request_token = noware::random::string (token_size_dft);
+	std::cerr << "noware::mach::dev::multicast()::request_token==[" << request_token << ']' << std::endl;
+	
+	msg_req.prepend (zmq::msg::frame ("noware::mach::dev::response::desired"));
+	msg_req.prepend (zmq::msg::frame (request_token));
+	
+	if (!node.multicast (msg_req, group))
+	{
+		std::cerr << "noware::mach::dev::multicast()::node.multicast()::failure" << std::endl;
+		return msg_resp;
+	}
+	
+	std::cerr << "noware::mach::dev::multicast()::node.multicast()::success" << std::endl;
+	
+	iteration = receive_local (request_token, node.peers_size (group), responses_count, group, net::cast::multi);
+	
+	//return *this;
+}
+
+virtual const misc::iterator <std::tuple <std::string, std::string, std::string>> operator -- (void);
+//virtual const store operator -- (void)
+{}
 */

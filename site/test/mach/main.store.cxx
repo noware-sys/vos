@@ -77,6 +77,8 @@ int main (int argc, char * argv [])
 		noware::mach m;
 		//noware::mach::cmd cli;
 		//noware::mach::cpu::loader loader;
+		std::string option;
+		
 		/*
 		assert (cli.init ());
 		assert (cli.enable ());
@@ -169,7 +171,27 @@ int main (int argc, char * argv [])
 		std::cout << "  dl , [" << m.store.get (m.trd.group (), "dl") << ']' << std::endl;
 		*/
 		
+		do
+		{
+			std::cout << "0 + [Enter] -- Exit || [Enter] -- Content :: ";
+			std::getline (std::cin, option);
+			
+			if (option == "0")
+				break;
+			
+			std::cout << "  The store's content:" << std::endl;
+			for (std::pair <std::string, std::map <std::string, std::string>> const & group : m._store [1].data)
+			{
+				for (std::pair <std::string, std::string> const & key : group.second)
+				{
+					std::cout << "    [" << group.first << "] [" << key.first << "] == [" << key.second << "]" << std::endl;
+				}
+			}
+			std::cout << "  End of the store's content." << std::endl;
+		}
+		while (true);
 		//std::cout << "  store size = [" << m.store.size () << ']' << std::endl;
+		
 		noware::pause ("Press [Enter] to finalize the store . . . ");
 	}
 //	boost::this_thread::sleep_for (boost::chrono::seconds (7));

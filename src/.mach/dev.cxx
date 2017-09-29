@@ -676,9 +676,9 @@ void noware::mach::dev::receive (const zyre_event_t * event)
 	//std::cerr << "noware::mach::dev::receive()::free()..." << std::endl;
 	////free (event_type);
 	//std::cerr << "noware::mach::dev::receive()::free()...OK" << std::endl;
-	std::cerr << "noware::mach::dev::receive()::return[" << (result ? "true" : "false") << "]" << std::endl;
+	std::cerr << "noware::mach::dev::receive()::result[" << (result ? "true" : "false") << "]" << std::endl;
 	
-	return result;
+	//return result;
 }
 
 //const bool noware::mach::dev::respond (const zmsg_t */* msg*/, const zyre_event_t */* event*/)
@@ -713,8 +713,8 @@ const zmq::msg noware::mach::dev::receive_local (const std::string & request_tok
 	int bind_return_code;
 	
 	// Socket options.
-	int linger;
-	int recv_timeout;
+	//int linger;
+	//int recv_timeout;
 	
 	std::string conn;	// Connection string.
 	
@@ -731,7 +731,8 @@ const zmq::msg noware::mach::dev::receive_local (const std::string & request_tok
 	//zmq::socket_t receiver (context, ZMQ_SUB);
 	//zmq::socket_t receiver (context, ZMQ_PAIR);
 	//zmq::socket_t receiver (context, ZMQ_REP);
-	zmq::socket_t receiver (context, ZMQ_DEALER);
+	//zmq::socket_t receiver (context, ZMQ_DEALER);
+	zmq::socket_t receiver (context, ZMQ_PULL);
 //	receiver.bind ("tcp://127.0.0.1:3210");
 	//receiver.bind (conn.c_str ());
 	//receiver.bind ("tcp://0.0.0.0:5555");
@@ -757,6 +758,7 @@ const zmq::msg noware::mach::dev::receive_local (const std::string & request_tok
 	
 	zmq::msg message;
 	zmq::msg response;
+	zmq::msg response_tmp;
 	//noware::nr::natural n;
 	//zmq::message_t message_filter;
 	zmq::message_t message_content;
@@ -817,7 +819,7 @@ const zmq::msg noware::mach::dev::receive_local (const std::string & request_tok
 	for (/*noware::nr::natural n*/responses_nr = 0; responses_nr < /*zlist_size (peers)*/ responses_expect; ++responses_nr)
 	{
 		//std::cerr << "noware::mach::dev::receive_local()::while::responses_count==[" << responses_count << ']' << std::endl;
-		std::cerr << "noware::mach::dev::receive_local()::while::responses_count==[" << responses_nr << ']' << std::endl;
+		std::cerr << "noware::mach::dev::receive_local()::while::index/responses occured so far==[" << responses_nr << ']' << std::endl;
 		
 		//zmq::message_t message_filter;
 		//zmq::message_t message_content;
@@ -871,10 +873,12 @@ const zmq::msg noware::mach::dev::receive_local (const std::string & request_tok
 		// when we haven't yet found the entire answer, we continue;
 		// when we fail, we (could) short-circuit the loop (stop looping).
   	std::cerr << "noware::mach::dev::receive_local()::if(search())::pre-call" << std::endl;
-		if (search (response, message, src, src_cast))
+		if (search (response, message, responses_expected/* total count*/, responses_nr/* current count*/, src, src_cast))
 		{
-	  	std::cerr << "noware::mach::dev::receive_local()::if(search())::break" << std::endl;
-			break;
+	  	//std::cerr << "noware::mach::dev::receive_local()::if(search())::break" << std::endl;
+	  	std::cerr << "noware::mach::dev::receive_local()::if(search())::found" << std::endl;
+			//break;
+			//response = response_tmp;
 		}
   	std::cerr << "noware::mach::dev::receive_local()::if(search())::post-call" << std::endl;
 		
@@ -939,7 +943,8 @@ const bool noware::mach::dev::unicast_local (const zmq::msg & msg, const std::st
 	//zmq::socket_t transmitter (context, ZMQ_PUB);
 	//zmq::socket_t transmitter (context, ZMQ_PAIR);
 	//zmq::socket_t transmitter (context, ZMQ_REQ);
-	zmq::socket_t transmitter (context, ZMQ_DEALER);
+	//zmq::socket_t transmitter (context, ZMQ_DEALER);
+	zmq::socket_t transmitter (context, ZMQ_PUSH);
 //	transmitter.connect ("tcp://127.0.0.1:3210");
 	//transmitter.connect (conn.c_str ());
 	//transmitter.bind ("tcp://*:5555");
@@ -981,7 +986,7 @@ const bool noware::mach::dev::unicast_local (const zmq::msg & msg, const std::st
 }
 
 // Short-circuited (triggered by success).
-const bool noware::mach::dev::search (zmq::msg &/* result*/, const zmq::msg &/* message*/, const std::string &/* src*/, const net::cast &/* src_cast*/)// const
+const bool noware::mach::dev::search (zmq::msg &/* result*/, const zmq::msg &/* message*/, const noware::nr &/* total, expected resonses count*/, const noware::nr &/* current count of peers who responded (so far)*/, const std::string &/* src*/, const net::cast &/* src_cast*/)// const
 {
 	std::cerr << "noware::mach::dev::search()::called" << std::endl;
 	

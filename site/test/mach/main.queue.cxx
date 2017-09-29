@@ -78,6 +78,8 @@ int main (int argc, char * argv [])
 		noware::mach m;
 		//noware::mach::cmd cli;
 		//noware::mach::cpu::loader loader;
+		std::string option;
+		
 		/*
 		assert (cli.init ());
 		assert (cli.enable ());
@@ -170,7 +172,19 @@ int main (int argc, char * argv [])
 		std::cout << "  dl , [" << m.store.get (m.trd.group (), "dl") << ']' << std::endl;
 		*/
 		
+		do
+		{
+			std::cout << "0 + [Enter] -- Exit || [Enter] -- Size :: ";
+			std::getline (std::cin, option);
+			
+			if (option == "0")
+				break;
+			
+			std::cout << "  The queue size [" << m._queue [1].count () << "]" << std::endl;
+		}
+		while (true);
 		//std::cout << "  store size = [" << m.store.size () << ']' << std::endl;
+		
 		noware::pause ("Press [Enter] to finalize the queue . . . ");
 	}
 //	boost::this_thread::sleep_for (boost::chrono::seconds (7));

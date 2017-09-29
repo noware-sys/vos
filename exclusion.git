@@ -35,8 +35,8 @@
 *.elf
 
 # Logs
-site/*.log
-*.journal
+#*.log
+#*.journal
 
 # Custom
 known_hosts
@@ -63,3 +63,9 @@ src/zmq*
 #src/pmach*
 src/mach/.screen
 src/net/-node*
+
+doc/sys/hierarchy.txt
+doc/usr/abbr.txt
+doc/usr/cfg.txt
+doc/usr/event.log
+doc/usr/struct.txt
