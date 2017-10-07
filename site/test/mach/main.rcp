@@ -13,7 +13,7 @@ out = main.elf
 cxx_arg = -g -ggdb -pedantic -pthread -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(quex_path) -I$(lib_noware_cxx_path) -I$(lib_mach_noware_cxx_path) -I/usr/include/noware/zmq.cxx -I/usr/include/noware/zyre.cxx -I/root/Projects/iMatix/czmq/src -L. -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -lzyre -lczmq -lzmq
 
 #all: $(out) main.store.elf main.queue.elf main.cpu.elf main.loader.elf
-all: main.store.elf main.queue.elf main.cpu.elf main.loader.elf
+all: main.store.elf main.queue.elf main.cpu.elf main.loader.elf main.cmd.elf
 
 $(out): $(obj) $(src)
 	$(cxx) $(cxx_arg) -o $@ $(obj);
@@ -26,6 +26,8 @@ main.queue.elf: main.queue.obj $(src)
 	$(cxx) $(cxx_arg) -o $@ main.queue.obj;
 main.cpu.elf: main.cpu.obj $(src)
 	$(cxx) $(cxx_arg) -o $@ main.cpu.obj;
+main.cmd.elf: main.cmd.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.cmd.obj;
 
 main.store.obj: main.store.cxx
 	$(cxx) $(cxx_arg) -o $@ -c main.store.cxx;
@@ -33,6 +35,8 @@ main.queue.obj: main.queue.cxx
 	$(cxx) $(cxx_arg) -o $@ -c main.queue.cxx;
 main.cpu.obj: main.cpu.cxx
 	$(cxx) $(cxx_arg) -o $@ -c main.cpu.cxx;
+main.cmd.obj: main.cmd.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.cmd.cxx;
 
 main.loader.elf: main.loader.obj $(src)
 	$(cxx) $(cxx_arg) -o $@ main.loader.obj;

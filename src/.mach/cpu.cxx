@@ -10,12 +10,20 @@ noware::mach::cpu::instr::instr (void)
 {
 	//oprn = opr::none;
 	//device = dev::none;
-	opr = "";
-	dev = "";
+	oprn = "";
 	
-	//oprnd [0] = oprnd [1] = "";
-	////oprnd_src_ref = false;
-	//ref [0] = ref [1] = false;
+	result_dev = "";
+	result_key = "";
+	
+	dest_dev = "";
+	dest_key = "";
+	
+	src_dev = "";
+	src_key = "";
+	
+	result_ref = false;
+	dest_ref = false;
+	src_ref = false;
 	
 	thread_id = "";
 }
@@ -34,32 +42,20 @@ noware::mach::cpu::instr::~instr (void)
 template <typename archive>
 void noware::mach::cpu::instr::serialize (archive & arch, const unsigned int &/* version*/)
 {
-	//arch & oprn;
-	//arch & device;
-	arch & opr;
-	arch & dev;
+	arch & oprn;
 	
-	arch & arg;
-	arch & arg_type;
+	arch & dest_dev;
+	arch & dest_key;
+	arch & result_dev;
+	arch & result_key;
+	arch & src_dev;
+	arch & src_key;
 	
-	/*
-	arch & oprnd [0];
-	arch & oprnd [1];
-	//arch & oprnd [2];
-	
-	arch & _ref [0];
-	arch & _ref [1];
-	
-	arch & _offset [0];
-	arch & _offset [1];
-	
-	arch & offset [0];
-	arch & offset [1];
-	*/
+	arch & result_ref;
+	arch & dest_ref;
+	arch & src_ref;
 	
 	arch & thread_id;
-	
-	//arch & oprnd_src_ref;
 }
 
 const bool noware::mach::cpu::instr::deserialize (const std::string & serial)
@@ -77,27 +73,30 @@ const std::string noware::mach::cpu::instr::serialize (void) const
 		return "";
 }
 
+/*
 const std::string noware::mach::cpu::instr::val (void) const
 {
 	//return oprnd [0];
 	return "";
 }
+*/
 
 const noware::mach::cpu::instr & noware::mach::cpu::instr::operator = (const instr & other)
 {
-	opr = other.opr;
-	dev = other.dev;
+	oprn = other.oprn;
 	
-	arg = other.arg;
-	arg_type = other.arg_type;
+	result_dev = other.result_dev;
+	result_key = other.result_key;
 	
-	/*
-	oprnd [0] = other.oprnd [0];
-	oprnd [1] = other.oprnd [1];
+	dest_dev = other.dest_dev;
+	dest_key = other.dest_key;
 	
-	ref [0] = other.ref [0];
-	ref [1] = other.ref [1];
-	*/
+	src_dev = other.src_dev;
+	src_key = other.src_key;
+	
+	result_ref = other.result_ref;
+	dest_ref = other.dest_ref;
+	src_ref = other.src_ref;
 	
 	thread_id = other.thread_id;
 	
@@ -345,7 +344,7 @@ void noware::mach::cpu::exe (void)
 			std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::next_dequeue()" << std::endl;
 			inst = next_dequeue ();
 			
-			if (inst.opr != "" && inst.dev != "" && inst.thread_id != "")
+			if (inst.thread_id != "" && inst.oprn != "")
 			{
 				// decode
 				thread_id = std::string ("thread ") + inst.thread_id;
@@ -365,139 +364,95 @@ void noware::mach::cpu::exe (void)
 				
 				//std::cerr << "noware::mach::cpu::exe::set(\"thread " << inst.thread_id << "\"," << inst.oprnd [1] << "," << inst.oprnd [0] << ")" << std::endl;
 				
-				// arg 1
-				// destination/result
-				if (inst.arg_type ["1"])
+				// result
+				if (inst.result_ref)
 				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.ref[arg1]==true" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_ref==true" << std::endl;
 					
-					inst.arg ["1"] = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.arg ["1"]);
+					if (inst.result_dev == "store")
+						inst.result_key = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.result_key);
 				}
 				else
 				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.ref[arg1]==false" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_ref==false" << std::endl;
 				}
-				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr[arg1]==[" << inst.arg["1"] << "]" << std::endl;
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_key==[" << inst.result_key << "]" << std::endl;
 				
-				// arg 2
-				if (inst.arg_type ["2"])
+				// destination
+				if (inst.dest_ref)
 				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.ref[arg2]==true" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_ref==true" << std::endl;
 					
-					inst.arg ["2"] = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.arg ["2"]);
+					if (inst.dest_dev == "store")
+						inst.dest_key = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.dest_key);
 				}
 				else
 				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.ref[arg2]==false" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_ref==false" << std::endl;
 				}
-				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr[arg2]==[" << inst.arg["2"] << "]" << std::endl;
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_key==[" << inst.dest_key << "]" << std::endl;
 				
-				// arg 3
-				if (inst.arg_type ["3"])
+				// source
+				if (inst.src_ref)
 				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.ref[arg3]==true" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_ref==true" << std::endl;
 					
-					inst.arg ["3"] = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.arg ["3"]);
+					if (inst.src_dev == "store")
+						inst.src_key = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.src_key);
 				}
 				else
 				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.ref[arg3]==false" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_ref==false" << std::endl;
 				}
-				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr[arg3]==[" << inst.arg["3"] << "]" << std::endl;
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_key==[" << inst.src_key << "]" << std::endl;
 				
-				// arg 4
-				if (inst.arg_type ["4"])
+				
+				
+				if (inst.oprn == "set")
 				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.ref[arg4]==true" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::set::dest_dev[" << inst.dest_dev << "]" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::set::dest_key[" << inst.dest_key << "]" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::set::src_key[" << inst.src_key << "]" << std::endl;
+					//std::cerr << inst.arg ["value"];
 					
-					inst.arg ["4"] = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.arg ["4"]);
-				}
-				else
-				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.ref[arg4]==false" << std::endl;
-				}
-				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr[arg4]==[" << inst.arg["4"] << "]" << std::endl;
-				
-				
-				if (inst.dev == "store")
-				{
-					if (inst.opr == "set")
-					{
-						std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::store::set" << std::endl;
-						//std::cerr << inst.arg ["value"];
-						
+					if (inst.dest_dev == "store")
 						//assert (set (thread_id/* group*/, dest/* key*/, src/* value*/));
-						result = set (thread_id/* group*/, inst.arg ["2"]/* key*/, inst.arg ["3"]/* value*/);
-					}
-					else if (inst.opr == "unset")
-					{
-						std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::store::unset" << std::endl;
-						//std::cerr << inst.arg ["value"];
-						
-						result = remove (thread_id/* group*/, inst.arg ["2"]);
-					}
-					else if (inst.opr == "exist")
-					{
-						std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::store::unset" << std::endl;
-						//std::cerr << inst.arg ["value"];
-						
-						result = exist (thread_id/* group*/, inst.arg ["2"]);
-					}
+						result = set (thread_id/* group*/, inst.dest_key/* key*/, inst.src_key/* value*/);
+					else if (inst.dest_dev == "cmd")
+						result = cout (inst.src_key);
 				}
-				else if (inst.dev == "cmd")
+				else if (inst.oprn == "delete")
 				{
-					if (inst.opr == "set")
-					{
-						std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::cmd::set[" << inst.arg ["2"] << "]" << std::endl;
-						
-						// space
-						if (inst.arg ["2"] == "\\_")
-						{
-							//std::cout << "TWO";
-							std::cout << ' ';
-						}
-						/*
-						// back slash
-						else if (inst.arg ["2"] == "\\")
-						{
-							//std::cout << "TWO";
-							std::cout << ;
-						}
-						*/
-						// new line
-						else if (inst.arg ["2"] == "\\n")
-						{
-							//std::cout << "TWO";
-							std::cout << std::endl;
-						}
-						else
-						{
-							std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::cout[" << inst.arg ["2"] << "]" << std::endl;
-							std::cout << inst.arg ["2"];
-						}
-						
-						result = true;
-					}
-					else if (inst.opr == "get")
-					{
-						std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::cmd::get(std::cin," << input << "," << inst.arg ["3"] [0] << ")" << std::endl;
-						if (inst.arg ["3"] == "\\n")
-							std::getline (std::cin, input, '\n');
-						else
-							std::getline (std::cin, input, inst.arg ["3"] [0]);
-						std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::cmd::get::set(" << thread_id << "," << inst.arg ["2"] << "," << input << ")" << std::endl;
-						result = set (thread_id/* group*/, inst.arg ["2"], input);
-						std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::cmd::get::set()::result==[" << result << "]" << std::endl;
-						//result = true;
-					}
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::delete" << std::endl;
+					//std::cerr << inst.arg ["value"];
+					
+					result = remove (thread_id/* group*/, inst.dest_key);
+				}
+				else if (inst.oprn == "exist")
+				{
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::exist" << std::endl;
+					//std::cerr << inst.arg ["value"];
+					
+					result = exist (thread_id/* group*/, inst.src_key);
 				}
 				
-				// if the destination is a reference:
-				// if the result was requested to be saved in a variable
-				if (inst.arg ["1"] != "null")
+				
+				
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::result[" << result << "]" << std::endl;
+				
+				if (inst.result_dev != "null")
+				// The result was requested to be saved to a device
 				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::save result [" << result << "] into var [" << inst.arg ["1"] << "]" << std::endl;
-					assert (set (thread_id, inst.arg ["1"], result ? "1" : "0"));
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::saving result [" << result << "]" << std::endl;
+					
+					if (inst.result_dev == "store")
+					{
+						std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::into var [" << inst.result_key << "]" << std::endl;
+						
+						assert (set (thread_id, inst.result_key, result ? "1" : "0"));
+					}
+					else if (inst.result_dev == "cmd")
+						assert (cout (result ? "1" : "0"));
 				}
 				
 				//assert (set (inst.thread_id/* group*/, inst.oprnd [1]/* key*/, inst.oprnd [0]/* value*/));
@@ -529,13 +484,18 @@ void noware::mach::cpu::exe (void)
 				//msg.prepend (zmq::msg::frame (noware::random::string (noware::mach::dev::token_size_dft)));
 				
 			//	node.multicast (msg, inst.thread_id);
-			
+				
+				
 				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::stop/continue?" << std::endl;
-				if (inst.arg ["4"] == "0")
+				
+				index_max = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, "index.max"/* key*/);
+				index = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, "index"/* key*/);
+				++index;
+				
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe()::index_max==[" << index_max << "]" << std::endl;
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe()::index==[" << index << "]" << std::endl;
+				if (index.operator const unsigned int () > index_max.operator const unsigned int ())
 				{
-					// "0" means "stop";
-					// end the execution of the thread
-					
 					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::stop(clear)::thread_id[" << thread_id << "]" << std::endl;
 					//assert (set (/*std::string ("thread ") + inst.*/thread_id/* group*/, "running"/* key*/, "0"/* value*/));
 					assert (clear (thread_id));
@@ -543,27 +503,6 @@ void noware::mach::cpu::exe (void)
 				else
 				{
 					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::continue" << std::endl;
-					index_max = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, "index.max"/* key*/);
-					
-					if (inst.arg ["4"] == "next")
-					{
-						index = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, "index"/* key*/);
-						++index;
-					}
-					else
-					{
-						index = inst.arg ["4"];
-					}
-					
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe()::index_max==[" << index_max << "]" << std::endl;
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe()::index==[" << index << "]" << std::endl;
-					if (index.operator const unsigned int () > index_max.operator const unsigned int ())
-					{
-						std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::_exen()::resetting index=1" << std::endl;
-						// assert (set (/*std::string ("thread ") + inst.*/thread_id/* group*/, "running"/* key*/, "0"/* value*/));
-						index = 1;
-					}
-					assert (set (/*std::string ("thread ") + inst.*/thread_id/* group*/, "index"/* key*/, index/* value*/));
 					
 					inst_next = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, std::string ("instr ") + index.operator const std::string ()/* key*/);
 					
@@ -918,10 +857,12 @@ const bool noware::mach::cpu::cout (const std::string & value)
 		return false;
 	
 	msg = xpr_serial;
-	return multival (msg, "noware::mach::cmd") == "1";
+	return multival (msg, noware::mach::cmd::grp_dft) == "1";
+	//std::cout << value << std::endl;
+	//return true;
 }
 
-const std::string noware::mach::cpu::cin (const char & delimiter)
+bool const noware::mach::cpu::cin (std::string & result, const char & delimiter)
 {
 	zmq::msg msg;
 	std::map <std::string, std::string> xpr;
@@ -934,7 +875,8 @@ const std::string noware::mach::cpu::cin (const char & delimiter)
 		return "";
 	
 	msg = xpr_serial;
-	return locval (msg);
+	result = locval (msg);
+	return true;
 }
 
 /*

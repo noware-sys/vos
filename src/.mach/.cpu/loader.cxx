@@ -2,8 +2,12 @@ const bool noware::mach::cpu::loader::load_file (const std::string & file_name)
 {
 	std::ifstream file;
 	std::string thread_id;
-	std::string id, device, operation, arg1, arg2, arg3, arg4;
-	bool arg1type, arg2type, arg3type, arg4type;
+	std::string label;
+	std::string oprn;
+	std::string result_dev, result_key;
+	std::string dest_dev, dest_key;
+	std::string src_dev, src_key;
+	bool result_ref, dest_ref, src_ref;
 	//std::string dest, src;
 	//bool dest_is_ref, src_is_ref;
 	//bool dest_is_offset, src_is_offset;
@@ -26,26 +30,29 @@ const bool noware::mach::cpu::loader::load_file (const std::string & file_name)
 	//_instr.thread_id = "1";
 	//_instr.oprn = cpu::opr::set;
 	//while (file >> operation >> dest >> dest_ref >> dest_is_offset >> dest_offset_location >> src >> src_ref >> src_is_offset >> src_offset_location)
-	while (file >> id >> device >> operation >> arg1type >> arg1 >> arg2type >> arg2 >> arg3type >> arg3 >> arg4type >> arg4)
+	//while (file >> id >> device >> operation >> arg1type >> arg1 >> arg2type >> arg2 >> arg3type >> arg3 >> arg4type >> arg4)
+	while (file >> label >> result_ref >> result_dev >> result_key >> oprn >> dest_ref >> dest_dev >> dest_key >> src_ref >> src_dev >> src_key)
 	//while (file >> token)
 	{
 		++_ndx;
 		
-		_instr.dev = device;
-		_instr.opr = operation;
+		_instr.oprn = oprn;
 		
-		_instr.arg ["1"] = arg1;
-		_instr.arg ["2"] = arg2;
-		_instr.arg ["3"] = arg3;
-		_instr.arg ["4"] = arg4;
+		_instr.result_dev = result_dev;
+		_instr.result_key = result_key;
+
+		_instr.dest_dev = dest_dev;
+		_instr.dest_key = dest_key;
 		
-		_instr.arg_type ["1"] = arg1type;
-		_instr.arg_type ["2"] = arg2type;
-		_instr.arg_type ["3"] = arg3type;
-		_instr.arg_type ["4"] = arg4type;
+		_instr.src_dev = src_dev;
+		_instr.src_key = src_key;
+		
+		_instr.result_ref = result_ref;
+		_instr.dest_ref = dest_ref;
+		_instr.src_ref = src_ref;
 		
 		//assert (set (thread_id, std::string ("instr ") + noware::nr (_ndx).operator const std::string (), _instr.serialize ()));
-		assert (set (thread_id, std::string ("instr ") + id, _instr.serialize ()));
+		assert (set (thread_id, std::string ("instr ") + label, _instr.serialize ()));
 	}
 	
 	file.close ();

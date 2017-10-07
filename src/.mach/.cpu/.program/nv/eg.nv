@@ -61,6 +61,7 @@
 	static
 	dyn[amic]
 	label
+	incl[ude]
 	=
 	==
 	[===	((Also compare the type?) Like in PHP)]
@@ -81,11 +82,12 @@
 	action ~= operation ~= instruction
 	actor ~= operator ~= instructor
 */
-include_once ("init[ialization].nv");	// Or ".ven"? No.
+incl[ude] ("init[ialization].nv");	// Or ".ven"? No.
 
 // This is the global scope.
 
-[partial|complete/fraction]? [[name?]space/]scope(/class?/struct[ure]?) "sys[tem]"
+// [partial|complete/fraction]? {[[name?]space/]}scope(/struct[ure]{/class?/}) "sys[tem]"
+scope sys
 {
 	/*
 		// Directly declare the operator(s) instead.
@@ -96,7 +98,7 @@ include_once ("init[ialization].nv");	// Or ".ven"? No.
 		}
 	*/
 	// Declare an entity.
-	[dyn[amic]|static] ([[variable|constant] type, ...]) (f[unctio]n) [op[erato]r]? "#" (null, null) [[var[iable]|const[ant]], [const[ant]|vari[able]]]
+	[dyn[amic]|static] ([[variable|const[ant]] type, ...]) (f[unctio]n) [op[erato]r]? "#" (null, null) [[var[iable]|const[ant]], [const[ant]|vari[able]]]
 	{
 		return [null];
 	};

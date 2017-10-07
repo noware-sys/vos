@@ -1,0 +1,22 @@
+	1 	cmd 	set 		0 null	0	Hello1!	0 null	0 next
+	2 	cmd 	set 		0 null	0	Hello2!	0 null	0 next
+	3 	cmd 	set 		0 null	0	Hello3!	0 null	0 next
+	4 	cmd 	set 		0 null	0	Hello4!	0 null	0 next
+	5 	cmd 	set 		0 null	0	Hello5!	0 null	0 next
+	6		null 	null 		0 null	0	null	0 null	0 0
+
+destination = value;
+[01] destination = [01] value;
+/device/key = value;
+
+label action destination [reference] value
+label action [reference] destination [reference] value
+label go [reference] label
+
+								result																destination								source
+label	reference dev			key				action	reference		device	key		reference		dev		key
+		1	0					null		null			set			0						cmd			null	0						null	Hello!
+		1	0					null		null			delete	0						store		key		0						null	null
+		1	0					store		present		exist		0						cmd			null	0						null	Hello!
+label action [reference] destination [reference] value
+label action [reference] device key [reference] value

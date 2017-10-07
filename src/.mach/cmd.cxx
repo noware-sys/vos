@@ -7,15 +7,26 @@
 #include <iostream>
 */
 
-const std::string noware::mach::cmd::grp_dft = "noware::mach::cmd";
+std::string const noware::mach::cmd::grp_dft = "noware::mach::cmd";
 
 noware::mach::cmd::cmd (void)
 {
-	node.join (/*noware::mach::cmd::*/grp_dft);
+	//node.join (/*noware::mach::cmd::*/grp_dft);
 }
 
 noware::mach::cmd::~cmd (void)
 {
+}
+
+bool const noware::mach::cmd::start (void)
+{
+	if (!dev::start ())
+		return false;
+	
+	if (!node.join (grp_dft))
+		return false;
+	
+	return true;
 }
 
 const bool noware::mach::cmd::set (const std::string & value)
@@ -50,8 +61,10 @@ const std::string noware::mach::cmd::get (const char & delimiter)
 	return locval (msg);
 }
 
-const bool/* success*/ noware::mach::cmd::respond (const zyre_event_t * event, const std::string & event_type, const zmq::msg & msg_request, zmq::msg & msg_response)
+const bool/* success*/ noware::mach::cmd::respond (zmq::msg & msg_response, const zmq::msg & msg_request, const zyre_event_t * event, const std::string &/* event_type*/, const std::string &/* src*/, const net::cast &/* src_cast*/)
 {
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cmd::respond()" << std::endl;
+	
 	std::map <std::string, std::string> request;
 	
 	if (!noware::deserialize <std::map <std::string, std::string>> (request, std::string (msg_request)))
@@ -59,8 +72,12 @@ const bool/* success*/ noware::mach::cmd::respond (const zyre_event_t * event, c
 	
 	if (request ["subject"] == "cout")
 	{
-		std::cout << request ["value"];
-		msg_response = "1";
+		//std::cout << request ["value"];
+		//msg_response = "1";
+		if (cout (request ["value"]))
+			msg_response = "1";
+		else
+			msg_response = "0";
 		//return true;
 		return false;
 	}
@@ -80,8 +97,10 @@ const bool/* success*/ noware::mach::cmd::respond (const zyre_event_t * event, c
 	return false;
 }
 
-const bool/* success*/ noware::mach::cmd::search (zmq::msg & msg_result, const zmq::msg & msg_response)
+const bool/* success*/ noware::mach::cmd::search (zmq::msg & msg_result, const zmq::msg & msg_response, const noware::nr &/* total, expected resonses count*/, const noware::nr &/* current count of peers who responded (so far)*/, const std::string &/* src*/, const net::cast &/* src_cast*/)// const
 {
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cmd::search()" << std::endl;
+	
 	std::map <std::string, std::string> response;
 	
 	if (!noware::deserialize <std::map <std::string, std::string>> (response, std::string (msg_response)))
@@ -106,8 +125,11 @@ const bool/* success*/ noware::mach::cmd::search (zmq::msg & msg_result, const z
 	return false;
 }
 
-const bool/* success*/ noware::mach::cmd::search_local (zmq::msg & msg_response, const zmq::msg & msg_request)
+//const bool/* success*/ noware::mach::cmd::search_local (zmq::msg & msg_response, const zmq::msg & msg_request)
+const bool/* success*/ noware::mach::cmd::search_local (zmq::msg & msg_response, const zmq::msg & msg_request, const std::string &/* src*/, const net::cast &/* src_cast*/)// const
 {
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cmd::search_local()" << std::endl;
+	
 	std::map <std::string, std::string> request;
 	
 	if (!noware::deserialize <std::map <std::string, std::string>> (request, std::string (msg_request)))
@@ -115,8 +137,11 @@ const bool/* success*/ noware::mach::cmd::search_local (zmq::msg & msg_response,
 	
 	if (request ["subject"] == "cout")
 	{
-		std::cout << request ["value"];
-		msg_response = "1";
+		//std::cout << request ["value"];
+		if (cout (request ["value"]))
+			msg_response = "1";
+		else
+			msg_response = "0";
 		//return true;
 		return false;
 	}
@@ -124,7 +149,6 @@ const bool/* success*/ noware::mach::cmd::search_local (zmq::msg & msg_response,
 	{
 		std::string input;
 		
-		//std::cout << request ["value"];
 		std::getline (std::cin, input, request ["delimiter"] [0]);
 		
 		msg_response = input;
@@ -134,4 +158,37 @@ const bool/* success*/ noware::mach::cmd::search_local (zmq::msg & msg_response,
 	
 	//msg_response = "0";
 	return false;
+}
+
+bool const noware::mach::cmd::cout (std::string const & value)
+{
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cmd::cout[" << value << "]" << std::endl;
+	
+	// space
+	if (value == "\\_")
+	{
+		//std::cout << "TWO";
+		std::cout << ' ';
+	}
+	/*
+	// back slash
+	else if (inst.arg ["2"] == "\\")
+	{
+		//std::cout << "TWO";
+		std::cout << ;
+	}
+	*/
+	// new line
+	else if (value == "\\n")
+	{
+		//std::cout << "TWO";
+		std::cout << std::endl;
+	}
+	else
+	{
+		//std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::cout[" << inst.arg ["2"] << "]" << std::endl;
+		std::cout << value;
+	}
+	
+	return true;
 }

@@ -65,7 +65,7 @@
 				*/
 				
 				class instr
-					: public noware::serial
+					: virtual public noware::serial
 				{
 					public:
 						instr (void);
@@ -78,8 +78,20 @@
 						
 						//opr oprn;	// Optional.
 						//dev device;
-						std::string opr ;	// Optional.
-						std::string dev;
+						std::string oprn;
+						
+						std::string dest_dev;
+						std::string dest_key;
+						
+						std::string result_dev;
+						std::string result_key;
+						
+						std::string src_dev;
+						std::string src_key;
+						
+						bool result_ref;
+						bool dest_ref;
+						bool src_ref;
 						/*
 						
 						// operand
@@ -100,8 +112,8 @@
 						// represent a reference?
 						// (or a literal?)
 						//bool oprnd_src_ref;
-						std::map <std::string, std::string> arg;
-						std::map <std::string, bool> arg_type;
+					//	std::map <std::string, std::string> arg;
+					//	std::map <std::string, std::string> arg_type;
 						std::string thread_id;
 						//bool reg;
 						//noware::nr reg_nr;
@@ -112,7 +124,7 @@
 						
 						// evaluate value val
 						//const bool operator== (const instruction &/* other*/) const;
-						virtual const std::string /*e*/val/*uate*/ (void) const;
+					//	virtual const std::string /*e*/val/*uate*/ (void) const;
 						
 						
 						friend class boost::serialization::access;
@@ -193,9 +205,9 @@
 				
 				// /Command Prompt/Terminal/Console/CLI/CUI/TTY/ functionality
 				// set
-				virtual const bool cout (const std::string &/* value*/);
+				virtual bool const cout (std::string const &/* value*/);
 				// get
-				virtual const std::string cin (const char &/* delimiter*/ = '\n');
+				virtual bool const cin (std::string &/* value*/, char const &/* delimiter*/ = '\n');
 			protected:
 				virtual const bool/* success*/ respond (zmq::msg &/* response*/, const zmq::msg &/* rx'd*/, const zyre_event_t */* (zyre) event*/, const std::string &/* event_type*/, const std::string &/* src*/, const net::cast &/* src_cast*/);
 				virtual const bool/* success*/ search (zmq::msg &/* result*/, const zmq::msg &/* message/expression*/, const noware::nr &/* total, expected resonses count*/, const noware::nr &/* current count of peers who responded (so far)*/, const std::string &/* src*/, const net::cast &/* src_cast*/);// const
