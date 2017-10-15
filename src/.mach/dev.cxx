@@ -748,7 +748,7 @@ const zmq::msg noware::mach::dev::receive_local (const std::string & request_tok
 	//receiver.setsockopt (ZMQ_LINGER, &linger, sizeof (linger));
 	receiver.setsockopt <int> (ZMQ_LINGER, 0);
 	//receiver.setsockopt (ZMQ_RCVTIMEO, &recv_timeout, sizeof (recv_timeout));
-	receiver.setsockopt <int> (ZMQ_RCVTIMEO, 3000);
+	receiver.setsockopt <int> (ZMQ_RCVTIMEO, 3000/* ms*/);
 	
 	
 	// zlist_t * peers;
@@ -896,7 +896,7 @@ const zmq::msg noware::mach::dev::receive_local (const std::string & request_tok
 	//std::cerr << "Message=" << '[' << static_cast <char *> (update.data ()) << ']' << std::endl;
 }
 
-const bool noware::mach::dev::unicast_local (const zmq::msg & msg, const std::string & request_token) const
+bool const noware::mach::dev::unicast_local (zmq::msg const & msg, std::string const & request_token) const
 //const bool noware::mach::dev::unicast_local (const zmsg_t * msg) const
 {
 	//zmq::msg filter;
@@ -974,12 +974,12 @@ const bool noware::mach::dev::unicast_local (const zmq::msg & msg, const std::st
 		//&&
 		//transmitter.send (msg.operator zmq::message_t & ())
 		//transmitter.send (message);
-		transmitter.send (msg.operator zmq::message_t & ());
+		transmitter.send (msg.operator zmq::message_t & ()/*, ZMQ_DONTWAIT*/);
 	;
 	
 	//zclock_sleep (1500);
 	
-	std::cerr << "noware::mach::dev::unicast_local()::send()==[" << (result ? "Success" : "Failure") << ']' << std::endl;
+	std::cerr << "noware::mach::dev::unicast_local()::send()[" << (result ? "true" : "false") << ']' << std::endl;
 	
 	//return true;
 	return result;

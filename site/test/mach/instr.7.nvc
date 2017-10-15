@@ -1,0 +1,18 @@
+1 0 null null 0 null null set 0 store count_current 0 null null 0 null 0 0 null null ;
+2 0 null null 0 null null set 0 store count_continue 0 null null 0 null 10 0 null null ;
+3 0 null null 0 null null set 0 store count_reset 0 null null 0 null 5 0 null null ;
+4 0 null null 0 null null set 0 store count_max 0 null null 0 null 3 0 null null ;
+
+5 0 null null 0 null null set 1 store count_max 0 null null 1 store count_reset 0 null null ;
+
+6 0 null null 0 null null set 0 cmd null 0 null null 0 null Hello! 0 null null ;
+
+7 0 null null 0 null null set 0 store count_current 0 null null 1 store count_current 0 null +1 ;
+
+8 0 null null 0 null null set 0 cmd null 0 null null 1 store count_current 0 null null ;
+
+9 0 null null 0 null null set 1 store count_current 0 null null 1 store count_continue 0 null null ;
+
+10 0 null null 0 null null set 0 store index 0 null null 1 store 3 0 null null ;
+
+11 0 null null 0 null null set 0 cmd null 0 null null 0 null Goodbye! 0 null null ;

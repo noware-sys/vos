@@ -150,13 +150,15 @@ const bool noware::mach::queue::enqueue (const std::string & element)
 	{
 		// Enqueuing notice.
 		zmq::msg notice;
+		std::string peer_id;
 		
 		notice = "enqueued(instr)";
 		notice.prepend (zmq::msg::frame ("noware::mach::dev::response::nondesired"));	// Optional
 		notice.prepend (zmq::msg::frame (noware::random::string (16)));
 		
 		// Try to transmit: "An instruction was enqueued.".
-		node.multicast (notice, cpu::grp_dft);
+		//node.multicast (notice, cpu::grp_dft);
+		node.anycast (notice, peer_id, cpu::grp_dft);
 		
 		return true;
 	}

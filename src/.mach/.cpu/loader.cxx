@@ -1,13 +1,44 @@
 const bool noware::mach::cpu::loader::load_file (const std::string & file_name)
 {
 	std::ifstream file;
+	
 	std::string thread_id;
+	
 	std::string label;
+	
+	noware::nr result_ref;
+	std::string result_dev;
+	std::string result_key;
+	noware::nr result_offset_prefetch_ref;
+	std::string result_offset_prefetch_dev;
+	std::string result_offset_prefetch_key;
+	noware::nr result_offset_postfetch_ref;
+	std::string result_offset_postfetch_dev;
+	std::string result_offset_postfetch_key;
+	
 	std::string oprn;
-	std::string result_dev, result_key;
-	std::string dest_dev, dest_key;
-	std::string src_dev, src_key;
-	bool result_ref, dest_ref, src_ref;
+	
+	noware::nr dest_ref;
+	std::string dest_dev;
+	std::string dest_key;
+	noware::nr dest_offset_prefetch_ref;
+	std::string dest_offset_prefetch_dev;
+	std::string dest_offset_prefetch_key;
+	noware::nr dest_offset_postfetch_ref;
+	std::string dest_offset_postfetch_dev;
+	std::string dest_offset_postfetch_key;
+	
+	noware::nr src_ref;
+	std::string src_dev;
+	std::string src_key;
+	noware::nr src_offset_prefetch_ref;
+	std::string src_offset_prefetch_dev;
+	std::string src_offset_prefetch_key;
+	noware::nr src_offset_postfetch_ref;
+	std::string src_offset_postfetch_dev;
+	std::string src_offset_postfetch_key;
+	
+	std::string separator;
 	//std::string dest, src;
 	//bool dest_is_ref, src_is_ref;
 	//bool dest_is_offset, src_is_offset;
@@ -31,25 +62,43 @@ const bool noware::mach::cpu::loader::load_file (const std::string & file_name)
 	//_instr.oprn = cpu::opr::set;
 	//while (file >> operation >> dest >> dest_ref >> dest_is_offset >> dest_offset_location >> src >> src_ref >> src_is_offset >> src_offset_location)
 	//while (file >> id >> device >> operation >> arg1type >> arg1 >> arg2type >> arg2 >> arg3type >> arg3 >> arg4type >> arg4)
-	while (file >> label >> result_ref >> result_dev >> result_key >> oprn >> dest_ref >> dest_dev >> dest_key >> src_ref >> src_dev >> src_key)
+	while (file >> label >> separator >> result_ref >> result_dev >> result_key >> separator >> result_offset_prefetch_ref >> result_offset_prefetch_dev >> result_offset_prefetch_key >> separator >> result_offset_postfetch_ref >> result_offset_postfetch_dev >> result_offset_postfetch_key >> separator >> oprn >> separator >> dest_ref >> dest_dev >> dest_key >> separator >> dest_offset_prefetch_ref >> dest_offset_prefetch_dev >> dest_offset_prefetch_key >> separator >> dest_offset_postfetch_ref >> dest_offset_postfetch_dev >> dest_offset_postfetch_key >> separator >> src_ref >> src_dev >> src_key >> separator >> src_offset_prefetch_ref >> src_offset_prefetch_dev >> src_offset_prefetch_key >> separator >> src_offset_postfetch_ref >> src_offset_postfetch_dev >> src_offset_postfetch_key >> separator)
 	//while (file >> token)
 	{
 		++_ndx;
 		
 		_instr.oprn = oprn;
 		
+		_instr.result_ref = result_ref;
 		_instr.result_dev = result_dev;
 		_instr.result_key = result_key;
+		_instr.result_offset_prefetch_ref = result_offset_prefetch_ref;
+		_instr.result_offset_prefetch_dev = result_offset_prefetch_dev;
+		_instr.result_offset_prefetch_key = result_offset_prefetch_key;
+		_instr.result_offset_postfetch_ref = result_offset_postfetch_ref;
+		_instr.result_offset_postfetch_dev = result_offset_postfetch_dev;
+		_instr.result_offset_postfetch_key = result_offset_postfetch_key;
 
+		_instr.dest_ref = dest_ref;
 		_instr.dest_dev = dest_dev;
 		_instr.dest_key = dest_key;
+		_instr.dest_offset_prefetch_ref = dest_offset_prefetch_ref;
+		_instr.dest_offset_prefetch_dev = dest_offset_prefetch_dev;
+		_instr.dest_offset_prefetch_key = dest_offset_prefetch_key;
+		_instr.dest_offset_postfetch_ref = dest_offset_postfetch_ref;
+		_instr.dest_offset_postfetch_dev = dest_offset_postfetch_dev;
+		_instr.dest_offset_postfetch_key = dest_offset_postfetch_key;
 		
+		_instr.src_ref = src_ref;
 		_instr.src_dev = src_dev;
 		_instr.src_key = src_key;
+		_instr.src_offset_prefetch_ref = src_offset_prefetch_ref;
+		_instr.src_offset_prefetch_dev = src_offset_prefetch_dev;
+		_instr.src_offset_prefetch_key = src_offset_prefetch_key;
+		_instr.src_offset_postfetch_ref = src_offset_postfetch_ref;
+		_instr.src_offset_postfetch_dev = src_offset_postfetch_dev;
+		_instr.src_offset_postfetch_key = src_offset_postfetch_key;
 		
-		_instr.result_ref = result_ref;
-		_instr.dest_ref = dest_ref;
-		_instr.src_ref = src_ref;
 		
 		//assert (set (thread_id, std::string ("instr ") + noware::nr (_ndx).operator const std::string (), _instr.serialize ()));
 		assert (set (thread_id, std::string ("instr ") + label, _instr.serialize ()));
@@ -66,6 +115,7 @@ const bool noware::mach::cpu::loader::load_file (const std::string & file_name)
 		assert (set (thread_id, "index.max", noware::nr (_ndx).operator const std::string ()));
 		
 		_instr = get (thread_id, "instr 1");
+		_instr.dump ();
 		//assert (enqueue (_instr));
 		if (!enqueue (_instr))
 			return false;
@@ -159,6 +209,7 @@ const bool noware::mach::cpu::loader::enqueue (const instr & inst)
 	{
 		// Enqueuing notice.
 		zmq::msg notice;
+		std::string peer_id;
 		
 		notice = "enqueued(instr)";
 		notice.prepend (zmq::msg::frame ("noware::mach::dev::response::nondesired"));	// Optional
@@ -166,7 +217,8 @@ const bool noware::mach::cpu::loader::enqueue (const instr & inst)
 		
 		// Try to transmit: "An instruction was enqueued.".
 		std::cerr << "noware::mach::cpu::loader::enqueue()::broadcast" << std::endl;
-		node.multicast (notice, cpu::grp_dft);
+		//node.multicast (notice, cpu::grp_dft);
+		node.anycast (notice, peer_id, cpu::grp_dft);
 		
 		return true;
 	}

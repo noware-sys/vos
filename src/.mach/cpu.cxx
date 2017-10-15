@@ -8,27 +8,45 @@ const std::string noware::mach::cpu::grp_dft = "noware::mach::cpu";
 
 noware::mach::cpu::instr::instr (void)
 {
+	thread_id = "";
+	
 	//oprn = opr::none;
 	//device = dev::none;
-	oprn = "";
-	
-	result_dev = "";
-	result_key = "";
-	
-	dest_dev = "";
-	dest_key = "";
-	
-	src_dev = "";
-	src_key = "";
 	
 	result_ref = false;
-	dest_ref = false;
-	src_ref = false;
+	result_dev = "";
+	result_key = "";
+	result_offset_prefetch_ref = false;
+	result_offset_prefetch_dev = "";
+	result_offset_prefetch_key = "";
+	result_offset_postfetch_ref = false;
+	result_offset_postfetch_dev = "";
+	result_offset_postfetch_key = "";
 	
-	thread_id = "";
+	oprn = "";
+	
+	dest_ref = false;
+	dest_dev = "";
+	dest_key = "";
+	dest_offset_prefetch_ref = false;
+	dest_offset_prefetch_dev = "";
+	dest_offset_prefetch_key = "";
+	dest_offset_postfetch_ref = false;
+	dest_offset_postfetch_dev = "";
+	dest_offset_postfetch_key = "";
+	
+	src_ref = false;
+	src_dev = "";
+	src_key = "";
+	src_offset_prefetch_ref = false;
+	src_offset_prefetch_dev = "";
+	src_offset_prefetch_key = "";
+	src_offset_postfetch_ref = false;
+	src_offset_postfetch_dev = "";
+	src_offset_postfetch_key = "";
 }
 
-noware::mach::cpu::instr::instr (const std::string & other)
+noware::mach::cpu::instr::instr (std::string const & other)
 {
 	//oprn = opr::none;
 	//deserialize (other);
@@ -40,30 +58,49 @@ noware::mach::cpu::instr::~instr (void)
 }
 
 template <typename archive>
-void noware::mach::cpu::instr::serialize (archive & arch, const unsigned int &/* version*/)
+void noware::mach::cpu::instr::serialize (archive & arch, unsigned int const &/* version*/)
 {
-	arch & oprn;
-	
-	arch & dest_dev;
-	arch & dest_key;
-	arch & result_dev;
-	arch & result_key;
-	arch & src_dev;
-	arch & src_key;
+	arch & thread_id;
 	
 	arch & result_ref;
-	arch & dest_ref;
-	arch & src_ref;
+	arch & result_dev;
+	arch & result_key;
+	arch & result_offset_prefetch_ref;
+	arch & result_offset_prefetch_dev;
+	arch & result_offset_prefetch_key;
+	arch & result_offset_postfetch_ref;
+	arch & result_offset_postfetch_dev;
+	arch & result_offset_postfetch_key;
 	
-	arch & thread_id;
+	arch & oprn;
+	
+	arch & dest_ref;
+	arch & dest_dev;
+	arch & dest_key;
+	arch & dest_offset_prefetch_ref;
+	arch & dest_offset_prefetch_dev;
+	arch & dest_offset_prefetch_key;
+	arch & dest_offset_postfetch_ref;
+	arch & dest_offset_postfetch_dev;
+	arch & dest_offset_postfetch_key;
+	
+	arch & src_ref;
+	arch & src_dev;
+	arch & src_key;
+	arch & src_offset_prefetch_ref;
+	arch & src_offset_prefetch_dev;
+	arch & src_offset_prefetch_key;
+	arch & src_offset_postfetch_ref;
+	arch & src_offset_postfetch_dev;
+	arch & src_offset_postfetch_key;
 }
 
-const bool noware::mach::cpu::instr::deserialize (const std::string & serial)
+bool const noware::mach::cpu::instr::deserialize (std::string const & serial)
 {
 	return noware::deserialize <noware::mach::cpu::instr> (*this, serial);
 }
 
-const std::string noware::mach::cpu::instr::serialize (void) const
+std::string const noware::mach::cpu::instr::serialize (void) const
 {
 	std::string serial;
 	
@@ -81,24 +118,41 @@ const std::string noware::mach::cpu::instr::val (void) const
 }
 */
 
-const noware::mach::cpu::instr & noware::mach::cpu::instr::operator = (const instr & other)
+noware::mach::cpu::instr const & noware::mach::cpu::instr::operator = (instr const & other)
 {
-	oprn = other.oprn;
-	
-	result_dev = other.result_dev;
-	result_key = other.result_key;
-	
-	dest_dev = other.dest_dev;
-	dest_key = other.dest_key;
-	
-	src_dev = other.src_dev;
-	src_key = other.src_key;
+	thread_id = other.thread_id;
 	
 	result_ref = other.result_ref;
-	dest_ref = other.dest_ref;
-	src_ref = other.src_ref;
+	result_dev = other.result_dev;
+	result_key = other.result_key;
+	result_offset_prefetch_ref = other.result_offset_prefetch_ref;
+	result_offset_prefetch_dev = other.result_offset_prefetch_dev;
+	result_offset_prefetch_key = other.result_offset_prefetch_key;
+	result_offset_postfetch_ref = other.result_offset_postfetch_ref;
+	result_offset_postfetch_dev = other.result_offset_postfetch_dev;
+	result_offset_postfetch_key = other.result_offset_postfetch_key;
 	
-	thread_id = other.thread_id;
+	oprn = other.oprn;
+	
+	dest_ref = other.dest_ref;
+	dest_dev = other.dest_dev;
+	dest_key = other.dest_key;
+	dest_offset_prefetch_ref = other.dest_offset_prefetch_ref;
+	dest_offset_prefetch_dev = other.dest_offset_prefetch_dev;
+	dest_offset_prefetch_key = other.dest_offset_prefetch_key;
+	dest_offset_postfetch_ref = other.dest_offset_postfetch_ref;
+	dest_offset_postfetch_dev = other.dest_offset_postfetch_dev;
+	dest_offset_postfetch_key = other.dest_offset_postfetch_key;
+	
+	src_ref = other.src_ref;
+	src_dev = other.src_dev;
+	src_key = other.src_key;
+	src_offset_prefetch_ref = other.src_offset_prefetch_ref;
+	src_offset_prefetch_dev = other.src_offset_prefetch_dev;
+	src_offset_prefetch_key = other.src_offset_prefetch_key;
+	src_offset_postfetch_ref = other.src_offset_postfetch_ref;
+	src_offset_postfetch_dev = other.src_offset_postfetch_dev;
+	src_offset_postfetch_key = other.src_offset_postfetch_key;
 	
 	return *this;
 }
@@ -112,6 +166,43 @@ const std::string & noware::mach::cpu::instr::operator = (const std::string & ot
 noware::mach::cpu::instr::operator const std::string (void) const
 {
 	return serialize ();
+}
+
+void noware::mach::cpu::instr::dump (void) const
+{
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::thread_id[" << thread_id << "]" << std::endl;
+	
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::result_ref[" << result_ref << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::result_dev[" << result_dev << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::result_key[" << result_key << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::result_offset_prefetch_ref[" << result_offset_prefetch_ref << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::result_offset_prefetch_dev[" << result_offset_prefetch_dev << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::result_offset_prefetch_key[" << result_offset_prefetch_key << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::result_offset_postfetch_ref[" << result_offset_postfetch_ref << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::result_offset_postfetch_dev[" << result_offset_postfetch_dev << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::result_offset_postfetch_key[" << result_offset_postfetch_key << "]" << std::endl;
+	
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::oprn[" << oprn << "]" << std::endl;
+	
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::dest_ref[" << dest_ref << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::dest_dev[" << dest_dev << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::dest_key[" << dest_key << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::dest_offset_prefetch_ref[" << dest_offset_prefetch_ref << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::dest_offset_prefetch_dev[" << dest_offset_prefetch_dev << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::dest_offset_prefetch_key[" << dest_offset_prefetch_key << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::dest_offset_postfetch_ref[" << dest_offset_postfetch_ref << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::dest_offset_postfetch_dev[" << dest_offset_postfetch_dev << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::dest_offset_postfetch_key[" << dest_offset_postfetch_key << "]" << std::endl;
+	
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::src_ref[" << src_ref << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::src_dev[" << src_dev << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::src_key[" << src_key << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::src_offset_prefetch_ref[" << src_offset_prefetch_ref << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::src_offset_prefetch_dev[" << src_offset_prefetch_dev << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::src_offset_prefetch_key[" << src_offset_prefetch_key << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::src_offset_postfetch_ref[" << src_offset_postfetch_ref << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::src_offset_postfetch_dev[" << src_offset_postfetch_dev << "]" << std::endl;
+	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::instr::dump()::src_offset_postfetch_key[" << src_offset_postfetch_key << "]" << std::endl;
 }
 
 noware::mach::cpu::cpu (void)
@@ -301,10 +392,14 @@ void noware::mach::cpu::exe (void)
 	//noware::var src_offset;
 	//noware::var dest_offset;
 	
-	char delimiter;
+	//std::string separator;
 	std::string input;
 	
 	std::string thread_id;
+	
+	bool result_offset_prefetch_visited;
+	bool dest_offset_prefetch_visited;
+	bool src_offset_prefetch_visited;
 	
 	bool result;
 	
@@ -328,6 +423,10 @@ void noware::mach::cpu::exe (void)
 	
 	result = false;
 	
+	result_offset_prefetch_visited = false;
+	dest_offset_prefetch_visited = false;
+	src_offset_prefetch_visited = false;
+	
 	while (true)
 	//while (_running)
 	//while (!boost::this_thread::interruption_requested ())
@@ -344,8 +443,13 @@ void noware::mach::cpu::exe (void)
 			std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::next_dequeue()" << std::endl;
 			inst = next_dequeue ();
 			
+			// Dump member variables
+			inst.dump ();
+			
 			if (inst.thread_id != "" && inst.oprn != "")
 			{
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::next_dequeue()::valid instruction" << std::endl;
+				
 				// decode
 				thread_id = std::string ("thread ") + inst.thread_id;
 				
@@ -364,60 +468,273 @@ void noware::mach::cpu::exe (void)
 				
 				//std::cerr << "noware::mach::cpu::exe::set(\"thread " << inst.thread_id << "\"," << inst.oprnd [1] << "," << inst.oprnd [0] << ")" << std::endl;
 				
+				// result offset (postfetch) (obtainment)
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_offset_postfetch_key(pre)==[" << inst.result_offset_postfetch_key << "]" << std::endl;
+				while (inst.result_offset_postfetch_ref.operator const unsigned int () > 0 && inst.result_offset_postfetch_key != "null")
+				{
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_offset_postfetch_ref==[true]" << std::endl;
+					
+					if (inst.result_offset_postfetch_dev == "store")
+						inst.result_offset_postfetch_key = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.result_offset_postfetch_key);
+					else if (inst.result_offset_postfetch_dev == "cmd")
+						///*inst.src_offset_key = */get (inst.src_offset_key, /*std::string ("thread ") + inst.*/thread_id/* group*/, inst.src_offset_key);
+						
+						/*inst.dest_offset_key = */
+						if (!cin (inst.result_offset_postfetch_key))
+							break;
+					
+					--inst.result_offset_postfetch_ref;
+				}
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_offset_postfetch_key(post)==[" << inst.result_offset_postfetch_key << "]" << std::endl;
+				
+				// result offset (prefetch) (obtainment)
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_offset_prefetch_key(pre)==[" << inst.result_offset_prefetch_key << "]" << std::endl;
+				while (inst.result_offset_prefetch_ref.operator const unsigned int () > 0 && inst.result_offset_prefetch_key != "null")
+				{
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_offset_prefetch_ref==true" << std::endl;
+					
+					if (inst.result_offset_prefetch_dev == "store")
+						inst.result_offset_prefetch_key = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.result_offset_prefetch_key);
+					else if (inst.result_offset_prefetch_dev == "cmd")
+						///*inst.result_offset_key = */get (inst.result_offset_key, /*std::string ("thread ") + inst.*/thread_id/* group*/, inst.result_offset_key);
+						
+						/*inst.result_offset_key = */
+						if (!cin (inst.result_offset_prefetch_key))
+							break;
+					
+					--inst.result_offset_prefetch_ref;
+				}
+				/*
+				else
+				{
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_offset_prefetch_ref==false" << std::endl;
+				}
+				*/
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_offset_prefetch_key(post)==[" << inst.result_offset_prefetch_key << "]" << std::endl;
+				
 				// result
-				if (inst.result_ref)
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_key(pre)==[" << inst.result_key << "]" << std::endl;
+				while (inst.result_ref.operator const unsigned int () > 0 && inst.result_key != "null")
 				{
 					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_ref==true" << std::endl;
 					
+					// result offset (prefetch) (application)
+					if (!result_offset_prefetch_visited && inst.result_offset_prefetch_key != "null")
+						inst.result_key = (noware::var (inst.result_key) + noware::var (inst.result_offset_prefetch_key)).operator const std::string ();
+					
 					if (inst.result_dev == "store")
 						inst.result_key = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.result_key);
+					else if (inst.result_dev == "cmd")
+						///*inst.result_key = */get (inst.result_key, /*std::string ("thread ") + inst.*/thread_id/* group*/, inst.result_key);
+						
+						/*inst.result_key = */
+						if (!cin (inst.result_key))
+							break;
+					
+					result_offset_prefetch_visited = true;
+					--inst.result_ref;
 				}
+				/*
 				else
 				{
 					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_ref==false" << std::endl;
 				}
-				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_key==[" << inst.result_key << "]" << std::endl;
+				*/
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.result_key(post)==[" << inst.result_key << "]" << std::endl;
+				
+				// destination offset (postfetch) (obtainment)
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_offset_postfetch_key(pre)==[" << inst.dest_offset_postfetch_key << "]" << std::endl;
+				while (inst.dest_offset_postfetch_ref.operator const unsigned int () > 0 && inst.dest_offset_postfetch_key != "null")
+				{
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_offset_postfetch_ref==[true]" << std::endl;
+					
+					if (inst.dest_offset_postfetch_dev == "store")
+						inst.dest_offset_postfetch_key = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.dest_offset_postfetch_key);
+					else if (inst.dest_offset_postfetch_dev == "cmd")
+						///*inst.src_offset_key = */get (inst.src_offset_key, /*std::string ("thread ") + inst.*/thread_id/* group*/, inst.src_offset_key);
+						
+						/*inst.dest_offset_key = */
+						if (!cin (inst.dest_offset_postfetch_key))
+							break;
+					
+					--inst.dest_offset_postfetch_ref;
+				}
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_offset_postfetch_key(post)==[" << inst.dest_offset_postfetch_key << "]" << std::endl;
+				
+				// destination offset (prefetch) (obtainment)
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_offset_prefetch_key(pre)==[" << inst.dest_offset_prefetch_key << "]" << std::endl;
+				while (inst.dest_offset_prefetch_ref.operator const unsigned int () > 0 && inst.dest_offset_prefetch_key != "null")
+				{
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_offset_prefetch_ref==true" << std::endl;
+					
+					if (inst.dest_offset_prefetch_dev == "store")
+						inst.dest_offset_prefetch_key = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.dest_offset_prefetch_key);
+					else if (inst.dest_offset_prefetch_dev == "cmd")
+						///*inst.dest_offset_key = */get (inst.dest_offset_key, /*std::string ("thread ") + inst.*/thread_id/* group*/, inst.dest_offset_key);
+						
+						/*inst.dest_offset_key = */
+						if (!cin (inst.dest_offset_prefetch_key))
+							break;
+					
+					--inst.dest_offset_prefetch_ref;
+				}
+				/*
+				else
+				{
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_offset_prefetch_ref==false" << std::endl;
+				}
+				*/
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_offset_prefetch_key(post)==[" << inst.dest_offset_prefetch_key << "]" << std::endl;
 				
 				// destination
-				if (inst.dest_ref)
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_key(pre)==[" << inst.dest_key << "]" << std::endl;
+				while (inst.dest_ref.operator const unsigned int () > 0 && inst.dest_key != "null")
 				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_ref==true" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_ref==[true]" << std::endl;
+					
+					// destination offset (prefetch) (application)
+					if (!dest_offset_prefetch_visited && inst.dest_offset_prefetch_key != "null")
+						inst.dest_key = (noware::var (inst.dest_key) + noware::var (inst.dest_offset_prefetch_key)).operator const std::string ();
 					
 					if (inst.dest_dev == "store")
 						inst.dest_key = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.dest_key);
+					else if (inst.dest_dev == "cmd")
+						///*inst.dest_key = */get (inst.dest_key, /*std::string ("thread ") + inst.*/thread_id/* group*/, inst.dest_key);
+						
+						/*inst.dest_key = */
+						if (!cin (inst.dest_key))
+							break;
+					
+					dest_offset_prefetch_visited = true;
+					--inst.dest_ref;
 				}
+				/*
 				else
 				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_ref==false" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_ref==[false]" << std::endl;
 				}
-				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_key==[" << inst.dest_key << "]" << std::endl;
+				*/
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.dest_key(post)==[" << inst.dest_key << "]" << std::endl;
+				
+				// source offset (postfetch) (obtainment)
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_offset_postfetch_key(pre)==[" << inst.src_offset_postfetch_key << "]" << std::endl;
+				while (inst.src_offset_postfetch_ref.operator const unsigned int () > 0 && inst.src_offset_postfetch_key != "null")
+				{
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_offset_postfetch_ref==[true]" << std::endl;
+					
+					if (inst.src_offset_postfetch_dev == "store")
+						inst.src_offset_postfetch_key = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.src_offset_postfetch_key);
+					else if (inst.src_offset_postfetch_dev == "cmd")
+						///*inst.src_offset_key = */get (inst.src_offset_key, /*std::string ("thread ") + inst.*/thread_id/* group*/, inst.src_offset_key);
+						
+						/*inst.src_offset_key = */
+						if (!cin (inst.src_offset_postfetch_key))
+							break;
+					
+					--inst.src_offset_postfetch_ref;
+				}
+				/*
+				else
+				{
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_offset_prefetch_ref==[false]" << std::endl;
+				}
+				*/
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_offset_postfetch_key(post)==[" << inst.src_offset_postfetch_key << "]" << std::endl;
+				
+				// source offset (prefetch) (obtainment)
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_offset_prefetch_key(pre)==[" << inst.src_offset_prefetch_key << "]" << std::endl;
+				while (inst.src_offset_prefetch_ref.operator const unsigned int () > 0 && inst.src_offset_prefetch_key != "null")
+				{
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_offset_prefetch_ref==[true]" << std::endl;
+					
+					if (inst.src_offset_prefetch_dev == "store")
+						inst.src_offset_prefetch_key = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.src_offset_prefetch_key);
+					else if (inst.src_offset_prefetch_dev == "cmd")
+						///*inst.src_offset_key = */get (inst.src_offset_key, /*std::string ("thread ") + inst.*/thread_id/* group*/, inst.src_offset_key);
+						
+						/*inst.src_offset_key = */
+						if (!cin (inst.src_offset_prefetch_key))
+							break;
+					
+					--inst.src_offset_prefetch_ref;
+				}
+				/*
+				else
+				{
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_offset_prefetch_ref==[false]" << std::endl;
+				}
+				*/
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_offset_prefetch_key(post)==[" << inst.src_offset_prefetch_key << "]" << std::endl;
 				
 				// source
-				if (inst.src_ref)
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_key(pre)==[" << inst.src_key << "]" << std::endl;
+				while (inst.src_ref.operator const unsigned int () > 0 && inst.src_key != "null")
 				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_ref==true" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_ref==[true]" << std::endl;
+					
+					// source offset (prefetch) (application)
+					if (!src_offset_prefetch_visited && inst.src_offset_prefetch_key != "null")
+						inst.src_key = (noware::var (inst.src_key) + noware::var (inst.src_offset_prefetch_key)).operator const std::string ();
 					
 					if (inst.src_dev == "store")
 						inst.src_key = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, inst.src_key);
+					else if (inst.src_dev == "cmd")
+						///*inst.src_key = */get (inst.src_key, /*std::string ("thread ") + inst.*/thread_id/* group*/, inst.src_key);
+						
+						/*inst.src_key = */
+						if (!cin (inst.src_key))
+							break;
+					
+					src_offset_prefetch_visited = true;
+					--inst.src_ref;
 				}
+				/*
 				else
 				{
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_ref==false" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_ref==[false]" << std::endl;
 				}
-				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_key==[" << inst.src_key << "]" << std::endl;
+				*/
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr.src_key(post)==[" << inst.src_key << "]" << std::endl;
+				
+				
+				
+				// result offset (postfetch) application
+				if (inst.result_offset_postfetch_key != "null")
+				{
+					inst.result_key = (noware::var (inst.result_key) + noware::var (inst.result_offset_postfetch_key)).operator const std::string ();
+				}
+				
+				// destintion offset (postfetch) application
+				if (inst.dest_offset_postfetch_key != "null")
+				{
+					inst.dest_key = (noware::var (inst.dest_key) + noware::var (inst.dest_offset_postfetch_key)).operator const std::string ();
+				}
+				
+				// source offset (postfetch) application
+				if (inst.src_offset_postfetch_key != "null")
+				{
+					//inst.src_key = noware::var (inst.src_key) + inst.src_offset_key;
+					inst.src_key = (noware::var (inst.src_key) + noware::var (inst.src_offset_postfetch_key)).operator const std::string ();
+				}
+				//std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::src_offset_key[" << inst.dest_dev << "]" << std::endl;
 				
 				
 				
 				if (inst.oprn == "set")
 				{
+					/*
 					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::set::dest_dev[" << inst.dest_dev << "]" << std::endl;
-					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::set::dest_key[" << inst.dest_key << "]" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::set::dest_offset_key[" << inst.dest_offset_key << "]" << std::endl;
 					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::set::src_key[" << inst.src_key << "]" << std::endl;
+					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::instr::set::src_offset_key[" << inst.src_offset_key << "]" << std::endl;
+					*/
 					//std::cerr << inst.arg ["value"];
 					
 					if (inst.dest_dev == "store")
+					{
 						//assert (set (thread_id/* group*/, dest/* key*/, src/* value*/));
 						result = set (thread_id/* group*/, inst.dest_key/* key*/, inst.src_key/* value*/);
+					}
 					else if (inst.dest_dev == "cmd")
 						result = cout (inst.src_key);
 				}
@@ -444,7 +761,12 @@ void noware::mach::cpu::exe (void)
 				// The result was requested to be saved to a device
 				{
 					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::saving result [" << result << "]" << std::endl;
-					
+					/*
+					if (inst.result_offset_dev != "null")
+					{
+						
+					}
+					*/
 					if (inst.result_dev == "store")
 					{
 						std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::into var [" << inst.result_key << "]" << std::endl;
@@ -498,12 +820,13 @@ void noware::mach::cpu::exe (void)
 				{
 					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::stop(clear)::thread_id[" << thread_id << "]" << std::endl;
 					//assert (set (/*std::string ("thread ") + inst.*/thread_id/* group*/, "running"/* key*/, "0"/* value*/));
-					assert (clear (thread_id));
+					//assert (clear (thread_id));
 				}
 				else
 				{
 					std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::exe::continue" << std::endl;
 					
+					assert (set (/*std::string ("thread ") + inst.*/thread_id/* group*/, "index"/* key*/, index.operator const std::string ()/* value*/));
 					inst_next = get (/*std::string ("thread ") + inst.*/thread_id/* group*/, std::string ("instr ") + index.operator const std::string ()/* key*/);
 					
 					//if (get (/*std::string ("thread ") + inst.*/thread_id/* group*/, "running"/* key*/) == "1")
@@ -515,7 +838,13 @@ void noware::mach::cpu::exe (void)
 					//node.unicast (msg, inst.thread_id);
 					//multival (msg, inst.thread_id);
 					//map_thread.clear ();
+					
+					//boost::this_thread::sleep_for (boost::chrono::milliseconds (200));
 				}
+			}
+			else
+			{
+				std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cpu::next_dequeue()::invalid instruction" << std::endl;
 			}
 		}
 		
@@ -846,6 +1175,7 @@ const bool noware::mach::cpu::enqueue (const instr & inst)
 
 const bool noware::mach::cpu::cout (const std::string & value)
 {
+	
 	zmq::msg msg;
 	std::map <std::string, std::string> xpr;
 	std::string xpr_serial;
@@ -858,8 +1188,11 @@ const bool noware::mach::cpu::cout (const std::string & value)
 	
 	msg = xpr_serial;
 	return multival (msg, noware::mach::cmd::grp_dft) == "1";
-	//std::cout << value << std::endl;
-	//return true;
+	
+	/*
+	std::cout << value << std::endl;
+	return true;
+	*/
 }
 
 bool const noware::mach::cpu::cin (std::string & result, const char & delimiter)

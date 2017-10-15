@@ -1,0 +1,49 @@
+// A loop
+/*
+	unsigned short int count = 0;
+	do
+	{
+		std::cout << "Hello!" << count;
+		++ count;
+	}
+	while (count < 3);
+*/
+
+			result										offset													destination							offset									source										offset
+label	reference device	key			reference	device	key		action	reference	device	key		reference	device	key		reference	device	key			reference	device	key
+
+		1	0					null		null		0					null		null	set			0					cmd			null	0					null		null	0					null		Hello!	0					null		null
+		1	0					null		null		0					null		null	delete	0					store		key		0					null		null	0					null		null		0					null		null
+		1	0					store		key			0					null		null	exist		0					null		null	0					null		null	0					store		key			0					null		null
+label action [reference] destination [reference] value
+label action [reference] device key [reference] value
+
+	// Initialize the count
+		1 0 null null 0 null null set 0 store count_current 0 null null 0 null 0 0 null null
+	// Initialize the selectable count variables
+		2 0 null null 0 null null set 0 store count_next 0 null null 0 null 1 0 null null
+		3 0 null null 0 null null set 0 store count_reset 0 null null 0 null 1 0 null null
+		4 0 null null 0 null null set 0 store count_max 0 null null 0 null 3 0 null null
+	
+		//1 0 null null 0 null null set 1 store count_current 0 null null 0 null 0 0 null null
+		// Now, 'count_max' is assigned to reset the index
+		5 0 null null 0 null null set 1 store count_max 0 null null 0 null 5 0 null null
+		
+	// Remove the "temporary", referred 'count_current'
+	//	5	0					null		null		0					null		null	delete	0					store		count_current		0					null		null	0					null		null		0					null		null
+	// Output the string
+		6 0 null null 0 null null set 0 cmd null 0 null null 0 null Hello! 0 null null
+	// Output the count
+		7 0 null null 0 null null set 0 cmd null 0 null null 1 store count_current 0 null null
+	
+	// Increment the count by 1
+		8 0 null null 0 null null set 0 store count_current 0 null null 1 store count_current 0 null +1
+	
+	// Branch based on the count:
+	// If count 
+		9 0 null null 0 null null set 1 store count_current 0 null null 0 null 10 0 null null
+	// Set the index for the next instruction
+		10 0 null null 0 null null set 0 store index 0 null null 1 store count_max 0 null null
+		//1 0 null null set 0 store index 0 null index
+		
+		//11 0 null null 0 null null null 0 null null 0 null null 0 null null 0 null null

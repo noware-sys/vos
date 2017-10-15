@@ -76,22 +76,45 @@
 						virtual const std::string & operator = (const std::string &/* other*/);
 						virtual operator const std::string (void) const;
 						
+						std::string thread_id;
+						
 						//opr oprn;	// Optional.
 						//dev device;
-						std::string oprn;
 						
-						std::string dest_dev;
-						std::string dest_key;
-						
+						noware::nr result_ref;
 						std::string result_dev;
 						std::string result_key;
+						noware::nr result_offset_prefetch_ref;
+						std::string result_offset_prefetch_dev;
+						std::string result_offset_prefetch_key;
+						noware::nr result_offset_postfetch_ref;
+						std::string result_offset_postfetch_dev;
+						std::string result_offset_postfetch_key;
 						
+						// operation action
+						std::string oprn;
+						
+						noware::nr dest_ref;
+						std::string dest_dev;
+						std::string dest_key;
+						noware::nr dest_offset_prefetch_ref;
+						std::string dest_offset_prefetch_dev;
+						std::string dest_offset_prefetch_key;
+						noware::nr dest_offset_postfetch_ref;
+						std::string dest_offset_postfetch_dev;
+						std::string dest_offset_postfetch_key;
+						
+						noware::nr src_ref;
 						std::string src_dev;
 						std::string src_key;
+						noware::nr src_offset_prefetch_ref;
+						std::string src_offset_prefetch_dev;
+						std::string src_offset_prefetch_key;
+						noware::nr src_offset_postfetch_ref;
+						std::string src_offset_postfetch_dev;
+						std::string src_offset_postfetch_key;
 						
-						bool result_ref;
-						bool dest_ref;
-						bool src_ref;
+						
 						/*
 						
 						// operand
@@ -114,7 +137,7 @@
 						//bool oprnd_src_ref;
 					//	std::map <std::string, std::string> arg;
 					//	std::map <std::string, std::string> arg_type;
-						std::string thread_id;
+						
 						//bool reg;
 						//noware::nr reg_nr;
 						//noware::nr ndx;
@@ -140,6 +163,8 @@
 						// (do not reimplement)
 						virtual const std::string serialize (void) const;
 						virtual const bool deserialize (const std::string &/* serial*/);
+						
+						virtual void dump (void) const;
 				};
 				
 				#include ".cpu/.hxx"
