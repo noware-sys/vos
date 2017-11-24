@@ -28,7 +28,7 @@
 
 #include <noware/var>
 #include <noware/mach.queue.cxx>
-#include <noware/tool/pause>
+#include <noware/cmd/pause>
 //#include <noware/container/entity.h++>
 
 //////#include <noware/containers/entity.h++>
@@ -53,17 +53,17 @@
 //	int x, y;
 //};
 
-int main (int argc, char * argv [])
+int main (int argc, char * argv [], char * env [])
 {
 	//using boost::any_cast;
 	//using namespace std;
 	//using boost;
 	//using namespace noware;
 	
+	std::cout << "#args [" << argc << "]" << std::endl;
 	for (/*unsigned long long*/ int i = 0; i < argc; ++i)
 		std::cout << argv [i] << ' ';
 	std::cout << std::endl;
-	std::cout << "Argument Count: " << argc << std::endl;
 	
 	/*
 	if (argc < 2)
@@ -185,10 +185,10 @@ int main (int argc, char * argv [])
 		while (true);
 		//std::cout << "  store size = [" << m.store.size () << ']' << std::endl;
 		
-		noware::pause ("Press [Enter] to finalize the queue . . . ");
+		noware::cmd::pause ("Press [Enter] to finalize the queue . . . ");
 	}
 //	boost::this_thread::sleep_for (boost::chrono::seconds (7));
-	noware::pause ("Press [Enter] to exit . . . ");
+	noware::cmd::pause ("Press [Enter] to exit . . . ");
 	
 	//return EXIT_SUCCESS;
 }

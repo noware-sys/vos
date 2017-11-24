@@ -4,3 +4,5 @@
 #include ".incl.cpu.cxx"
 //#include ".thread.cxx"
 #include ".incl.cmd.cxx"
+
+#include ".incl.cpu_loader.cxx"

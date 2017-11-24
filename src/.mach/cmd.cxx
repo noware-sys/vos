@@ -164,12 +164,14 @@ bool const noware::mach::cmd::cout (std::string const & value)
 {
 	std::cerr << "[" << boost::this_thread::get_id () << "] noware::mach::cmd::cout[" << value << "]" << std::endl;
 	
+	/*
 	// space
 	if (value == "\\_")
 	{
 		//std::cout << "TWO";
 		std::cout << ' ';
 	}
+	*/
 	/*
 	// back slash
 	else if (inst.arg ["2"] == "\\")
@@ -179,7 +181,7 @@ bool const noware::mach::cmd::cout (std::string const & value)
 	}
 	*/
 	// new line
-	else if (value == "\\n")
+	/*else */if (value == "\\n")
 	{
 		//std::cout << "TWO";
 		std::cout << std::endl;

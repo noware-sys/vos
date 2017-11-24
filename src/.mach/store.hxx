@@ -11,7 +11,7 @@ class store
 	//, virtual public misc::iterator <std::tuple <std::string, std::string, std::string>>
 {
 	public:
-		//#include ".store/.hxx"
+		#include ".store/.hxx"
 		
 		store (void);
 		virtual ~store (void);
@@ -68,6 +68,10 @@ class store
 		virtual const std::string/*value*/ get (const std::string &/* key*/) const;
 		//const std::pair <std::string/*value*/, bool/*reference*/> get (const std::string &/* group*/, const std::string &/* key*/) const;
 		//const std::pair <std::string/*value*/, bool/*reference*/> get (const std::string &/* key*/) const;
+		
+		// Obtaining a concatenated value of a range
+		virtual std::string const/* value*/ get (std::string const &/* group*/, noware::nr const & /* beginning*/, noware::nr const & /* size*/) const;
+		virtual std::string const/* value*/ get (noware::nr const & /* beginning*/, noware::nr const & /* size*/) const;
 		
 		/*
 		// For range-based for looping:
@@ -132,8 +136,8 @@ class store
 		//noware::list <noware::list <>> data;
 		//noware::array <noware::array <>> data;
 		
-		std::map <std::string, std::map <std::string, std::string>> data;
-		//std::map <std::string/*group*/, std::map <std::string/*key*/, std::pair <std::string/*value*/, bool/*reference*/>>> data;
+		std::map <std::string/*group*/, std::map <std::string/*key*/, std::string/*value*/>> data;
+		//std::map <std::string/*group*/, std::map <std::string/*key*/, std::pair <bool/*reference*/, std::string/*value*/>>> data;
 	//public:
 		// Manager of received messages.
 		//void receive (const zyre_event_t */* zyre_event*/);
@@ -147,7 +151,13 @@ class store
 		virtual const bool/* success*/ search_local (zmq::msg &/* result*/, const zmq::msg &/* message/expression*/, const std::string &/* src*/, const net::cast &/* src_cast*/);// const
 		virtual const zmq::msg/* result*/ aggregate (const zmq::msg &/* result*/, const zmq::msg &/* response*/, const zmq::msg &/* expression*/, const noware::nr &/* responses_count*//* number of peers who answered*/, const std::string &/* src*/, const net::cast &/* src_cast*/);
 	public:
-		bool writable;
+		static const bool write_dft;
+		static const bool cache_dft;
+	public:
+		// If the local data store is writable
+		bool write;
+		// If requests (read and write) are cached
+		bool cache;
 		/*
 			// Iteration-related:
 			//virtual const iterator <value> begin (void) const;

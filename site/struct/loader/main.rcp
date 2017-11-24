@@ -1,0 +1,34 @@
+#.PHONY: clean
+#.PHONY : all, clean
+
+# QUEX_PATH = /opt/quex
+quex_path = /usr/include/quex
+lib = noware
+lib_noware_cxx_path = /usr/include/noware/noware.cxx
+lib_mach_noware_cxx_path = /usr/include/noware/mach.noware.cxx
+lib_zmq_cxx_path = /usr/include/noware/zmq.cxx
+lib_zyre_cxx_path = /usr/include/noware/zyre.cxx
+cxx = g++
+c = gcc
+src = main.cxx
+
+component = #container-variable.obj tool.obj
+result = main.elf
+#obj = main.obj noware-array.obj
+obj = main.obj
+#OUT_32 = main-32.elf
+#COMPILER_FLAGS = -g -ggdb -pedantic -fpermissive -static-libstdc++ -static-libgcc -static -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(QUEX_PATH) -I$(LIB_PATH) $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lczmq -lzmq -lzyre
+#cxx_arg = -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(quex_path) -I$(lib_mach_noware_cxx_path) -I$(lib_noware_cxx_path) -I$(lib_zmq_cxx_path) -I$(lib_zyre_cxx_path) -I/usr/include/imatix/zmq.cxx $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lsqlite3 -lczmq -lzmq -lzyre
+cxx_arg = -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(quex_path) -I$(lib_mach_noware_cxx_path) -I$(lib_noware_cxx_path) -I$(lib_zmq_cxx_path) -I$(lib_zyre_cxx_path) $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lsqlite3 -lczmq -lzmq -lzyre
+
+all: $(result)
+$(result): $(obj)
+	$(cxx) $(cxx_arg) -o $(@) $(obj);
+main.obj: $(src) #$(lib_path)/$(lib)/contnr/array.hxx $(lib_path)/$(lib)/contnr/array.cxx $(lib_path)/$(lib)/array $(lib_path)/$(lib)/array.hxx $(lib_path)/$(lib)/array.cxx $(lib_path)/$(lib)/.array/.incl.hxx $(lib_path)/$(lib)/.array/.node.hxx $(lib_path)/$(lib)/.array/node.cxx
+	$(cxx) $(cxx_arg) -o $(@) -c $(src);
+#noware-array.obj: $(lib_path)/$(lib)/array $(lib_path)/$(lib)/array.hxx $(lib_path)/$(lib)/array.cxx
+#	$(cxx) $(cxx_arg) -o noware-tool-ptr.obj -c $(lib_path)/$(lib)/array.cxx;
+#noware-array.obj: $(lib_path)/$(lib)/.array/.incl.hxx $(lib_path)/$(lib)/.array/.node.hxx $(lib_path)/$(lib)/.array/node.cxx
+#	$(cxx) $(cxx_arg) -o noware-tool-ptr.obj -c $(lib_path)/$(lib)/array.cxx;
+clean:
+	rm --force main.elf main.obj;

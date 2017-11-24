@@ -4,3 +4,5 @@
 #include ".incl.cpu.hxx"
 //#include ".thread.hxx"
 #include ".incl.cmd.hxx"
+
+#include ".incl.cpu_loader.hxx"

@@ -1,4 +1,4 @@
-//#include ".storage/.incl.hxx"
+#include ".cpu/.incl.hxx"
 
 //#include <imatix/zyre/zyre.h>
 #include <zmq/msg.hxx>
@@ -23,3 +23,5 @@
 //#include <map>
 #include <fstream>
 #include <mutex>
+
+#include "../vmach/cpu/x86_64/instr.hxx"

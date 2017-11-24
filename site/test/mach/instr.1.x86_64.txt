@@ -1,0 +1,8 @@
+mov 2 0 1 1 1 edx 0 0 null 0 0 null 0 1 1 0 0xd 0 0 null 0 0 null 0 0 0 0 null 0 0 null 0 0 null
+mov 2 0 1 1 1 ecx 0 0 null 0 0 null 0 1 1 0 0x80490a4 0 0 null 0 0 null 0 0 0 0 null 0 0 null 0 0 null
+mov 2 0 1 1 1 ebx 0 0 null 0 0 null 0 1 1 0 0x1 0 0 null 0 0 null 0 0 0 0 null 0 0 null 0 0 null
+mov 2 0 1 1 1 eax 0 0 null 0 0 null 0 1 1 0 0x4 0 0 null 0 0 null 0 0 0 0 null 0 0 null 0 0 null
+int 1 0 1 1 0 0x80 0 0 null 0 0 null 0 0 0 0 null 0 0 null 0 0 null 0 0 0 0 null 0 0 null 0 0 null
+mov 2 0 1 1 1 ebx 0 0 null 0 0 null 0 1 1 0 0x0 0 0 null 0 0 null 0 0 0 0 null 0 0 null 0 0 null
+mov 2 0 1 1 1 eax 0 0 null 0 0 null 0 1 1 0 0x1 0 0 null 0 0 null 0 0 0 0 null 0 0 null 0 0 null
+int 1 0 1 1 0 0x80 0 0 null 0 0 null 0 0 0 0 null 0 0 null 0 0 null 0 0 0 0 null 0 0 null 0 0 null

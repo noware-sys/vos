@@ -1,4 +1,4 @@
-//#include ".storage/.incl.cxx"
+#include ".cpu/.incl.cxx"
 
 #include <zmq/msg.cxx>
 
@@ -11,3 +11,5 @@
 
 #include <string>
 #include <map>
+
+#include "../vmach/cpu/x86_64/instr.cxx"
