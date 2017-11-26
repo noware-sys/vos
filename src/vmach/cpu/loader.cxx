@@ -15,6 +15,7 @@ const bool noware::vmach::cpu::loader::load_file (const std::string & file_name,
 	
 	x86_64::instr instr;
 	//std::string token;
+	std::string operation;
 	unsigned long int ndx;
 	//std::string token_prev;
 	//std::string dest_offset_location, src_offset_location;
@@ -42,7 +43,7 @@ const bool noware::vmach::cpu::loader::load_file (const std::string & file_name,
 		file >>
 		
 		// operation
-		instr.operation >>
+		/*instr.*/operation >>
 		// number of arguments
 		instr.args_nr >>
 		
@@ -77,6 +78,9 @@ const bool noware::vmach::cpu::loader::load_file (const std::string & file_name,
 	{
 		++ndx;
 		
+		std::cerr << "noware::vmach::cpu::loader::load_file()::ndx[" << ndx << "]" << std::endl;
+		std::cerr << "noware::vmach::cpu::loader::load_file()::operation[" << operation << "]" << std::endl;
+		instr.operation = operation_get (operation);
 		assert (set (thread_id, std::string ("instr ") + noware::nr (ndx).operator const std::string (), instr.serialize ()));
 		//assert (set (thread_id, std::string ("instr ") + label, _instr.serialize ()));
 	}
@@ -102,6 +106,8 @@ const bool noware::vmach::cpu::loader::load_file (const std::string & file_name,
 	
 	return true;
 }
+
+#include "loader.operation_get.cxx"
 
 const std::string/* value*/ noware::vmach::cpu::loader::get (const std::string & group, const std::string & key) const
 {

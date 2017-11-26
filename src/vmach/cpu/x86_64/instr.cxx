@@ -4,6 +4,14 @@
 
 #include ".instr/.incl.cxx"
 #include ".instr/.cxx"
+#include "opr.cxx"
+#include "reg.cxx"
+
+noware::vmach::cpu::x86_64::instr::instr (void)
+{
+	operation = opr::none;
+	args_nr = 0;
+}
 
 template <typename archive>
 void noware::vmach::cpu::x86_64::instr::serialize (archive & arch, unsigned int const &/* version*/)
@@ -20,7 +28,7 @@ void noware::vmach::cpu::x86_64::instr::serialize (archive & arch, unsigned int 
 
 bool const noware::vmach::cpu::x86_64::instr::null (void) const
 {
-	return false;
+	return operation == opr::none;
 }
 
 std::string const noware::vmach::cpu::x86_64::instr::serialize (void) const

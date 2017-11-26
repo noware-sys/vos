@@ -4,6 +4,8 @@ class term
 	: virtual public noware::serial
 {
 	public:
+		term (void);
+		
 		// a[n optional] factor for the value
 		unsigned short int factor;
 		

@@ -1,7 +1,20 @@
 #pragma once
 
-enum opr
+namespace noware
 {
-	mov,
-	int_
-};
+	namespace vmach
+	{
+		namespace cpu
+		{
+			namespace x86_64
+			{
+				enum opr
+				{
+					none,
+					int_,
+					mov
+				};
+			}
+		}
+	}
+}

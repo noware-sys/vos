@@ -73,7 +73,9 @@ doc/usr/struct.txt
 site/test/mach/main.store.obj.1
 site/test/mach/main.store.elf.1
 site/test/unicorn
-site/test/elf.cxx/asm/hello
+#site/test/elf.cxx/asm/hello
+src/vmach/cpu/extractor.3.test.sh
+src/vmach/cpu/extractor.4.sh
 src/.mach/.cpu/loader.1.hxx
 src/.mach/.cpu/loader.1.cxx
 src/.mach/.cpu/loader.2.hxx

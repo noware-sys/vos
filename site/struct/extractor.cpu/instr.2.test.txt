@@ -1,0 +1,6 @@
+mov ebx,0x1
+mov [edx+4*eax+0x3],0xd
+mov ecx,[rdx+4*rax+0x80490a4]
+mov [eqx+8*ebx+0x5],[rbx+2*rcx+0x789]
+int 0x80
+exit

@@ -1,9 +1,21 @@
 #pragma once
 
-enum reg
+namespace noware
 {
-	eax,
-	ebx,
-	ecx,
-	edx
-};
+	namespace vmach
+	{
+		namespace cpu
+		{
+			namespace x86_64
+			{
+				enum reg
+				{
+					eax,
+					ebx,
+					ecx,
+					edx
+				};
+			}
+		}
+	}
+}

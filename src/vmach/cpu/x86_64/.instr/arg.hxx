@@ -6,6 +6,8 @@ class arg
 	public:
 		#include ".arg/.hxx"
 		
+		arg (void);
+		
 		// memory reference
 		//bool ref;
 		//bool var;

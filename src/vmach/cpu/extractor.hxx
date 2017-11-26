@@ -7,7 +7,7 @@ namespace noware
 {
 	namespace vmach
 	{
-		namespace store
+		namespace cpu
 		{
 			class extractor
 			{
@@ -18,7 +18,7 @@ namespace noware
 					
 					// ! overwrites
 					// creates if nonexistent
-					virtual bool const write_file (std::string const &/* output_file_name*/, bool const &/* pad*/ = false);
+					virtual bool const extract (std::string const &/* input_file_name*/, std::string const &/* output_file_name*/);
 					
 					virtual bool const & loaded (void) const;
 					virtual bool const/* success*/ clear (void);

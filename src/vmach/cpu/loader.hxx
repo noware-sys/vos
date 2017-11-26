@@ -13,7 +13,8 @@ namespace noware
 				: virtual public mach::dev
 			{
 				public:
-					virtual const bool load_file (const std::string &/* file_name*/, std::string /* thread_id*/);
+					virtual bool const load_file (std::string const &/* file_name*/, std::string /* thread_id*/ = "");
+					virtual x86_64::opr const operation_get (std::string const &/* operation*/) const;
 					
 					
 					// Store functionality

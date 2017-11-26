@@ -3,6 +3,8 @@
 #include <noware/serial.hxx>
 
 #include ".instr/.incl.hxx"
+#include "opr.hxx"
+#include "reg.hxx"
 
 namespace noware
 {
@@ -18,14 +20,15 @@ namespace noware
 					public:
 						#include ".instr/.hxx"
 						
+						instr (void);
 						//virtual ~instr (void) = default;
 						// ID of the thread
 						// which this instruction
 						// belongs to
 						std::string thread_id;
 						
-						//opr operation;
-						std::string operation;
+						opr operation;
+						//std::string operation;
 						
 						// number of arguments
 						// which are in use
