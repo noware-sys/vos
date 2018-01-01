@@ -78,9 +78,9 @@ namespace noware
 	// calculator computer mach[ine] robot
 	// dev[ice]
 	class mach
-		//: public dev
-		//: public mach::store
-		//, public mach::queue
+		//: virutal public dev
+		//: virutal public mach::store
+		//, virutal public mach::queue
 	{
 		/*
 			1. Resource Presentation/Aggregation/Sharing (Server) -- Machine (Physical Machine)

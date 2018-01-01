@@ -1,5 +1,6 @@
 class cpu_loader
-	: virtual public dev
+	//: virtual public dev
+	: virtual public cluster::node
 {
 	public:
 		virtual const bool load_file (const std::string &/* file_name*/, std::string /* thread_id*/);

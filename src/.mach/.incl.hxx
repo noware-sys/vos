@@ -1,4 +1,5 @@
-#include ".incl.dev.hxx"
+//#include ".incl.dev.hxx"
+#include <noware/cluster/node.hxx>
 #include ".incl.store.hxx"
 #include ".incl.queue.hxx"
 #include ".incl.cpu.hxx"

@@ -80,3 +80,4 @@ src/.mach/.cpu/loader.1.hxx
 src/.mach/.cpu/loader.1.cxx
 src/.mach/.cpu/loader.2.hxx
 src/.mach/.cpu/loader.2.cxx
+#*.asm

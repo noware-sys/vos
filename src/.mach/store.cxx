@@ -975,14 +975,58 @@ const bool noware::mach::store::exist (const std::string & group, const std::str
 
 const std::map <unsigned int, std::string> noware::mach::store::owner (const std::string & key) const
 {
-	std::map <unsigned int, std::string> owners;
-	return owners;
+	return owner ("", key);
+	//std::map <unsigned int, std::string> owner_;
+	//return owner_;
 }
 
 const std::map <unsigned int, std::string> noware::mach::store::owner (const std::string & group, const std::string & key) const
 {
-	std::map <unsigned int, std::string> owners;
-	return owners;
+	std::map <unsigned int, std::string> owner_;
+	
+	if (cache)
+	{
+		if (ref.count (group) > 0 && ref.at (group).count (key) > 0)
+			return ref.at (group).at (key);
+		else
+		// Find the corresponding future nodes.
+		{
+			if (dht)
+			// Find the nodes according to the function.
+			{
+				return dht_node (group, key);
+			}
+			else
+			// Find the nodes randomly.
+			{
+				// All relevant nodes.
+				std::map <unsigned int, std::string> nodes_all;
+				nodes_all = _node.peers (grp_dft);
+				// Add the self node.
+				nodes_all [nodes_all.size () + 1] = _node.id ();
+				
+				for (unsigned int ndx = 1/*starting index*/, unsigned int max = peers_ ().size () + ndx; ndx < max; ++ndx)
+				{}
+			}
+		}
+	}
+	
+	// If we are here, we have not found the possible peers yet.
+	if (dht)
+	{
+		return dht_node (group, key);
+	}
+	
+	// the else case: ask all nodes
+	{}
+	
+	return owner_;
+}
+
+const std::map <unsigned int, std::string> noware::mach::store::dht_node (const std::string & group, const std::string & key) const
+{
+	std::map <unsigned int, std::string> owner_;
+	return owner_;
 }
 
 const std::string/*value*/ noware::mach::store::get (const std::string & key) const

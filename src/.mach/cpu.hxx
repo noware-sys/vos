@@ -7,7 +7,8 @@
 		// processor cpu
 		// thread task job
 		class cpu
-			: virtual public dev
+			//: virtual public dev
+			: virtual public cluster::node
 		{
 			public:
 				// operator operation

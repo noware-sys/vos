@@ -5,7 +5,8 @@
 // remembers memories
 
 class store
-	: virtual public dev
+	//: virtual public dev
+	: virtual public cluster::node
 	//, public misc::iterator <noware::var>
 	, virtual public contnr::array <std::string, std::string>
 	//, virtual public misc::iterator <std::tuple <std::string, std::string, std::string>>
@@ -59,7 +60,7 @@ class store
 		virtual const bool exist (const std::string &/* group*/, const std::string &/* key*/) const;
 		//const bool exist_group (const noware::var &/* group*/) const;
 		
-		// Returns the nodes which have a certain key.
+		// Returns the nodes which have a specified key.
 		virtual const std::map <unsigned int/* map (array) index*/, std::string/* peer.id*/> owner (const std::string &/* key*/) const;
 		virtual const std::map <unsigned int/* map (array) index*/, std::string/* peer.id*/> owner (const std::string &/* group*/, const std::string &/* key*/) const;
 		
@@ -137,11 +138,13 @@ class store
 		//noware::array <noware::array <>> data;
 		
 		std::map <std::string/*group*/, std::map <std::string/*key*/, std::string/*value*/>> data;
+		std::map <std::string/*group*/, std::map <std::string/*key*/, std::map <unsigned int/*index*/, std::string/*peer id*/>>> ref;
 		//std::map <std::string/*group*/, std::map <std::string/*key*/, std::pair <bool/*reference*/, std::string/*value*/>>> data;
 	//public:
 		// Manager of received messages.
 		//void receive (const zyre_event_t */* zyre_event*/);
-	//public:
+	public:
+		virtual const std::map <unsigned int/* index*/, std::string/* peer id*/> dht_node (std::string const &/*group*/, std::string const &/* key*/) const;
 	protected:
 		//virtual const bool/* success*/ respond (const /*zmq::msg &*/zmsg_t */* message*/, const zyre_event_t */* (zyre) event*/);
 		virtual const bool/* success*/ respond (zmq::msg &/* response*/, const zmq::msg &/* rx'd*/, const zyre_event_t */* (zyre) event*/, const std::string &/* event_type*/, const std::string &/* shouted_group*/, const net::cast &/* src_cast*/);
@@ -151,13 +154,22 @@ class store
 		virtual const bool/* success*/ search_local (zmq::msg &/* result*/, const zmq::msg &/* message/expression*/, const std::string &/* src*/, const net::cast &/* src_cast*/);// const
 		virtual const zmq::msg/* result*/ aggregate (const zmq::msg &/* result*/, const zmq::msg &/* response*/, const zmq::msg &/* expression*/, const noware::nr &/* responses_count*//* number of peers who answered*/, const std::string &/* src*/, const net::cast &/* src_cast*/);
 	public:
-		static const bool write_dft;
+		static const bool write_local_dft;
 		static const bool cache_dft;
+		static const bool dht_dft;
 	public:
-		// If the local data store is writable
-		bool write;
-		// If requests (read and write) are cached
+		// Whether the local data store is writable
+		bool write_local;
+		
+		// Whether requests (read and write) use a cache
 		bool cache;
+		
+		// Whether requests (read and write) use a distributed hash table
+		bool dht;
+		
+		// The (minimum?) number of copies of each key.
+		unsigned short int copy;
+		
 		/*
 			// Iteration-related:
 			//virtual const iterator <value> begin (void) const;

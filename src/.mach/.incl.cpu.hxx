@@ -12,6 +12,7 @@
 #include <boost/thread/condition_variable.hpp>
 //#include <cstring>	// For std::memcpy()
 
+//#include <noware/cluster/node.hxx>
 //#include <noware/contnr/array.hxx>
 //#include <noware/tree.hxx>
 #include <noware/serial.hxx>

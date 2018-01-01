@@ -15,10 +15,11 @@ class arg
 		
 		// number of terms
 		// which are accounted for
-		unsigned short int terms_nr;
+		unsigned short int term_nr;
 		
 		// the terms themselves
-		term term1, term2, term3;
+		term [4];
+		//term term1, term2, term3;
 		
 		
 		friend class boost::serialization::access;

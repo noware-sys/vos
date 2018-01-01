@@ -5,7 +5,8 @@
 	//namespace machine
 	//{
 		class queue
-			: virtual public dev
+			//: virtual public dev
+			: virtual public cluster::node
 		{
 			public:
 				queue (void);

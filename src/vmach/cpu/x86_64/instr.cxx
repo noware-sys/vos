@@ -10,7 +10,7 @@
 noware::vmach::cpu::x86_64::instr::instr (void)
 {
 	operation = opr::none;
-	args_nr = 0;
+	arg_nr = 0;
 }
 
 template <typename archive>
@@ -19,14 +19,15 @@ void noware::vmach::cpu::x86_64::instr::serialize (archive & arch, unsigned int 
 		arch & thread_id;
 		
 		arch & operation;
-		arch & args_nr;
+		arch & arg_nr;
 		
-		arch & arg1;
-		arch & arg2;
-		arch & arg3;
+		arch & arg [0];
+		arch & arg [1];
+		arch & arg [2];
+		arch & arg [3];
 }
 
-bool const noware::vmach::cpu::x86_64::instr::null (void) const
+bool const noware::vmach::cpu::x86_64::instr::is_null (void) const
 {
 	return operation == opr::none;
 }

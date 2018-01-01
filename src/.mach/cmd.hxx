@@ -3,7 +3,8 @@
 //#include <string>
 
 class cmd
-	: virtual public dev
+	//: virtual public dev
+	: virtual public cluster::node
 {
 	public:
 		cmd (void);

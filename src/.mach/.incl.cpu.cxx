@@ -2,6 +2,7 @@
 
 #include <zmq/msg.cxx>
 
+//#include <noware/cluster/node.cxx>
 //#include <noware/contnr/array.cxx>
 //#include <noware/tree.cxx>
 #include <noware/serial.cxx>

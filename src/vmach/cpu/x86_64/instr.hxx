@@ -32,12 +32,13 @@ namespace noware
 						
 						// number of arguments
 						// which are in use
-						unsigned short int args_nr;
+						unsigned short int arg_nr;
 						
 						//noware::tree <> operand;
-						arg arg1, arg2, arg3;
+						arg [4];
+						//arg arg1, arg2, arg3;
 						
-						bool const null (void) const;
+						bool const is_null (void) const;
 						
 						virtual std::string const serialize (void) const;
 						virtual bool const deserialize (std::string const &/* serial*/);

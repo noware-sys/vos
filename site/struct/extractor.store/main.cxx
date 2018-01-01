@@ -113,7 +113,7 @@ int main (int argc, char * argv [], char * env [])
 	for (/*unsigned long long */int i = 0; i < argc; ++i)
 		std::cout << argv [i] << ' ';
 	std::cout << std::endl;
-	std::cout << "#args [" << argc << ']' << std::endl;
+	std::cout << "argc [" << argc << ']' << std::endl;
 	
 	if (argc < 3)
 	{
