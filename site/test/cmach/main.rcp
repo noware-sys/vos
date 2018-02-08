@@ -1,0 +1,28 @@
+#quex_path = /usr/include/quex
+#lib = noware
+#lib_path = /usr/include/noware/noware.cxx
+cxx = g++
+
+obj = main.obj
+src = main.cxx
+#tool.string.obj tool.nr.obj
+out = main.elf
+
+#cxx_arg = -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(quex_path) -I$(lib_path) $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lsqlite3 -lczmq -lzmq -lzyre
+cxx_arg = -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -pthread -fopenmp -fPIC -std=c++14 -I. -I/usr/include/noware/noware.cxx -I/usr/include/noware/mach.noware.cxx -I/usr/include/noware/nr.cln.cxx -I/usr/include/noware/zmq.cxx -I/usr/include/noware/zyre.cxx -L. -ldl -lboost_serialization -lboost_system -lboost_thread -lboost_random -lcln -lzyre -lczmq -lzmq
+
+all: $(out)
+$(out): $(obj)
+	$(cxx) $(cxx_arg) -o $@ $(obj);
+$(obj):
+	$(cxx) $(cxx_arg) -o $@ -c $(src);
+#nr.obj:
+#	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/nr.cxx;
+#serial.obj:
+#	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/serial.hxx;
+#tool.string.obj:
+#	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/tool/string.cxx;
+#misc.serial.obj:
+#	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/misc/serial.cxx;
+clean:
+	rm --force *.elf *.obj;

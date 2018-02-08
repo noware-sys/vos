@@ -1,6 +1,6 @@
 //#include "cluster.hxx"
 
-//#include "dev.hxx"
+#include "dev.hxx"
 
 //#include "entity.h++"
 #include "store.hxx"

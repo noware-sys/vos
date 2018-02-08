@@ -19,8 +19,11 @@
 // #include <zmq/msg.cxx>
 //#include "nr.cxx"
 //#include "container/list/sqlite.cxx"
-#include ".mach/.incl.cxx"
-#include ".mach/.cxx"
+//#include ".mach/.incl.cxx"
+//#include ".mach/.cxx"
+#include "smach/store.cxx"
+//#include "mach/store.cxx"
+//#include "mach/store.cxx"
 
 noware::mach::mach (void)
 {
@@ -38,7 +41,7 @@ noware::mach::mach (void)
 	
 	unsigned int n;
 	
-	store * s;
+	smach::store * s;
 	//queue * q;
 	//cpu * p;	// processor
 	
@@ -49,20 +52,20 @@ noware::mach::mach (void)
 	#pragma omp parallel
 	{
 		#pragma omp for
-		for (unsigned int ndx = 1; ndx <= n; ++ndx)
+		for (unsigned int ndx = 0; ndx < n; ++ndx)
 		{
-			/*
+			
 			#pragma omp critical
 			{
-				s = &_store [ndx];
+				s = &_sstore [ndx];
 				
 				assert (s -> init ());
 				assert (s -> enable ());
 				assert (s -> start ());
-				assert (s -> running ());
+				//assert (s -> running ());
 			}
-			*/
 			
+			/*
 			#pragma omp critical
 			{
 				q = &_queue [ndx];
@@ -70,11 +73,9 @@ noware::mach::mach (void)
 				assert (q -> init ());
 				assert (q -> enable ());
 				assert (q -> start ());
-				//assert (q -> running ());
-				//assert (q -> node.join (noware::mach::queue::grp_dft));
-				//assert (q -> node.join ("noware::mach::queue::nonfull"));
+				assert (q -> running ());
 			}
-			
+			*/
 			/*
 			#pragma omp critical
 			{

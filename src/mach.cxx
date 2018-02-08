@@ -19,10 +19,9 @@
 // #include <zmq/msg.cxx>
 //#include "nr.cxx"
 //#include "container/list/sqlite.cxx"
-#include ".mach/.incl.cxx"
 
-
-#include ".mach/.cxx"
+//#include ".mach/.incl.cxx"
+//#include ".mach/.cxx"
 
 noware::mach::mach (void)
 {

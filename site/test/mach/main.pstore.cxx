@@ -27,7 +27,7 @@
 ////#include <boost/archive/binary_iarchive.hpp>
 
 #include <noware/var>
-#include <noware/mach.store.cxx>
+#include <noware/pmach.store.cxx>
 #include <noware/cmd/pause>
 //#include <noware/container/entity.h++>
 
@@ -180,7 +180,7 @@ int main (int argc, char * argv [], char * envp [])
 				break;
 			
 			std::cout << "  The store's content:" << std::endl;
-			for (std::pair <std::string, std::map <std::string, std::string>> const & group : m._store [1].data)
+			for (std::pair <std::string, std::map <std::string, std::string>> const & group : m._pstore [1].data)
 			{
 				for (std::pair <std::string, std::string> const & key : group.second)
 				{

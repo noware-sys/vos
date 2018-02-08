@@ -66,12 +66,16 @@
 #include <boost/thread/mutex.hpp>
 #include <cstring>	// For std::memcpy()
 */
+#include "pmach/store.hxx"
+#include "vmach/store.hxx"
+#include "cmach/store.hxx"
+
 //// For storage::sqlite
 //#include "container/list/sqlite.hdr.cxx"
 
 //#include <zmq/msg.hxx>
 
-#include ".mach/.incl.hxx"
+//#include ".mach/.incl.hxx"
 
 namespace noware
 {
@@ -89,7 +93,7 @@ namespace noware
 		*/
 		
 		public:
-			#include ".mach/.hxx"
+			//#include ".mach/.hxx"
 			
 			mach (void);
 			virtual ~mach (void);
@@ -97,13 +101,15 @@ namespace noware
 		public:
 			
 			//store _store;
-			std::map <unsigned int, store> _store;
+			std::map <unsigned int, smach::store> _sstore;
+			std::map <unsigned int, mmach::store> _mstore;
+			std::map <unsigned int, cmach::store> _cstore;
 			
 			//queue _queue;
-			std::map <unsigned int, queue> _queue;
+			//std::map <unsigned int, queue> _queue;
 			
 			//cpu _cpu;
-			std::map <unsigned int, cpu> _cpu;
+			//std::map <unsigned int, cpu> _cpu;
 			
 			
 			//std::map <std::string, thread *> trd;

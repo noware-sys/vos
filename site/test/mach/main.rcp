@@ -21,8 +21,12 @@ $(out): $(obj) $(src)
 main.obj: main.cxx
 	$(cxx) $(cxx_arg) -o $@ -c main.cxx;
 
-main.store.elf: main.store.obj $(src)
-	$(cxx) $(cxx_arg) -o $@ main.store.obj;
+main.pstore.elf: main.pstore.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.pstore.obj;
+main.vstore.elf: main.vstore.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.vstore.obj;
+main.cstore.elf: main.cstore.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.cstore.obj;
 main.queue.elf: main.queue.obj $(src)
 	$(cxx) $(cxx_arg) -o $@ main.queue.obj;
 main.cpu.elf: main.cpu.obj $(src)
@@ -30,8 +34,12 @@ main.cpu.elf: main.cpu.obj $(src)
 main.cmd.elf: main.cmd.obj $(src)
 	$(cxx) $(cxx_arg) -o $@ main.cmd.obj;
 
-main.store.obj: main.store.cxx
-	$(cxx) $(cxx_arg) -o $@ -c main.store.cxx;
+main.pstore.obj: main.pstore.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.pstore.cxx;
+main.vstore.obj: main.vstore.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.vstore.cxx;
+main.cstore.obj: main.cstore.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.cstore.cxx;
 main.queue.obj: main.queue.cxx
 	$(cxx) $(cxx_arg) -o $@ -c main.queue.cxx;
 main.cpu.obj: main.cpu.cxx

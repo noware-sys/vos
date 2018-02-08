@@ -1,0 +1,61 @@
+#pragma once
+
+#include "dev.hxx"
+#include <noware/net/node.cxx>
+
+const std::string noware::pmach::dev::grp_dft = "noware::pmach::dev";
+//const cln::nr noware::pmach::dev::token_size_dft = 16;
+
+noware::pmach::dev::dev (void)
+{
+	//assert (node.rx_set (boost::bind (boost::mem_fn (&noware::pmach::dev::rx), this, _1)));
+}
+
+const zmq::msg noware::pmach::dev::aggregate (const zmq::msg &/* result*//* from search_local*/, const zmq::msg & response/* from ...search*/, const zmq::msg &/* expression*/, const noware::nr &/* responses_count*/, const std::string &/* src*/, const net::cast &/* src_cast*/)
+{
+	return response;
+}
+
+//const bool noware::pmach::dev::respond (const zmsg_t */* msg*/, const zyre_event_t */* event*/)
+const bool noware::pmach::dev::respond (zmq::msg &/* response*/, const zmq::msg &/* rx'd*/, const zyre_event_t */* event*/, const std::string &/* event_type*/, const std::string &/* src*/, const net::cast &/* src_cast*/)
+{
+	std::cerr << "noware::pmach::dev::respond()::called" << std::endl;
+	
+	return false;
+}
+
+const bool noware::pmach::dev::respond_post (const zmq::msg &/* response*/, const zmq::msg &/* rx'd*/, const zyre_event_t */* event*/, const std::string &/* event_type*/, const std::string &/* src*/, const net::cast &/* src_cast*/, const bool & result)
+{
+	std::cerr << "noware::pmach::dev::respond_post()::called" << std::endl;
+	
+	return true;
+}
+
+//const bool noware::pmach::dev::infrastruct (const zmq::msg &/* rx'd*/, const zyre_event_t */* event*/, const std::string &/* event_type*/, const std::string &/* src*/, const net::cast &/* src_cast*/)
+//const bool noware::pmach::dev::infrastruct (const zmq::msg &/* rx'd*/, const zyre_event_t */* event*/, const std::string &/* event_type*/)
+const bool noware::pmach::dev::infrastruct (const zyre_event_t */* event*/, const std::string &/* event_type*/)
+{
+	std::cerr << "noware::pmach::dev::infrastruct()::called" << std::endl;
+	
+	return false;
+}
+
+// Short-circuited (triggered by success).
+const bool noware::pmach::dev::search (zmq::msg &/* result*/, const zmq::msg &/* message*/, const noware::nr &/* total, expected resonses count*/, const noware::nr &/* current count of peers who responded (so far)*/, const std::string &/* src*/, const net::cast &/* src_cast*/)// const
+{
+	std::cerr << "noware::pmach::dev::search()::called" << std::endl;
+	
+	return false;
+}
+
+const bool noware::pmach::dev::search_local (zmq::msg &/* result*/, const zmq::msg &/* message*/, const std::string &/* src*/, const net::cast &/* src_cast*/)// const
+{
+	std::cerr << "noware::pmach::dev::search_local()::called" << std::endl;
+	
+	return false;
+}
+
+std::string const noware::pmach::dev::val (std::string const &/* xpr*/)
+{
+	return "";
+}

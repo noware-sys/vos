@@ -5,8 +5,8 @@
 // remembers memories
 
 class store
-	//: virtual public dev
-	: virtual public cluster::node
+	: virtual public dev	// the server
+	//: virtual public cluster::node	// the client
 	//, public misc::iterator <noware::var>
 	, virtual public contnr::array <std::string, std::string>
 	//, virtual public misc::iterator <std::tuple <std::string, std::string, std::string>>
