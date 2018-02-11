@@ -127,6 +127,8 @@ int main (int argc, char * argv [], char * envp [])
 			std::cout << "  " << "Getting : [" << group << "][" << name << "] == [" << dam.get (group, name, value) << ']' << std::endl;
 			//std::cout << "  " << "Getting : [" << name << "] == [" << dam.get (name) << ']' << std::endl;
 			std::cout << "  " << "    Got : [" << group << "][" << name << "] == [" << value << ']' << std::endl;
+			
+			value = "";
 		}
 		else if (selection == "3")
 		{

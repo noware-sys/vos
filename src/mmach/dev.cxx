@@ -14,6 +14,11 @@
 std::string const noware::mmach::dev::grp_dft = "noware::mmach::dev";
 //cln::nr const noware::mmach::dev::token_size_dft = 16;
 
+noware::mmach::dev::dev (void)
+{
+	_node.sync = false;
+}
+
 bool const noware::mmach::dev::start (void)
 {
 	if (!net::node::start ())

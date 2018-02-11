@@ -75,6 +75,10 @@ bool const noware::mmach::store::start (void)
 
 zmq::msg const noware::mmach::store::aggregate (zmq::msg const & result, zmq::msg const & response, zmq::msg const & expression, cln::nr const & responses_count, std::string const &/* src*/, net::cast const &/* src_cast*/)
 {
+	std::cerr << "noware::mmach::store::aggregate()::response==[" << std::string (response) << "]" << std::endl;
+	return response;
+	
+	/*
 	//noware::tree <std::string, std::string> xpr;
 	std::map <std::string, std::string> xpr;
 	//noware::tree <std::string, std::string> resp_;
@@ -85,6 +89,11 @@ zmq::msg const noware::mmach::store::aggregate (zmq::msg const & result, zmq::ms
 	
 	resp = std::string (response);
 	reslt = std::string (result);
+	
+	std::cerr << "noware::mmach::store::aggregate()::if::(responses_count > noware::nr::natural (0))" << "::in scope::result==[" << std::string (result) << "]" << std::endl;
+	std::cerr << "noware::mmach::store::aggregate()::if::(responses_count > noware::nr::natural (0))" << "::in scope::response==[" << std::string (response) << "]" << std::endl;
+	std::cerr << "noware::mmach::store::aggregate()::if::(responses_count > noware::nr::natural (0))" << "::in scope::reslt==[" << reslt << "]" << std::endl;
+	std::cerr << "noware::mmach::store::aggregate()::if::(responses_count > noware::nr::natural (0))" << "::in scope::resp==[" << resp << "]" << std::endl;
 	
 	//if (!xpr.deserialize (expression))
 	if (!noware::deserialize <std::map <std::string, std::string>> (xpr, std::string (expression)))
@@ -104,25 +113,26 @@ zmq::msg const noware::mmach::store::aggregate (zmq::msg const & result, zmq::ms
 	}
 	else if (xpr ["subject"] == "removal" || xpr ["subject"] == "clearance")
 	{
-		std::cerr << "noware::mmach::store::respond()::if::expression[subject]==" << xpr ["subject"] << "::in scope" << std::endl;
-		std::cerr << "noware::mmach::store::respond()::if::expression[subject]==" << xpr ["subject"] << "::in scope::reponses_count==[" << responses_count << "]" << std::endl;
+		std::cerr << "noware::mmach::store::aggregate()::if::expression[subject]==" << xpr ["subject"] << "::in scope" << std::endl;
+		std::cerr << "noware::mmach::store::aggregate()::if::expression[subject]==" << xpr ["subject"] << "::in scope::reponses_count==[" << responses_count << "]" << std::endl;
 		
 		//if (responses_count > noware::nr::natural (0))
 		if (responses_count > 0)
 		{
-			std::cerr << "noware::mmach::store::respond()::if::(responses_count > noware::nr::natural (0))" << "::in scope" << std::endl;
+			std::cerr << "noware::mmach::store::aggregate()::if::(responses_count > noware::nr::natural (0))" << "::in scope" << std::endl;
 			
 			return zmq::msg ((result == "1" && response == "1") ? "1" : "0");
 		}
 		else
 		{
-			std::cerr << "noware::mmach::store::respond()::if::(responses_count > noware::nr::natural (0))" << "::else::in scope" << std::endl;
+			std::cerr << "noware::mmach::store::aggregate()::if::(responses_count > noware::nr::natural (0))" << "::else::in scope" << std::endl;
 			
 			return result;
 		}
 	}
 	
 	return response;
+	*/
 }
 
 bool const noware::mmach::store::respond (zmq::msg & msg_response, zmq::msg const & msg_request, zyre_event_t const * const/* event*/, std::string const &/* event_type*/, std::string const &/* src*/, net::cast const &/* src_cast*/)
@@ -287,17 +297,22 @@ bool const noware::mmach::store::respond (zmq::msg & msg_response, zmq::msg cons
 			
 			if (remove (message.at ("group"), message.at ("key")))
 			{
+				std::cerr << "noware::mmach::store::respond()::removal::remove()::true" << std::endl;
 				response ["value"] = "1";
 			}
 			else
 			{
+				std::cerr << "noware::mmach::store::respond()::removal::remove()::false" << std::endl;
 				response ["value"] = "0";
 			}
 		}
 		catch (...)
 		{
+			std::cerr << "noware::mmach::store::respond()::removal::caught(...)" << "" << std::endl;
 			response ["value"] = "0";
 		}
+		
+		std::cerr << "noware::mmach::store::respond()::removal::response[value]==" << response ["value"] << "" << std::endl;
 	}
 	else if (message ["subject"] == "size::count")
 	{
@@ -451,6 +466,9 @@ bool const noware::mmach::store::search (zmq::msg & msg_result, zmq::msg const &
 	else if (resp ["subject"] == "removal")
 	{
 		msg_result = resp ["value"];
+		std::cerr << "noware::mmach::store::search()::subject==removal" << std::endl;
+		std::cerr << "noware::mmach::store::search()::subject==removal::response[value]==[" << resp ["value"] << "]" << std::endl;
+		std::cerr << "noware::mmach::store::search()::subject==removal::msg_result==[" << std::string (msg_result) << "]" << std::endl;
 		
 		//return msg_result == "1";
 		return false;
@@ -692,7 +710,7 @@ cln::nr const noware::mmach::store::size (std::string const & grp) const
 		return false;
 	
 	//return multival (zmq::msg (expression.serialize ()), noware::mach::store::grp_dft);
-	return std::string (multival (zmq::msg (expression_serial), noware::smach::store::grp_dft/* + std::string ("::nonempty")*/));
+	return std::string (multival (zmq::msg (expression_serial), noware::smach::store::grp_dft + std::string ("::nonempty")));
 }
 
 bool const noware::mmach::store::empty (void) const
@@ -754,7 +772,11 @@ bool const noware::mmach::store::remove (std::string const & grp, std::string co
 		return false;
 	
 	//return multival (zmq::msg (expression.serialize ()), noware::mach::store::grp_dft);
-	return multival (zmq::msg (expression_serial), noware::smach::store::grp_dft + std::string ("::nonempty")) == "1";
+	
+	//return multival (zmq::msg (expression_serial), noware::smach::store::grp_dft + std::string ("::nonempty")) == "1";
+	std::string result = multival (zmq::msg (expression_serial), noware::smach::store::grp_dft + std::string ("::nonempty"));
+	std::cout << "noware::mmach::store::remove()::result==" << "[" << result << "]" << std::endl;
+	return result == "1";
 }
 
 bool const noware::mmach::store::clear (void)

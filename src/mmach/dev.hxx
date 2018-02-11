@@ -24,7 +24,7 @@ namespace noware
 			: virtual public net::node
 		{
 			public:
-				//dev (void);
+				dev (void);
 				//virtual ~dev (void);
 				
 				static const std::string grp_dft;
