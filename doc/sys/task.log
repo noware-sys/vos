@@ -10,3 +10,7 @@ change extension: .[class].[hc]xx -> .incl.[class].[hc]xx
 make virtual all functions of all classes
 virtually inherit from all classes (virtual public <class>)
 
+mach
+	rename?:
+		client -> user
+		manager -> controller

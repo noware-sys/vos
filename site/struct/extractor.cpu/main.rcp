@@ -19,7 +19,7 @@ obj = main.obj
 #OUT_32 = main-32.elf
 #COMPILER_FLAGS = -g -ggdb -pedantic -fpermissive -static-libstdc++ -static-libgcc -static -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(QUEX_PATH) -I$(LIB_PATH) $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lczmq -lzmq -lzyre
 #cxx_arg = -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(quex_path) -I$(lib_mach_noware_cxx_path) -I$(lib_noware_cxx_path) -I$(lib_zmq_cxx_path) -I$(lib_zyre_cxx_path) -I/usr/include/imatix/zmq.cxx $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lsqlite3 -lczmq -lzmq -lzyre
-cxx_arg = -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(quex_path) -I$(lib_mach_noware_cxx_path) -I$(lib_noware_cxx_path) -I$(lib_zmq_cxx_path) -I$(lib_zyre_cxx_path) $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lsqlite3 -lczmq -lzmq -lzyre
+cxx_arg = -O0 -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(quex_path) -I$(lib_mach_noware_cxx_path) -I$(lib_noware_cxx_path) -I/usr/include/noware/elf.noware.cxx -I$(lib_zmq_cxx_path) -I$(lib_zyre_cxx_path) $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lsqlite3 -lczmq -lzmq -lzyre
 
 all: $(result)
 $(result): $(obj)

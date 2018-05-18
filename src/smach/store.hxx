@@ -4,6 +4,7 @@
 // storage space
 // remembers memories
 
+#include <cln/nr.hxx>
 #include <noware/contnr/array.hxx>
 #include "dev.hxx"
 //#include "../mmach/store.hxx"

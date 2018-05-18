@@ -57,7 +57,8 @@
 //#include <noware/cmd/pause>
 
 //#include <noware/vmach/cpu/x86_64/instr>
-#include <noware/vmach/store/extractor>
+//#include <noware/mmach/store.d/extractor>
+#include <noware/mach/tool/store/extractor>
 
 //#include <vector>
 //struct My
@@ -123,7 +124,7 @@ int main (int argc, char * argv [], char * env [])
 	}
 	
 	
-	noware::vmach::store::extractor extr;
+	noware::mach::tool::store::extractor extr;
 	
 	if (!extr.load_file (argv [1]))
 	{

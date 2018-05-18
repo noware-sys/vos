@@ -52,12 +52,13 @@
 //#include "Numerical Strings.h"
 //#include <noware/unsigned_string>
 //#include <noware/misc/elf>
-#include <noware/mach>
+//#include <noware/mach>
 #include <noware/random/string>
 #include <noware/cmd/pause>
 
-#include <noware/vmach/cpu/x86_64/instr>
-#include <noware/vmach/cpu/loader>
+//#include <noware/vmach/cpu/x86_64/instr>
+//#include <noware/vmach/cpu/loader>
+#include <noware/mach/tool/loader>
 
 //#include <vector>
 //struct My
@@ -113,7 +114,7 @@ int main (int argc, char * argv [], char * env [])
 	for (/*unsigned long long*/ int i = 0; i < argc; ++i)
 		std::cout << argv [i] << ' ';
 	std::cout << std::endl;
-	std::cout << "#args [" << argc << ']' << std::endl;
+	std::cout << "argc [" << argc << ']' << std::endl;
 	
 	if (argc < 3)
 	{
@@ -127,24 +128,22 @@ int main (int argc, char * argv [], char * env [])
 	//noware::unsigned_string content;
 	// Direct-Access Memory for the program
 	//std::map <unsigned long int, unsigned char> dam;
-	noware::mach::store::loader loader_store;
-	noware::vmach::cpu::loader loader_cpu;
 	
-	assert (loader_store.init ());
-	assert (loader_store.enable ());
-	assert (loader_store.start ());
+	//noware::mach::store::loader loader_store;
+	////noware::vmach::cpu::loader loader_cpu;
+	noware::mach::tool::loader loader;
+	
+	assert (loader.init ());
+	assert (loader.enable ());
+	assert (loader.start ());
 	//assert (loader_store.node.join ("noware::mach::store"));
 	//assert (loader_store.node.join ("noware::mach::store::nonfull"));
-	
-	assert (loader_cpu.init ());
-	assert (loader_cpu.enable ());
-	assert (loader_cpu.start ());
 	
 	thread_id = noware::random::string (16);
 	
 	noware::cmd::pause ();
 	
-	if (!loader_store.load_file (argv [1], thread_id))
+	if (!loader.load_store_file (argv [1], thread_id))
 	{
 		std::cerr << "'" << argv [0] << "'::store::error::could not load file '" << argv [1] << "'" << std::endl;
 		
@@ -154,7 +153,7 @@ int main (int argc, char * argv [], char * env [])
 	std::cout << "'" << argv [0] << "'::store::success::loaded file '" << argv [1] << "'" << std::endl;
 	
 	
-	if (!loader_cpu.load_file (argv [2], thread_id))
+	if (!loader.load_cpu_file (argv [2], thread_id))
 	{
 		std::cerr << "'" << argv [0] << "'::cpu::error::could not load file '" << argv [2] << "'" << std::endl;
 		

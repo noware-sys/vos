@@ -57,7 +57,8 @@
 //#include <noware/cmd/pause>
 
 //#include <noware/vmach/cpu/x86_64/instr>
-#include <noware/vmach/cpu/extractor>
+//#include <noware/vmach/cpu/extractor>
+#include <noware/mach/tool/cpu/extractor>
 
 //#include <vector>
 //struct My
@@ -113,7 +114,7 @@ int main (int argc, char * argv [], char * env [])
 	for (/*unsigned long long */int i = 0; i < argc; ++i)
 		std::cout << argv [i] << ' ';
 	std::cout << std::endl;
-	std::cout << "#args [" << argc << ']' << std::endl;
+	std::cout << "argc [" << argc << ']' << std::endl;
 	
 	if (argc < 3)
 	{
@@ -123,7 +124,7 @@ int main (int argc, char * argv [], char * env [])
 	}
 	
 	
-	noware::vmach::cpu::extractor extr;
+	noware::mach::tool::cpu::extractor extr;
 	
 	if (!extr.load_file (argv [1]))
 	{

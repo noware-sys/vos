@@ -1,0 +1,4 @@
+[thread 1] [instr 1] [22 serialization C B]
+
+[thread 1] [index] [val]
+[thread 1] [index.max] [val]

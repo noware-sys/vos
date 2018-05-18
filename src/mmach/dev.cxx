@@ -37,6 +37,13 @@ bool const/* success*/ noware::mmach::dev::respond (zmq::msg &/* response*/, zmq
 	return false;
 }
 
+bool const/* success*/ noware::mmach::dev::respond_post (zmq::msg const &/* response (read-only)*/, zmq::msg const &/* rx'd*/, zyre_event_t const * const/* (zyre) event*/, std::string const &/* event_type*/, std::string const &/* src*/, net::cast const &/* src_cast*/, bool const &/* result*/)
+{
+	std::cerr << "noware::mmach::dev::respond_post()::called" << std::endl;
+	
+	return true;
+}
+
 bool const/* success*/ noware::mmach::dev::search (zmq::msg &/* result*/, zmq::msg const &/* message/expression*/, cln::nr const &/* total, expected resonses count*/, cln::nr const &/* current count of peers who responded (so far)*/, std::string const &/* src*/, net::cast const &/* src_cast*/)// const
 {
 	std::cerr << "noware::mmach::dev::search()::called" << std::endl;

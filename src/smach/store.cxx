@@ -1,6 +1,7 @@
 #pragma once
 
 #include "store.hxx"
+#include <cln/nr.cxx>
 #include <noware/contnr/array.cxx>
 #include "dev.cxx"
 //#include "../mmach/store.cxx"

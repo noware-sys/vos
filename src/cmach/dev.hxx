@@ -10,6 +10,7 @@
 
 namespace noware
 {
+	// TODO?: rename cmach -> umach (user machine)
 	// Place in another project (kernel/os?)?
 	namespace cmach
 	{

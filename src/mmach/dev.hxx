@@ -48,6 +48,7 @@ namespace noware
 				// handle request
 				virtual bool const/* success*/ respond (zmq::msg &/* response*/, zmq::msg const &/* rx'd*/, zyre_event_t const * const/* (zyre) event*/, std::string const &/* event_type*/, std::string const &/* src*/, net::cast const &/* src_cast*/);
 		//		virtual bool const/* success*/ respond_post (zmq::msg const &/* response (read-only)*/, zmq::msg const &/* rx'd*/, zyre_event_t const * const/* (zyre) event*/, std::string const &/* event_type*/, std::string const &/* src*/, net::cast const &/* src_cast*/, bool const &/* result*/);
+				virtual bool const/* success*/ respond_post (zmq::msg const &/* response (read-only)*/, zmq::msg const &/* rx'd*/, zyre_event_t const * const/* (zyre) event*/, std::string const &/* event_type*/, std::string const &/* src*/, net::cast const &/* src_cast*/, bool const &/* result*/);
 				//virtual const bool/* success*/ rx_response (const zyre_event_t */* (zyre) event*/);
 				//virtual const bool/* success*/ rx_request (const zyre_event_t */* (zyre) event*/);
 				//virtual const bool/* success*/ request (const zyre_event_t */* (zyre) event*/);

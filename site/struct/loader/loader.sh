@@ -1,6 +1,8 @@
 #! /bin/bash
 
-if test $# -lt 2
+set -e;
+
+if test $# -lt 1
 then
 	echo "${0}"': usage: '"${0}"' <exe.elf>'
 	exit 1;
