@@ -87,8 +87,8 @@ const bool/* success*/ noware::smach::cmd::respond (zmq::msg & msg_response, con
 			msg_response = "1";
 		else
 			msg_response = "0";
-		//return true;
-		return false;
+		return true;
+		//return false;
 	}
 	else if (request ["subject"] == "cin")
 	{
