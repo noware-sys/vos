@@ -4,6 +4,13 @@
 #include ".instr/.cxx"
 //#include "_instr/.cxx"
 
+noware::smach::cpu::x86_64::instr::instr (void)
+{
+	//thread_id = "";
+	//_operation = "";
+	operation = opr::_null;
+}
+
 template <typename archive>
 void noware::smach::cpu::x86_64::instr::serialize (archive & arch, unsigned int const &/* version*/)
 {
@@ -20,9 +27,8 @@ void noware::smach::cpu::x86_64::instr::serialize (archive & arch, unsigned int 
 
 bool const noware::smach::cpu::x86_64::instr::null (void) const
 {
-	return false;
+	return operation == opr::_null;
 }
-
 
 std::string const noware::smach::cpu::x86_64::instr::serialize (void) const
 {

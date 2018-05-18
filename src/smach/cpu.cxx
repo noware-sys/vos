@@ -582,7 +582,7 @@ const bool noware::smach::cpu::empty (void) const
 		return false;
 	
 	//return multival (zmq::msg (expression.serialize ()), noware::mach::store::grp_dft);
-	return anyval (zmq::msg (expression_serial), "noware::mmach::queue") == "1";
+	return anyval (zmq::msg (expression_serial), "noware::mmach::queue") != "0";
 }
 
 const bool noware::smach::cpu::full (void) const

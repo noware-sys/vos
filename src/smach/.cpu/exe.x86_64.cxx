@@ -61,7 +61,7 @@ void noware::smach::cpu::exe (void)
 		//std::cerr << "noware::smach::cpu::exe()::while(_running)::in scope" << std::endl;
 		
 		//std::cerr << "noware::smach::cpu::exe()::empty()==[" << empty () << "]==noware::smach::cpu::exe()::empty()" << std::endl;
-		while (!empty ())
+		while (/*_node.peer_size ("noware::mmach::queue") > 0 && */!empty ())
 		{
 			std::cerr << "[" << boost::this_thread::get_id () << "] noware::smach::cpu::exe()::while(!empty())::in scope" << std::endl;
 			

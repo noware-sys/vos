@@ -14,6 +14,6 @@ noware::smach::cpu::x86_64::opr const noware::mach::tool::loader::operation_get 
 	}
 	else
 	{
-		return noware::smach::cpu::x86_64::opr::_none;
+		return noware::smach::cpu::x86_64::opr::_null;
 	}
 }

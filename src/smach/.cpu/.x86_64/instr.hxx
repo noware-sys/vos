@@ -8,7 +8,9 @@ class instr
 	public:
 		#include ".instr/.hxx"
 		
+		instr (void);
 		//virtual ~instr (void) = default;
+		
 		// ID of the thread
 		// which this instruction
 		// belongs to

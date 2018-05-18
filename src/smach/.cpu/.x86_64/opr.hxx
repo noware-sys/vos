@@ -2,7 +2,7 @@
 
 enum opr
 {
-	_none,
+	_null,
 	_mov,
 	_int
 };
