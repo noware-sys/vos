@@ -1,0 +1,5 @@
+//id  opr  dest_length dest  src_ref src_length src  next_length next;
+//id  opr  dest_dev dest_length dest  src_dev src_length src  next_length next;
+//id  opr  dest_dev_type dest_dev_id dest_dev_dest_grp dest_val_length dest_val =  src_ref  dev # src  # next;
+//id  opr  dest_dev_type dest_dev_id dest_val_length dest_val =  src_ref  dev # src  # next;
+.  1  4 dest =  0  3 src, 4 next;

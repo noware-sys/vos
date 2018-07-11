@@ -1,8 +1,8 @@
 #pragma once
 
-void noware::smach::cpu::exe (void)
+void noware::smach::cpu::cycle (void)
 {
-	std::cerr << "noware::smach::cpu::exe()::in scope" << std::endl;
+	std::cerr << "noware::smach::cpu::cycle()::in scope" << std::endl;
 	
 	/*vmach::cpu::*/x86_64::instr inst;
 	std::string inst_next;
@@ -78,9 +78,10 @@ void noware::smach::cpu::exe (void)
 				
 				thread_id = std::string ("thread ") + inst.thread_id;
 				
-				// execute;
+				// execute
 				// evaluate
-				val (inst);
+				exe (inst);
+				//val (inst);
 				
 				
 				std::cerr << "[" << boost::this_thread::get_id () << "] noware::smach::cpu::exe::stop/continue?" << std::endl;

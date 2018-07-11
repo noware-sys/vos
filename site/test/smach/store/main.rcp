@@ -9,7 +9,7 @@ src = main.cxx
 out = main.elf
 
 #cxx_arg = -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(quex_path) -I$(lib_path) $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lsqlite3 -lczmq -lzmq -lzyre
-cxx_arg = -O0 -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -pthread -fopenmp -fPIC -std=c++14 -I. -I/usr/include/noware/noware.cxx -I/usr/include/noware/mach.noware.cxx -I/usr/include/noware/nr.cln.cxx -I/usr/include/noware/zmq.cxx -I/usr/include/noware/zyre.cxx -L. -ldl -lboost_serialization -lboost_system -lboost_thread -lboost_random -lcln -lzyre -lczmq -lzmq
+cxx_arg = -O0 -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -pthread -fopenmp -fPIC -std=c++14 -I. -I/usr/include/noware/noware.cxx -I/usr/include/noware/mach.noware.cxx -I/usr/include/noware/nr.cln.cxx -I/usr/include/noware/zmq.cxx -I/usr/include/noware/zyre.cxx -L. -ldl -lboost_serialization -lboost_system -lboost_chrono -lboost_thread -lboost_random -lcln -lzyre -lczmq -lzmq
 
 all: $(out)
 $(out): $(obj)
@@ -25,4 +25,4 @@ $(obj):
 #misc.serial.obj:
 #	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/misc/serial.cxx;
 clean:
-	rm --force *.elf *.obj;
+	rm $(out) $(obj);

@@ -9,7 +9,7 @@
 #include "../../cmach/dev.cxx"
 #include "../../smach/cpu.cxx"
 
-const bool noware::mach::tool::loader::load_store_file (const std::string & file_name, std::string thread_id)
+const bool noware::mach::tool::loader::load_store_file (const std::string & file_name, std::string const & thread_id)
 {
 	std::ifstream file;
 	
@@ -20,6 +20,7 @@ const bool noware::mach::tool::loader::load_store_file (const std::string & file
 	//unsigned long int ndx;
 	//std::string token_prev;
 	//std::string dest_offset_location, src_offset_location;
+	std::string thread_name;
 	
 	// the first instruction;
 	// the "entry point"
@@ -33,7 +34,7 @@ const bool noware::mach::tool::loader::load_store_file (const std::string & file
 	//ndx = 0;
 	//instr.thread_id = noware::random::string (16);
 	//instr.thread_id = thread_id;
-	thread_id = std::string ("thread ") + thread_id;
+	thread_name = std::string ("thread ") + thread_id;
 	//thread = std::string ("thread ") + thread_id;
 	//token_prev = "";
 	//_instr.thread_id = "1";
@@ -45,8 +46,8 @@ const bool noware::mach::tool::loader::load_store_file (const std::string & file
 	{
 		//++ndx;
 		
-		std::cerr << "set(\"" << thread_id << "\", \"" << key << "\", \"" << val << "\")" << std::endl;
-		assert (set (thread_id, key, val));
+		std::cerr << "set(\"" << thread_name << "\", \"" << key << "\", \"" << val << "\")" << std::endl;
+		assert (set (thread_name, key, val));
 		//assert (set (thread_id, std::string ("instr ") + label, _instr.serialize ()));
 	}
 	
@@ -57,98 +58,144 @@ const bool noware::mach::tool::loader::load_store_file (const std::string & file
 	return true;
 }
 
-const bool noware::mach::tool::loader::load_cpu_file (const std::string & file_name, std::string thread_id)
+const bool noware::mach::tool::loader::load_cpu_file (const std::string & file_name, std::string const & thread_id)
 {
 	std::ifstream file;
 	
-	//std::string thread_id;
+	std::string thread_name;
 	
-	smach::cpu::x86_64::instr instr;
+	//smach::cpu::x86_64::instr instr;
 	//std::string token;
-	std::string operation;
-	unsigned long int ndx;
+	//std::string operation;
+	//cln::nr ndx;
+	std::string instr_id;
+	std::string instr_id_entry;
+	std::string instr_str;
+	
+	//cln::nr length;
+	
+	//unsigned long int ndx;
 	//std::string token_prev;
 	//std::string dest_offset_location, src_offset_location;
 	
 	// the first instruction;
 	// the "entry point"
-	std::string instr1;
+	//std::string instr1;
+	
+	smach::cpu::bbj::instr instr;
+	
+	// whether there are no instructions
+	bool empty;
+	
+	
+	empty = true;
 	
 	file.open (file_name);
 	
 	if (!file.is_open ())
 		return false;
 	
-	ndx = 0;
+	//ndx = 0;
 	//instr.thread_id = noware::random::string (16);
-	instr.thread_id = thread_id;
-	thread_id = std::string ("thread ") + instr.thread_id;
+	//instr.thread_id = thread_id;
+	thread_name = std::string ("thread ") + thread_id;
 	//token_prev = "";
 	//_instr.thread_id = "1";
 	//_instr.oprn = cpu::opr::set;
 	//while (file >> operation >> dest >> dest_ref >> dest_is_offset >> dest_offset_location >> src >> src_ref >> src_is_offset >> src_offset_location)
 	//while (file >> id >> device >> operation >> arg1type >> arg1 >> arg2type >> arg2 >> arg3type >> arg3 >> arg4type >> arg4)
+	
+	if (file >> instr_id_entry)
+	{
+		// get the rest of the instruction
+		if (!std::getline (file, instr_str, ';'))
+		{
+			file.close ();
+			return false;
+		}
+		
+		instr = instr_deserialize (instr_str);
+		
+		std::cerr << "noware::mach::cpu::loader::load_file()::instr_id_entry[" << instr_id_entry << "]" << std::endl;
+		//std::cerr << "noware::mach::cpu::loader::load_file()::instr.operation[" << instr.operation << "]" << std::endl;
+		std::cerr << instr.dump () << std::endl;
+		//instr.operation = operation_get (operation);
+		assert (set (thread_name, std::string ("instr ") + instr_id_entry, instr.serialize ()));
+		//assert (set (thread_id, std::string ("instr ") + label, _instr.serialize ()));
+		
+		empty = false;
+	}
+	
 	while
 	(
 		file >>
 		
+		// instruction id
+		instr_id
+		
+		/*
 		// operation
-		/*instr.*/operation >>
-		// number of arguments
-		instr.args_nr >>
+		instr.operation >>
 		
-		// argument 1
-			instr.arg1.ref >> instr.arg1.terms_nr >>
-			// argument 1, term 1
-			instr.arg1.term1.factor >> instr.arg1.term1.ref >> instr.arg1.term1.val >>
-			// argument 1, term 2
-			instr.arg1.term2.factor >> instr.arg1.term2.ref >> instr.arg1.term2.val >>
-			// argument 1, term 3
-			instr.arg1.term3.factor >> instr.arg1.term3.ref >> instr.arg1.term3.val >>
+		// dest
+			instr.dest >>
 		
-		// argument 2
-			instr.arg2.ref >> instr.arg1.terms_nr >>
-			// argument 2, term 1
-			instr.arg2.term1.factor >> instr.arg2.term1.ref >> instr.arg2.term1.val >>
-			// argument 2, term 2
-			instr.arg2.term2.factor >> instr.arg2.term2.ref >> instr.arg2.term2.val >>
-			// argument 2, term 3
-			instr.arg2.term3.factor >> instr.arg2.term3.ref >> instr.arg2.term3.val >>
+		// src_ref
+			instr.src_ref >>
 		
-		// argument 3
-			instr.arg3.ref >> instr.arg1.terms_nr >>
-			// argument 2, term 1
-			instr.arg3.term1.factor >> instr.arg3.term1.ref >> instr.arg3.term1.val >>
-			// argument 2, term 2
-			instr.arg3.term2.factor >> instr.arg3.term2.ref >> instr.arg3.term2.val >>
-			// argument 2, term 3
-			instr.arg3.term3.factor >> instr.arg3.term3.ref >> instr.arg3.term3.val
+		// src
+			instr.src >>
+		
+		// next
+			instr.next
+		*/
 	)
+	
+	//while (std::getline (file, instr_str, ';'))
 	//while (file >> token)
 	{
-		++ndx;
+		//++ndx;
 		
-		std::cerr << "noware::vmach::cpu::loader::load_file()::ndx[" << ndx << "]" << std::endl;
-		std::cerr << "noware::vmach::cpu::loader::load_file()::operation[" << operation << "]" << std::endl;
-		instr.operation = operation_get (operation);
-		assert (set (thread_id, std::string ("instr ") + cln::nr (ndx).operator const std::string (), instr.serialize ()));
+		/*
+		if (empty)
+		{
+			instr_id_entry = instr_id;
+		}
+		*/
+		
+		// get the rest of the instruction
+		if (!std::getline (file, instr_str, ';'))
+		{
+			file.close ();
+			return false;
+		}
+		
+		instr = instr_deserialize (instr_str);
+		
+		std::cerr << "noware::mach::cpu::loader::load_file()::instr_id[" << instr_id << "]" << std::endl;
+		//std::cerr << "noware::mach::cpu::loader::load_file()::instr.operation[" << instr.operation << "]" << std::endl;
+		std::cerr << instr.dump () << std::endl;
+		//instr.operation = operation_get (operation);
+		assert (set (thread_name, std::string ("instr ") + instr_id, instr.serialize ()));
 		//assert (set (thread_id, std::string ("instr ") + label, _instr.serialize ()));
+		
+		//empty = false;
 	}
 	
 	file.close ();
 	
-	if (ndx > 0)
+	if (!empty)
 	{
 		////assert (set (std::string ("thread ") + _instr.thread_id, "running", "0"));
 		//assert (set (thread_id, "running", "1"));
-		assert (set (thread_id, "index", "1"));
+		assert (set (thread_name, "index", instr_id_entry));
 		//set (std::string ("thread ") + _instr.thread_id, "running", "0");
-		assert (set (thread_id, "index.max", cln::nr (ndx).operator const std::string ()));
+		//assert (set (thread_name, "index.max", cln::nr (ndx).operator const std::string ()));
 		
-		instr1 = get (thread_id, "instr 1");
+		//instr1 = get (thread_id, "instr 1");
 		//_instr.dump ();
 		//assert (enqueue (_instr));
-		if (!enqueue (instr1))
+		if (!enqueue (thread_name))
 			return false;
 	}
 	
@@ -157,7 +204,56 @@ const bool noware::mach::tool::loader::load_cpu_file (const std::string & file_n
 	return true;
 }
 
-#include "loader.operation_get.cxx"
+//#include "loader.operation_get.cxx"
+noware::smach::cpu::bbj::instr const noware::mach::tool::loader::instr_deserialize (std::string const & instr_str) const
+{
+	noware::smach::cpu::bbj::instr instr;
+	std::stringstream instr_ss;
+	cln::nr length;
+	unsigned short int operation;
+	//std::string dev;
+	char * buffer;
+	
+	instr_ss.str (instr_str);
+	
+	instr_ss >> operation;
+	instr.operation = operation == 0 ? noware::smach::cpu::bbj::opr::_null : noware::smach::cpu::bbj::opr::_bbj;
+	
+	
+	instr_ss >> instr.dest_dev;
+	
+	instr_ss >> length;
+	buffer = new char [(unsigned long int) length+1];
+	instr_ss.ignore (1);	// the space between the length and the value
+	instr_ss.read (buffer, length);
+	buffer [(unsigned long int) length] = '\0';
+	instr.dest = buffer;
+	delete [] buffer;
+	
+	
+	instr_ss >> instr.src_dev;
+	
+	//instr_ss >> instr.src_ref;
+	
+	instr_ss >> length;
+	buffer = new char [(unsigned long int) length+1];
+	instr_ss.ignore (1);	// the space between the length and the value
+	instr_ss.read (buffer, length);
+	buffer [(unsigned long int) length] = '\0';
+	instr.src = buffer;
+	delete [] buffer;
+	
+	
+	instr_ss >> length;
+	buffer = new char [(unsigned long int) length+1];
+	instr_ss.ignore (1);	// the space between the length and the value
+	instr_ss.read (buffer, length);
+	buffer [(unsigned long int) length] = '\0';
+	instr.next = buffer;
+	delete [] buffer;
+	
+	return instr;
+}
 
 std::string const/* value*/ noware::mach::tool::loader::get (const std::string & group, const std::string & key) const
 {

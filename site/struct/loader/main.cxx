@@ -100,7 +100,7 @@ const unsigned int integer (const std::string & block, const bool & swap = false
 }
 */
 
-int main (int argc, char * argv [], char * env [])
+int main (int argc, char * argv [], char * envp [])
 {
 	//using boost::any_cast;
 	//using namespace std;

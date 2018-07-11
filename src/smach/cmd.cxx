@@ -182,6 +182,7 @@ bool const noware::smach::cmd::cout (std::string const & value)
 	out_val = value;
 	
 	std::cout << (char) (out_val.operator unsigned long int const ());
+	//std::cout << value;
 	
 	/*
 	// space

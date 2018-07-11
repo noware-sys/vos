@@ -4,7 +4,7 @@ set -e;
 
 if test $# -lt 3
 then
-	echo "${0}"': usage: '"${0}"' <exe.elf> <store.txt> <cpu-instr.txt>'
+	echo "${0}"': usage: '"${0}"' <exe.elf> <store.key+val.txt> <cpu.instr.txt>'
 	exit 1;
 fi
 

@@ -48,7 +48,7 @@ const bool noware::smach::store::start (void)
 	if (!_node.join (grp_dft))
 		return false;
 	
-	if (!_node.join (grp_dft + std::string ("::nonfull"))) // Temporary: dynamically find when needed.
+	if (!_node.join (grp_dft + std::string ("::nonfull"))) // TODO: dynamically find when needed.
 		return false;
 	
 	return true;

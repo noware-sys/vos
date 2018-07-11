@@ -359,7 +359,7 @@ const bool noware::smach::cpu::start (void)
 	
 	if (_exen == nullptr)
 	{
-		_exen = new boost::thread (boost::bind (boost::mem_fn (&noware::smach::cpu::exe), this));
+		_exen = new boost::thread (boost::bind (boost::mem_fn (&noware::smach::cpu::cycle), this));
 		
 		if (_exen == nullptr)
 		{
@@ -384,7 +384,9 @@ const bool noware::smach::cpu::start (void)
 }
 
 //#include ".cpu/exe.mov.cxx"
-#include ".cpu/exe.x86_64.cxx"
+//#include ".cpu/exe.x86_64.cxx"
+//#include ".cpu/cycle-x86_64.cxx"
+#include ".cpu/cycle-bbj.cxx"
 
 void noware::smach::cpu::notify (const unsigned int & delay_)
 {
@@ -1055,5 +1057,6 @@ const bool/* success*/ noware::smach::cpu::search (zmq::msg & msg_result, const 
 	return false;
 }
 
-#include ".cpu/val.x86_64.cxx"
+//#include ".cpu/val.x86_64.cxx"
 //#include ".cpu/exe-x86_64.cxx"
+#include ".cpu/exe-bbj.cxx"

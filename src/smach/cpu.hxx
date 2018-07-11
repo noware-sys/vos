@@ -78,7 +78,7 @@ namespace noware
 				cpu (void);
 				virtual ~cpu (void);
 				
-				static const std::string grp_dft;
+				static std::string const grp_dft;
 				
 				virtual const bool stop (void);
 				virtual const bool running (void) const;
@@ -88,7 +88,13 @@ namespace noware
 				// notification_delay_dft noten_delay_dft
 				static unsigned int const noten_delay_dft;
 				
+				// in nr of instructions
+				static cln::nr const reenqueue_delay_dft;
+				
 				//virtual const bool join (void);
+				
+				cln::nr const reenqueue_delay_get (void) const;
+				bool const reenqueue_delay_set (cln::nr const &);
 				
 				// Queue
 			public:
@@ -103,7 +109,7 @@ namespace noware
 				virtual const bool empty (void) const;
 				virtual const bool full (void) const;
 				
-				virtual const bool enqueue (const std::string &);
+				virtual const bool enqueue (std::string const &);
 				////const bool enqueue (const operation &/* operator*/, const noware::var &/* operand1*/, const noware::var &/* operand2*/ = "");	// Accurate.
 				//virtual const bool enqueue (const std::string &/* operand1 (source)*/, const opr &/* operation*/ = opr::none, const std::string &/* operand2 (key)*/ = "", const std::string &/* operand3/thread_id (group)*/ = "");	// Convenient.
 				
@@ -145,8 +151,9 @@ namespace noware
 				//#include ".cpu/val.x86_64.hxx"
 				//virtual bool const val (x86_64::instr const &/* instruction*/);
 			protected:
-				#include ".cpu/val.x86_64.hxx"
+				//#include ".cpu/val.x86_64.hxx"
 				//#include ".cpu/exe-x86_64.hxx"
+				#include ".cpu/exe-bbj.hxx"
 				
 				virtual const bool/* success*/ respond (zmq::msg &/* response*/, const zmq::msg &/* rx'd*/, const zyre_event_t */* (zyre) event*/, const std::string &/* event_type*/, const std::string &/* src*/, const net::cast &/* src_cast*/);
 				virtual const bool/* success*/ search (zmq::msg &/* result*/, const zmq::msg &/* message/expression*/, const cln::nr &/* total, expected resonses count*/, const cln::nr &/* current count of peers who responded (so far)*/, const std::string &/* src*/, const net::cast &/* src_cast*/);// const
@@ -156,6 +163,11 @@ namespace noware
 				// /Process/Find/Search for/ the next instruction on-the-fly.
 				// Do not store an instruction queue.
 				//std::queue <instruction> queue;
+				
+				// how many instructions to locally execute before enqueing into the
+				// networked queue the result of the last executed one.
+				// valid range: [1 -> infin[ | val is an int
+				cln::nr reenqueue_delay;
 			protected:
 				//bool _running;
 				bool _insn_avail;
@@ -164,8 +176,8 @@ namespace noware
 				// For running "void exe (void)".
 				boost::thread * _exen;
 				
-				// executer of instructions
-				void exe (void);
+				// main execution loop
+				void cycle (void);
 				
 				boost::condition_variable _condition_instr_enqueued;
 				boost::mutex _mutex;
