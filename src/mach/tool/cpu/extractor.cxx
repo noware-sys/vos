@@ -85,22 +85,23 @@ bool const/* success*/ noware::mach::tool::cpu::extractor::extract (std::string 
 		// If this program segment is of the type 'LOAD', then load it
 		if (noware::elf::integer (elf.prog [phndx].type.data, true) == 0x1/*PT_LOAD*/)
 		{
-			// This is the executable LOAD program segment which contains the instructions
-			// Write the program segment into the output file
 			filesz = noware::elf::integer (elf.prog [phndx].filesz.data, true);
 			vaddr = noware::elf::integer (elf.prog [phndx].vaddr.data, true);
 			offset = noware::elf::integer (elf.prog [phndx].offset.data, true);
 			flag = noware::elf::integer (elf.prog [phndx].flag.data, true);
+			
 			if ((flag & 0x5/*Read + eXecute*/) && entry >= vaddr)
+			// This is the executable LOAD program segment which contains the instructions
+			// Write the program segment into the output file
 			{
 				diff = entry - vaddr;
 				start = diff + offset;
 				size = filesz - diff;
 				
-				cmd << "dd skip=$((" << start << ")) bs=1 count=$((" << size << ")) if='" << input_file_name << "' 2> /dev/null | ndisasm -b $((" << elf_bits << ")) -p intel - 1> '" << output_file_name << "'";
+				cmd << "dd skip=$((" << start << ")) bs=1 count=$((" << size << ")) if='" << input_file_name << "' 2> /dev/null | ndisasm -b $((" << elf_bits << ")) -p intel - 1> '" << output_file_name << '-' << phndx << "'";
 				
 				error = system (cmd.str ().c_str ());
-				break;
+				//break;
 			}
 		}
 	}

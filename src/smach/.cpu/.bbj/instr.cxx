@@ -8,7 +8,7 @@ noware::smach::cpu::bbj::instr::instr (void)
 {
 	//thread_id = "";
 	//_operation = "";
-	operation = opr::_null;
+	_oprn = oprn::_null;
 	//dest_dev = mach::dev::cmd;
 	//dest_dev = "";
 	//src_dev = mach::dev::null;
@@ -19,12 +19,12 @@ std::string const noware::smach::cpu::bbj::instr::dump (void) const
 {
 	std::stringstream ss;
 	
-	ss << "operation[" << operation << ']' << std::endl;
-	ss << " dest_dev[" << dest_dev << ']' << std::endl;
-	ss << "     dest[" << dest << ']' << std::endl;
-	ss << "  src_dev[" << src_dev << ']' << std::endl;
-	ss << "      src[" << src << ']' << std::endl;
-	ss << "     next[" << next << ']' << std::endl;
+	ss << "   _oprn[" << _oprn << ']' << std::endl;
+	ss << "dest_dev[" << dest_dev << ']' << std::endl;
+	ss << "    dest[" << dest << ']' << std::endl;
+	ss << " src_dev[" << src_dev << ']' << std::endl;
+	ss << "     src[" << src << ']' << std::endl;
+	ss << "    next[" << next << ']' << std::endl;
 	
 	return ss.str ();
 }
@@ -34,7 +34,7 @@ void noware::smach::cpu::bbj::instr::serialize (archive & arch, unsigned int con
 {
 	//arch & thread_id;
 	
-	arch & operation;
+	arch & _oprn;
 	//arch & _operation;
 	//arch & args_nr;
 	
@@ -47,7 +47,7 @@ void noware::smach::cpu::bbj::instr::serialize (archive & arch, unsigned int con
 
 bool const noware::smach::cpu::bbj::instr::null (void) const
 {
-	return operation == opr::_null;
+	return _oprn == oprn::_null;
 }
 
 std::string const noware::smach::cpu::bbj::instr::serialize (void) const

@@ -80,8 +80,8 @@ void noware::smach::cpu::cycle (void)
 			// dump member variables
 			std::cerr << inst.dump () << std::endl;
 			
-			if (!inst.null ())
-			{
+			//if (!inst.null ())
+			//{
 				std::cerr << "[" << boost::this_thread::get_id () << "] noware::smach::cpu::next_dequeue()::valid instruction" << std::endl;
 				
 				//thread_id = std::string ("thread ") + inst.thread_id;
@@ -132,11 +132,11 @@ void noware::smach::cpu::cycle (void)
 					
 					//boost::this_thread::sleep_for (boost::chrono::milliseconds (200));
 				}
-			}
-			else
-			{
-				std::cerr << "[" << boost::this_thread::get_id () << "] noware::smach::cpu::next_dequeue()::null instruction" << std::endl;
-			}
+			//}
+			//else
+			//{
+			//	std::cerr << "[" << boost::this_thread::get_id () << "] noware::smach::cpu::next_dequeue()::null instruction" << std::endl;
+			//}
 		}
 		
 		//std::cerr << "noware::smach::cpu::exe()::while(!empty())::in scope" << std::endl;

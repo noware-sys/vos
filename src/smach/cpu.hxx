@@ -164,9 +164,9 @@ namespace noware
 				// Do not store an instruction queue.
 				//std::queue <instruction> queue;
 				
-				// how many instructions to locally execute before enqueing into the
-				// networked queue the result of the last executed one.
-				// valid range: [1 -> infin[ | val is an int
+				// how many instructions to locally execute, before enqueing into the
+				// networked queue, the result of the last executed instruction.
+				// valid range: [1 - !fin[ | val is an int
 				cln::nr reenqueue_delay;
 			protected:
 				//bool _running;

@@ -2,8 +2,8 @@
 
 #include <string>
 #include <zmq/msg.hxx>
-#include "../../cmach/dev.hxx"
-#include "../../smach/cpu.hxx"
+//#include "../../cmach/dev.hxx"
+//#include "../../smach/cpu.hxx"
 
 namespace noware
 {
@@ -16,9 +16,9 @@ namespace noware
 			{
 				public:
 					virtual bool const load_store_file (std::string const &/* file_name*/, std::string const &/* thread_id*/ = "");
-					virtual bool const load_cpu_file (std::string const &/* file_name*/, std::string const &/* thread_id*/ = "");
+				//	virtual bool const load_cpu_file (std::string const &/* file_name*/, std::string const &/* thread_id*/ = "");
 					//virtual smach::cpu::x86_64::opr const operation_get (std::string const &/* operation*/) const;
-					virtual smach::cpu::bbj::instr const instr_deserialize (std::string const &/* serialized instruction*/) const;
+				//	virtual smach::cpu::bbj::instr const instr_deserialize (std::string const &/* serialized instruction*/) const;
 					
 					
 					// Store functionality

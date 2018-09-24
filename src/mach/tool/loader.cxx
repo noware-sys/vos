@@ -6,10 +6,10 @@
 #include <zmq/msg.cxx>
 
 #include "loader.hxx"
-#include "../../cmach/dev.cxx"
-#include "../../smach/cpu.cxx"
+//#include "../../cmach/dev.cxx"
+//#include "../../smach/cpu.cxx"
 
-const bool noware::mach::tool::loader::load_store_file (const std::string & file_name, std::string const & thread_id)
+const bool noware::mach::tool::loader::load_store_file (const std::string & file_name, std::string const & thread_id/*, char const & delim_inner, char const & delim_outer*/)
 {
 	std::ifstream file;
 	
@@ -20,7 +20,8 @@ const bool noware::mach::tool::loader::load_store_file (const std::string & file
 	//unsigned long int ndx;
 	//std::string token_prev;
 	//std::string dest_offset_location, src_offset_location;
-	std::string thread_name;
+//	std::string thread_name;
+//	std::string key_prefix;
 	
 	// the first instruction;
 	// the "entry point"
@@ -34,7 +35,8 @@ const bool noware::mach::tool::loader::load_store_file (const std::string & file
 	//ndx = 0;
 	//instr.thread_id = noware::random::string (16);
 	//instr.thread_id = thread_id;
-	thread_name = std::string ("thread ") + thread_id;
+//	thread_name = std::string ("thread ") + thread_id;
+//	key_prefix = std::string ("ram ");
 	//thread = std::string ("thread ") + thread_id;
 	//token_prev = "";
 	//_instr.thread_id = "1";
@@ -46,8 +48,8 @@ const bool noware::mach::tool::loader::load_store_file (const std::string & file
 	{
 		//++ndx;
 		
-		std::cerr << "set(\"" << thread_name << "\", \"" << key << "\", \"" << val << "\")" << std::endl;
-		assert (set (thread_name, key, val));
+		std::cerr << "set(\"" << thread_id << "\", \"" << /*key_prefix << */key << "\", \"" << val << "\")" << std::endl;
+		assert (set (thread_id, /*key_prefix + */key, val));
 		//assert (set (thread_id, std::string ("instr ") + label, _instr.serialize ()));
 	}
 	
@@ -58,6 +60,7 @@ const bool noware::mach::tool::loader::load_store_file (const std::string & file
 	return true;
 }
 
+/*
 const bool noware::mach::tool::loader::load_cpu_file (const std::string & file_name, std::string const & thread_id)
 {
 	std::ifstream file;
@@ -161,7 +164,7 @@ const bool noware::mach::tool::loader::load_cpu_file (const std::string & file_n
 		{
 			instr_id_entry = instr_id;
 		}
-		*/
+		* /
 		
 		// get the rest of the instruction
 		if (!std::getline (file, instr_str, ';'))
@@ -203,7 +206,9 @@ const bool noware::mach::tool::loader::load_cpu_file (const std::string & file_n
 	
 	return true;
 }
+*/
 
+/*
 //#include "loader.operation_get.cxx"
 noware::smach::cpu::bbj::instr const noware::mach::tool::loader::instr_deserialize (std::string const & instr_str) const
 {
@@ -254,6 +259,7 @@ noware::smach::cpu::bbj::instr const noware::mach::tool::loader::instr_deseriali
 	
 	return instr;
 }
+*/
 
 std::string const/* value*/ noware::mach::tool::loader::get (const std::string & group, const std::string & key) const
 {

@@ -1,6 +1,6 @@
 #pragma once
 
-enum opr
+enum oprn
 {
 	_null,
 	_bbj

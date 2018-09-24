@@ -3,9 +3,13 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <bitset>
 #include <noware/elf.cxx>
 
 #include "extractor.hxx"
+
+//char const noware::mach::tool::store::extractor::delim_inner_dft = ' ';
+//char const noware::mach::tool::store::extractor::delim_outer_dft = ';';
 
 /*
 noware::mach::tool::store::extractor::extractor (void)
@@ -37,7 +41,7 @@ bool const/* success*/ noware::mach::tool::store::extractor::load_file (std::str
 }
 
 
-bool const/* success*/ noware::mach::tool::store::extractor::write_file (std::string const & file_name, bool const & pad)
+bool const/* success*/ noware::mach::tool::store::extractor::write_file (std::string const & file_name, bool const & pad/*, char const & delim_inner, char const & delim_outer*//*, unsigned short int const & bit_addr*/)
 {
 	std::ofstream file;
 	
@@ -47,6 +51,10 @@ bool const/* success*/ noware::mach::tool::store::extractor::write_file (std::st
 	if (!file.is_open ())
 		return false;
 	
+	unsigned short int const addr_bit = 8;
+	
+	// Whether the elf is for 32 or 64 bits architecture
+	unsigned short int elf_bit;
 	
 	// Load all 'LOAD' program segments into memory
 	unsigned long int phndx, phnum;
@@ -55,6 +63,7 @@ bool const/* success*/ noware::mach::tool::store::extractor::write_file (std::st
 	unsigned long int filesz, memsz;
 	unsigned long int flag;
 	
+	elf_bit = noware::elf::integer (elf.hdr.id_class.data, true) == 0x1/*32-bit == 0x1; 64-bit == 0x2*/ ? 32 : 64;
 	phnum = noware::elf::integer (elf.hdr.phnum.data, true);
 	for (phndx = 0; phndx < phnum; ++phndx)
 	{
@@ -66,8 +75,8 @@ bool const/* success*/ noware::mach::tool::store::extractor::write_file (std::st
 			vaddr = noware::elf::integer (elf.prog [phndx].vaddr.data, true);
 			flag = noware::elf::integer (elf.prog [phndx].flag.data, true);
 			
-			if (!(flag & 0x1/*eXecute*/))
-			{
+			//if (!(flag & 0x1/*eXecute*/))
+			//{
 				for (j = 0; j < filesz; ++j, ++vaddr)
 				{
 					// 8 bits (1 byte) at a time
@@ -76,13 +85,19 @@ bool const/* success*/ noware::mach::tool::store::extractor::write_file (std::st
 					//dam [vaddr] = file.prog [phndx].data.data [j];
 					
 					// memory address
-					file << vaddr << std::endl;
+					file << std::bitset <elf_bit> (vaddr);
+					file << std::endl;
+					
+					//file << delim_inner;
 					
 					// memory content at that address
-					if (elf.prog [phndx].data.data [j] == 0xA)
-						file << ((unsigned long int) ('\n')) << std::endl;
-					else
-						file << ((unsigned long int) (elf.prog [phndx].data.data [j])) << std::endl;
+					//if (elf.prog [phndx].data.data [j] == 0xA)
+					//	file << ((unsigned long int) ('\n')) << std::endl;
+					//else
+						file << std::bitset <addr_bit> ((unsigned long int) (elf.prog [phndx].data.data [j]));
+					
+					//file << delim_outer;
+					file << std::endl;
 				}
 				
 				if (pad)
@@ -94,13 +109,19 @@ bool const/* success*/ noware::mach::tool::store::extractor::write_file (std::st
 						//dam [vaddr] = (unsigned char) '0';
 						
 						// memory address
-						file << vaddr << std::endl;
+						file << std::bitset <elf_bit> (vaddr);
+						file << std::endl;
+						
+						//file << delim_inner;
 						
 						// memory content at that address
-						file << ((unsigned long int) '0') << std::endl;
+						file << std::bitset <addr_bit> ((unsigned long int) '0');
+						
+						//file << delim_outer;
+						file << std::endl;
 					}
 				}
-			}
+			//}
 		}
 	}
 	

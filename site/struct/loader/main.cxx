@@ -116,9 +116,11 @@ int main (int argc, char * argv [], char * envp [])
 	std::cout << std::endl;
 	std::cout << "argc [" << argc << ']' << std::endl;
 	
-	if (argc < 3)
+	//if (argc < 3)
+	if (argc < 2)
 	{
-		std::cerr << "'" << argv [0] << "'" << " '<store.key+val.txt>' '<cpu.instr.txt>'" << std::endl;
+		//std::cerr << "'" << argv [0] << "'" << " '<store.key+val.txt>' '<cpu.insn.txt>'" << std::endl;
+		std::cerr << "'" << argv [0] << "'" << " <ram.txt>" << std::endl;
 		
 		return EXIT_FAILURE;
 	}
@@ -152,7 +154,7 @@ int main (int argc, char * argv [], char * envp [])
 	
 	std::cout << "'" << argv [0] << "'::store::success::loaded file '" << argv [1] << "'" << std::endl;
 	
-	
+	/*
 	if (!loader.load_cpu_file (argv [2], thread_id))
 	{
 		std::cerr << "'" << argv [0] << "'::cpu::error::could not load file '" << argv [2] << "'" << std::endl;
@@ -161,4 +163,5 @@ int main (int argc, char * argv [], char * envp [])
 	}
 	
 	std::cout << "'" << argv [0] << "'::cpu::success::loaded file '" << argv [2] << "'" << std::endl;
+	*/
 }

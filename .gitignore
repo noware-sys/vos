@@ -40,44 +40,44 @@
 
 # Custom
 known_hosts
-exclusion.cxx.git
+excl.cxx.git
 nbproject
 
 cfg
 lib
 doc.html
 
-src/db/sqlite.c
+#src/db/sqlite.c
 
 #LICENSE.txt
 
-other
+#other
 
 # Temporary
-noware.hxx
-src/list*
-src/pc*
-src/.pc
-src/calculator*
-src/zmq*
+#noware.hxx
+#src/list*
+#src/pc*
+#src/.pc
+#src/calculator*
+#src/zmq*
 #src/pmach*
-src/mach/.screen
-src/net/-node*
+#src/mach/.screen
+#src/net/-node*
 
-doc/sys/hierarchy.txt
-doc/usr/abbr.txt
+#doc/sys/hierarchy.txt
+#doc/usr/abbr.txt
 doc/usr/cfg.txt
-doc/usr/event.log
+doc/usr/event.log.txt
 doc/usr/struct.txt
 
-site/test/mach/main.store.obj.1
-site/test/mach/main.store.elf.1
-site/test/unicorn
+#site/test/mach/main.store.obj.1
+#site/test/mach/main.store.elf.1
+#site/test/unicorn
 #site/test/elf.cxx/asm/hello
-src/vmach/cpu/extractor.3.test.sh
-src/vmach/cpu/extractor.4.sh
-src/.mach/.cpu/loader.1.hxx
-src/.mach/.cpu/loader.1.cxx
-src/.mach/.cpu/loader.2.hxx
-src/.mach/.cpu/loader.2.cxx
+#src/vmach/cpu/extractor.3.test.sh
+#src/vmach/cpu/extractor.4.sh
+#src/.mach/.cpu/loader.1.hxx
+#src/.mach/.cpu/loader.1.cxx
+#src/.mach/.cpu/loader.2.hxx
+#src/.mach/.cpu/loader.2.cxx
 #*.asm

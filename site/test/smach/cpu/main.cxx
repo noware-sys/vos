@@ -72,12 +72,12 @@ int main (int argc, char * argv [], char * envp [])
 	
 	
 	{
-		noware::smach::cpu p;
+		noware::smach::cpu procsr;
 		//noware::mach::cpu::loader loader;
 		
-		assert (p.init ());
-		assert (p.enable ());
-		assert (p.start ());
+		assert (procsr.init ());
+		assert (procsr.enable ());
+		assert (procsr.start ());
 		
 		noware::cmd::pause ("Press [Enter] to finalize the CPU ... ");
 	}

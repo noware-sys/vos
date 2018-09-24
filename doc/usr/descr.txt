@@ -1,1 +1,1 @@
-A clusterd virtual machine
+A clusterd ELF emulator

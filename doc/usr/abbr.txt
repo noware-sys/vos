@@ -1,0 +1,45 @@
+ai								artificial intelligence
+al								artificial language
+cfg								configuration
+cod								code
+com								communication
+db								database
+dev								device
+doc								documentation
+dst								destination
+excl							exclusion
+exo								external
+incl							inclusion
+ip								instruction pointer
+lib								library
+lic								licence
+lic								license
+log								journal
+lst								list
+mach							machine
+math							mathematica
+mem								memory
+misc							miscellaneous
+ndx								index
+net								network
+nr								number
+ntt								entity
+opn								operation
+opr								operator
+pc								personal computer
+pc								program counter
+ram								memory
+rcp								recipe
+rx								receive
+rx								reception
+si								synthetic intelligence
+sl								synthetic language
+src								source
+str								string
+struct.site				construction site
+sys								system
+test.site					test site
+tx								transmission
+tx								transmit
+txt								text
+var								variable

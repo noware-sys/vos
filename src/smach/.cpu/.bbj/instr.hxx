@@ -17,7 +17,7 @@ class instr
 		// belongs to
 		//std::string thread_id;
 		
-		opr operation;
+		opnr _oprn;
 		//std::string _operation;
 		
 		//// number of arguments which are in use

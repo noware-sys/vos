@@ -66,7 +66,7 @@ int main (int argc, char * argv [], char * envp [])
 	for (/*unsigned long long*/ int i = 0; i < argc; ++i)
 		std::cout << argv [i] << ' ';
 	std::cout << std::endl;
-	std::cout << "  argc==[" << argc << ']' << std::endl;
+	std::cout << "  argc [" << argc << ']' << std::endl;
 	
 	std::cout << std::boolalpha;
 	
