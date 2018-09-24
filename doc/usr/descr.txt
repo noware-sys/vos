@@ -1,1 +1,1 @@
-A clusterd ELF emulator
+A clusterd ELF x86_64 emulator.
