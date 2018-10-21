@@ -1,1 +1,9 @@
-A clusterd ELF x86_64 emulator.
+A clusterd ELF emulator.
+
+It is a set of user space programs.
+It loads ELF executable files in distributed RAM, and runs them in the cluster.
+
+At this very early development stage, it is capable of running only very simple
+statically-linked single-threaded CLI GNU/Linux ELF x86 executable files,
+which require only the instructions 'noop', 'mov', and 'int 0x80', and which
+do not use any other system calls.

@@ -1,0 +1,1 @@
+doc/licence/gpl/2.txt

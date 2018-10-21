@@ -12,5 +12,52 @@ virtually inherit from all classes (virtual public <class>)
 
 mach
 	rename?:
-		client -> user
-		manager -> controller
+		client -> us[e]r -- yes
+		man[ager] -> controller/ctrl -- no
+
+rename:
+	mach.noware.cxx -> ... vos?
+			[d]emach ([distributed] emulated machine)
+			cee (clustered elf emulator)
+			dee (distributed elf emulator)
+			nee (networked elf emulator)
+			cemu
+			cemu.usr
+			emu.net
+			emu.d[ist[r]]
+			emu.c[luster]
+			emu[l].clust[.elf[.x86_64]]
+			emulan
+			emelf
+			elfan
+			elvan
+			mu
+			mlan
+			emlan
+			elf.emu
+			emu.med
+			mede
+			mide
+			venv
+			vmed
+			vmid
+			osvmed
+			oskv (OS Kernel Virtual)
+			oscv
+			osv
+			sov
+			vos
+			vose
+			mv
+			mvc (Medium Virtual Clustered)
+			[c[omputer]|m[achine]|o[rdinateur]]os[e|u[sr]](e[nv]|m[ed])[ed]v[irt] cosev (Comp OS Env Virt)
+			cosee (Comp OS Env Emulator)
+			vcose
+			cose (Comp OS Emulator)
+			machmed
+			vmd (virtual medium distributed)
+			mvd (medium, virtual distributed)
+			mvc (medium, virtual clustered)
+		smach -> srv
+		mmach -> man
+		cmach -> usr

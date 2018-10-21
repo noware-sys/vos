@@ -58,7 +58,7 @@
 
 //#include <noware/vmach/cpu/x86_64/instr>
 //#include <noware/vmach/cpu/loader>
-#include <noware/mach/tool/loader>
+#include <noware/vos/tool/loader>
 
 //#include <vector>
 //struct My
@@ -111,29 +111,30 @@ int main (int argc, char * argv [], char * envp [])
 	//std::cout << std::hex;
 	//std::cout << std::showbase;
 	
+	std::cout << "argc [" << argc << ']' << std::endl;
 	for (/*unsigned long long*/ int i = 0; i < argc; ++i)
 		std::cout << argv [i] << ' ';
 	std::cout << std::endl;
-	std::cout << "argc [" << argc << ']' << std::endl;
 	
 	//if (argc < 3)
-	if (argc < 2)
+	if (argc < 3)
 	{
 		//std::cerr << "'" << argv [0] << "'" << " '<store.key+val.txt>' '<cpu.insn.txt>'" << std::endl;
-		std::cerr << "'" << argv [0] << "'" << " <ram.txt>" << std::endl;
+		std::cerr << "'" << argv [0] << "'" << " <in:ram.txt> <in:program entry point>" << std::endl;
 		
 		return EXIT_FAILURE;
 	}
 	
 	//noware::elf file;
-	std::string thread_id;
+	//std::string thread_id;
 	//noware::unsigned_string content;
 	// Direct-Access Memory for the program
 	//std::map <unsigned long int, unsigned char> dam;
 	
 	//noware::mach::store::loader loader_store;
 	////noware::vmach::cpu::loader loader_cpu;
-	noware::mach::tool::loader loader;
+	noware::vos::tool::loader loader;
+	noware::vos::srv::cpu::x86_64::thread t;
 	
 	assert (loader.init ());
 	assert (loader.enable ());
@@ -141,18 +142,21 @@ int main (int argc, char * argv [], char * envp [])
 	//assert (loader_store.node.join ("noware::mach::store"));
 	//assert (loader_store.node.join ("noware::mach::store::nonfull"));
 	
-	thread_id = noware::random::string (16);
+	//t.id = noware::random::string (16);
+	t.id = 123;
+	//t.insn_ptr = argv [2];
+	t.insn_ptr = 0x8049000;
 	
 	noware::cmd::pause ();
 	
-	if (!loader.load_store_file (argv [1], thread_id))
+	if (!loader.load_file_store (argv [1], t.id))
 	{
-		std::cerr << "'" << argv [0] << "'::store::error::could not load file '" << argv [1] << "'" << std::endl;
+		std::cerr << "'" << argv [0] << "'::store::error::could not load file [" << argv [1] << ']' << std::endl;
 		
 		return EXIT_FAILURE;
 	}
 	
-	std::cout << "'" << argv [0] << "'::store::success::loaded file '" << argv [1] << "'" << std::endl;
+	std::cout << "'" << argv [0] << "'::store::success::loaded file [" << argv [1] << ']' << std::endl;
 	
 	/*
 	if (!loader.load_cpu_file (argv [2], thread_id))
@@ -164,4 +168,13 @@ int main (int argc, char * argv [], char * envp [])
 	
 	std::cout << "'" << argv [0] << "'::cpu::success::loaded file '" << argv [2] << "'" << std::endl;
 	*/
+	
+	if (!loader.enqueue (t.serialize ()))
+	{
+		std::cerr << "'" << argv [0] << "'::store::error::could not enqueue thread id [" << t.id << ']' << " with entry point [" << t.insn_ptr << ']' << std::endl;
+		
+		return EXIT_FAILURE;
+	}
+	
+	std::cout << "'" << argv [0] << "'::store::success::enqueued thread id [" << t.id << ']' << " with entry point [" << t.insn_ptr << ']' << std::endl;
 }

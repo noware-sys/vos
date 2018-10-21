@@ -1,3 +1,0 @@
-https://github.com/noware-sys/noware.cxx
-https://github.com/noware-sys/zmq.cxx
-https://github.com/noware-sys/zyre.cxx

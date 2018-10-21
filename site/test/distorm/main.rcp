@@ -1,0 +1,70 @@
+quex_path = /usr/include/quex
+lib = noware
+lib_noware_cxx_path = /usr/include/noware/noware.cxx
+lib_mach_noware_cxx_path = /usr/include/noware/mach.noware.cxx
+cxx = g++
+
+obj = main.obj
+src = main.cxx
+#tool.string.obj tool.nr.obj
+elf = main.elf
+
+#cxx_arg = -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(quex_path) -I$(lib_path) $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lsqlite3 -lczmq -lzmq -lzyre
+cxx_arg = -g -ggdb -pedantic -pthread -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -L. -L/root/Projects/gdabah/distorm/make/linux -I. -I$(quex_path) -I$(lib_noware_cxx_path) -I$(lib_mach_noware_cxx_path) -I/usr/include/noware/zmq.cxx -I/usr/include/noware/zyre.cxx -I/root/Projects/iMatix/czmq/src -I/root/Projects/gdabah/distorm/include -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -lzyre -lczmq -lzmq -ldistorm3
+
+#all: $(out) main.store.elf main.queue.elf main.cpu.elf main.loader.elf
+#all: main.store.elf main.queue.elf main.cpu.elf main.loader.elf main.cmd.elf
+all: $(elf)
+#all: main.store.elf main.queue.elf main.cpu.elf main.cmd.elf
+
+$(elf): $(obj)
+	$(cxx) $(cxx_arg) -o $@ $(obj);
+$(obj): $(src)
+	$(cxx) $(cxx_arg) -o $@ -c $(src);
+	
+main.pstore.elf: main.pstore.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.pstore.obj;
+main.vstore.elf: main.vstore.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.vstore.obj;
+main.cstore.elf: main.cstore.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.cstore.obj;
+main.queue.elf: main.queue.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.queue.obj;
+main.cpu.elf: main.cpu.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.cpu.obj;
+main.cmd.elf: main.cmd.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.cmd.obj;
+
+main.pstore.obj: main.pstore.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.pstore.cxx;
+main.vstore.obj: main.vstore.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.vstore.cxx;
+main.cstore.obj: main.cstore.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.cstore.cxx;
+main.queue.obj: main.queue.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.queue.cxx;
+main.cpu.obj: main.cpu.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.cpu.cxx;
+main.cmd.obj: main.cmd.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.cmd.cxx;
+
+main.cpu.loader.elf: main.cpu.loader.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.cpu.loader.obj;
+main.cpu.loader.obj: main.cpu.loader.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.cpu.loader.cxx;
+
+main.store.loader.elf: main.store.loader.obj $(src)
+	$(cxx) $(cxx_arg) -o $@ main.store.loader.obj;
+main.store.loader.obj: main.store.loader.cxx
+	$(cxx) $(cxx_arg) -o $@ -c main.store.loader.cxx;
+
+#nr.obj:
+#	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/nr.cxx;
+#serial.obj:
+#	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/serial.hxx;
+#tool.string.obj:
+#	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/tool/string.cxx;
+#misc.serial.obj:
+#	$(cxx) $(cxx_arg) -o $@ -c $(lib_path)/$(lib)/misc/serial.cxx;
+clean:
+	rm --force *.elf *.obj;

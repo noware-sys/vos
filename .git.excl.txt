@@ -1,0 +1,91 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.do
+*.act
+*.app
+*.out
+*.elf
+
+# Logs
+#*.log
+#*.journal
+
+# Custom
+known_hosts
+git.excl.cxx.txt
+nbproject
+#
+cfg
+lib
+doc.html
+#src/db/sqlite.c
+#LICENSE.txt
+#other
+src/smach/dev.hxx.1
+src/smach/dev.cxx.1
+src/.mach/processor.hxx.1
+
+site/test/elf.cxx/hello.asm
+site/test/elf.cxx/hello.asm.out
+site/test/elf.cxx/hello.elf.1.asm
+
+site/test/elf.cxx/asm/hello.elf.asm
+site/test/elf.cxx/asm/hello.asm.1
+site/test/elf.cxx/asm/hello.asm
+site/test/mach/test.asm
+site/test/pmach/test.asm
+
+# Temporary
+#noware.hxx
+#src/list*
+#src/pc*
+#src/.pc
+#src/calculator*
+#src/zmq*
+#src/pmach*
+#src/mach/.screen
+#src/net/-node*
+#doc/sys/hierarchy.txt
+#doc/usr/abbr.txt
+doc/usr/cfg.txt
+doc/usr/event.log
+doc/usr/struct.txt
+#site/test/mach/main.store.obj.1
+#site/test/mach/main.store.elf.1
+#site/test/unicorn
+#site/test/elf.cxx/asm/hello
+#src/vmach/cpu/extractor.3.test.sh
+#src/vmach/cpu/extractor.4.sh
+#src/.mach/.cpu/loader.1.hxx
+#src/.mach/.cpu/loader.1.cxx
+#src/.mach/.cpu/loader.2.hxx
+#src/.mach/.cpu/loader.2.cxx
+#*.asm

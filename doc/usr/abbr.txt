@@ -4,11 +4,14 @@ cfg								configuration
 cod								code
 com								communication
 db								database
+dep								dependency
+depend						dependency
 dev								device
 doc								documentation
 dst								destination
 excl							exclusion
-exo								external
+ex								extern[al]/outer
+in								intern[al]/inner
 incl							inclusion
 ip								instruction pointer
 lib								library
@@ -29,6 +32,7 @@ opr								operator
 pc								personal computer
 pc								program counter
 ram								memory
+retent						retention
 rcp								recipe
 rx								receive
 rx								reception

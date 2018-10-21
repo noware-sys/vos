@@ -1,0 +1,2 @@
+This file retains the folder which contains it.
+Used for VCS to include folder structure.

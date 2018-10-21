@@ -58,7 +58,7 @@
 
 //#include <noware/vmach/cpu/x86_64/instr>
 //#include <noware/mmach/store.d/extractor>
-#include <noware/mach/tool/store/extractor>
+#include <noware/vos/tool/store/extractor>
 
 //#include <vector>
 //struct My
@@ -118,28 +118,28 @@ int main (int argc, char * argv [], char * env [])
 	
 	if (argc < 3)
 	{
-		std::cerr << "'" << argv [0] << "'" << " <out:ram.txt> <in:exe.elf>" << std::endl;
+		std::cerr << "'" << argv [0] << "'" << " <in:exe.elf> <out:ram.txt>" << std::endl;
 		
 		return EXIT_FAILURE;
 	}
 	
 	
-	noware::mach::tool::store::extractor extr;
+	noware::vos::tool::store::extractor extr;
 	
-	if (!extr.load_file (argv [2]))
+	if (!extr.load_file (argv [1]))
 	{
-		std::cerr << "'" << argv [0] << "'::error::could not load file '" << argv [2] << "'" << std::endl;
+		std::cerr << "'" << argv [0] << "'::error::could not load file [" << argv [1] << ']' << std::endl;
 		
 		return EXIT_FAILURE;
 	}
-	std::cout << "'" << argv [0] << "'::success::loaded file '" << argv [2] << "'" << std::endl;
+	std::cout << "'" << argv [0] << "'::success::loaded file [" << argv [1] << ']' << std::endl;
 	
 	
-	if (!extr.write_file (argv [1]))
+	if (!extr.write_file (argv [2]))
 	{
-		std::cerr << "'" << argv [0] << "'::error::could not write to file '" << argv [1] << "'" << std::endl;
+		std::cerr << "'" << argv [0] << "'::error::could not write to file [" << argv [2] << ']' << std::endl;
 		
 		return EXIT_FAILURE;
 	}
-	std::cout << "'" << argv [0] << "'::success::wrote to file '" << argv [1] << "'" << std::endl;
+	std::cout << "'" << argv [0] << "'::success::wrote to file [" << argv [2] << ']' << std::endl;
 }

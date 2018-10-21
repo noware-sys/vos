@@ -1,0 +1,29 @@
+#quex_path = /usr/include/quex
+#lib = noware
+#lib_path = /usr/include/noware/noware.cxx
+compiler = nasm
+linker = ld
+
+#obj = main.obj
+#src = hello.asm
+#tool.string.obj tool.nr.obj
+#out = main.elf
+
+#cxx_arg = -g -ggdb -pedantic -fpermissive -W -Wall -Wmain -Wcomment -Wconversion -Wunused-parameter -Wparentheses -std=c++14 -I. -I$(quex_path) -I$(lib_path) $(CCFLAG_ASSERTS) -L. -L/usr/local/lib -lboost_system -lboost_serialization -lboost_thread -lboost_random -lcln -fopenmp -pthread -ldl -lsqlite3 -lczmq -lzmq -lzyre
+compiler_arg =
+linker_arg =
+
+all: hello-x86.elf hello-x86_64.elf
+
+hello-x86.elf: hello-x86.obj
+	$(linker) $(linker_arg) -o $@ -m elf_i386 'hello-x86.obj';
+hello-x86.obj: hello-x86.asm
+	$(compiler) $(compiler_arg) -o $@ -f elf32 'hello-x86.asm';
+
+hello-x86_64.elf: hello-x86_64.obj
+	$(linker) $(linker_arg) -o $@ -m elf_x86_64 'hello-x86_64.obj';
+hello-x86_64.obj: hello-x86.asm
+	$(compiler) $(compiler_arg) -o $@ -f elf64 'hello-x86.asm';
+
+clean:
+	rm 'hello-x86.elf' 'hello-x86_64.elf' 'hello-x86.obj' 'hello-x86_64.obj';

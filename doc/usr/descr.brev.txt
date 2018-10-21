@@ -1,1 +1,1 @@
-Clusterd ELF x86_64 Emulator
+clustered gnu/linux elf x86_64 emulator

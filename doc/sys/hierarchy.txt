@@ -1,3 +1,0 @@
-Top:  3. (Overall) Functionality
-Level 2. (Multiple Unidirectional) Relations (Between Elements)
-Base: 1. Capabilities/Properties (of an Individual Element)
